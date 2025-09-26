@@ -1,0 +1,440 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Api\\IdentityAccess.Api.csproj": {}
+  },
+  "projects": {
+    "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Api\\IdentityAccess.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Api\\IdentityAccess.Api.csproj",
+        "projectName": "IdentityAccess.Api",
+        "projectPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Api\\IdentityAccess.Api.csproj",
+        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+        "outputPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Application\\IdentityAccess.Application.csproj": {
+                "projectPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Application\\IdentityAccess.Application.csproj"
+              },
+              "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Infrastructure\\IdentityAccess.Infrastructure.csproj": {
+                "projectPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Infrastructure\\IdentityAccess.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true,
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[9.0.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Application\\IdentityAccess.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Application\\IdentityAccess.Application.csproj",
+        "projectName": "IdentityAccess.Application",
+        "projectPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Application\\IdentityAccess.Application.csproj",
+        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+        "outputPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Domain\\IdentityAccess.Domain.csproj": {
+                "projectPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Domain\\IdentityAccess.Domain.csproj"
+              },
+              "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Shared\\BuildingBlocks\\BuildingBlocks.csproj": {
+                "projectPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Shared\\BuildingBlocks\\BuildingBlocks.csproj"
+              },
+              "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Shared\\SharedKernel\\SharedKernel.csproj": {
+                "projectPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Shared\\SharedKernel\\SharedKernel.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true,
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Domain\\IdentityAccess.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Domain\\IdentityAccess.Domain.csproj",
+        "projectName": "IdentityAccess.Domain",
+        "projectPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Domain\\IdentityAccess.Domain.csproj",
+        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+        "outputPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true,
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Infrastructure\\IdentityAccess.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Infrastructure\\IdentityAccess.Infrastructure.csproj",
+        "projectName": "IdentityAccess.Infrastructure",
+        "projectPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Infrastructure\\IdentityAccess.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+        "outputPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Application\\IdentityAccess.Application.csproj": {
+                "projectPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Application\\IdentityAccess.Application.csproj"
+              },
+              "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Domain\\IdentityAccess.Domain.csproj": {
+                "projectPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Domain\\IdentityAccess.Domain.csproj"
+              },
+              "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Shared\\BuildingBlocks\\BuildingBlocks.csproj": {
+                "projectPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Shared\\BuildingBlocks\\BuildingBlocks.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true,
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Shared\\BuildingBlocks\\BuildingBlocks.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Shared\\BuildingBlocks\\BuildingBlocks.csproj",
+        "projectName": "BuildingBlocks",
+        "projectPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Shared\\BuildingBlocks\\BuildingBlocks.csproj",
+        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+        "outputPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Shared\\BuildingBlocks\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true,
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Shared\\SharedKernel\\SharedKernel.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Shared\\SharedKernel\\SharedKernel.csproj",
+        "projectName": "SharedKernel",
+        "projectPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Shared\\SharedKernel\\SharedKernel.csproj",
+        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+        "outputPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Shared\\SharedKernel\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "allWarningsAsErrors": true,
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
