@@ -1,41 +1,47 @@
+using Notification.Application.Interfaces;
+using Notification.Application.Services;
+using Notification.Infrastructure.Configuration;
+using Notification.Infrastructure.Services;
+using Notification.Infrastructure.Messaging;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
+// Add configuration
+builder.Services.Configure<RabbitMqSettings>(
+    builder.Configuration.GetSection(RabbitMqSettings.SectionName));
+builder.Services.Configure<EmailSettings>(
+    builder.Configuration.GetSection(EmailSettings.SectionName));
+builder.Services.Configure<SmsSettings>(
+    builder.Configuration.GetSection(SmsSettings.SectionName));
+
+// Add services to the container
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+builder.Services.AddLogging();
+
+// Register application services
+builder.Services.AddSingleton<INotificationService, NotificationService>();
+builder.Services.AddSingleton<IEmailService, EmailService>();
+builder.Services.AddSingleton<ISmsService, SmsService>();
+
+// Register background service for RabbitMQ
+builder.Services.AddHostedService<RabbitMqConsumerService>();
+
+// Add health checks
+builder.Services.AddHealthChecks();
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();
-
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
-
-app.MapGet("/weatherforecast", () =>
-{
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
-})
-.WithName("GetWeatherForecast");
+app.MapControllers();
+app.MapHealthChecks("/health");
 
 app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}
