@@ -93,7 +93,7 @@ public class RabbitMqConsumerService : BackgroundService
                         warrantyEvent.AssetId,
                         warrantyEvent.AssetName,
                         warrantyEvent.OwnerEmail,
-                        warrantyEvent.OwnerPhone,
+                        warrantyEvent.SlackChannel,
                         warrantyEvent.OwnerName,
                         warrantyEvent.WarrantyExpiryDate,
                         warrantyEvent.DaysUntilExpiry);
@@ -128,7 +128,7 @@ public class RabbitMqConsumerService : BackgroundService
                         maintenanceEvent.AssetId,
                         maintenanceEvent.AssetName,
                         maintenanceEvent.OwnerEmail,
-                        maintenanceEvent.OwnerPhone,
+                        maintenanceEvent.SlackChannel,
                         maintenanceEvent.OwnerName,
                         maintenanceEvent.MaintenanceDate,
                         maintenanceEvent.DaysUntilMaintenance);
@@ -163,7 +163,7 @@ public class RabbitMqConsumerService : BackgroundService
                         assignmentEvent.AssetId,
                         assignmentEvent.AssetName,
                         assignmentEvent.NewOwnerEmail,
-                        assignmentEvent.NewOwnerPhone,
+                        assignmentEvent.SlackChannel,
                         assignmentEvent.NewOwnerName,
                         assignmentEvent.AssignmentDate);
 

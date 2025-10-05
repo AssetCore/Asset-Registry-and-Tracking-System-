@@ -30,7 +30,7 @@ public class NotificationController : ControllerBase
                 Type = request.Type,
                 Channel = request.Channel,
                 EmailAddress = request.EmailAddress ?? string.Empty,
-                PhoneNumber = request.PhoneNumber ?? string.Empty,
+                SlackChannel = request.SlackChannel ?? string.Empty,
                 RecipientName = request.RecipientName ?? string.Empty,
                 Subject = request.Subject,
                 Body = request.Body,
@@ -63,7 +63,7 @@ public class NotificationController : ControllerBase
                 request.AssetId,
                 request.AssetName,
                 request.OwnerEmail,
-                request.OwnerPhone ?? string.Empty,
+                request.SlackChannel ?? string.Empty,
                 request.OwnerName,
                 request.WarrantyExpiryDate,
                 request.DaysUntilExpiry);
@@ -86,7 +86,7 @@ public class NotificationController : ControllerBase
                 request.AssetId,
                 request.AssetName,
                 request.OwnerEmail,
-                request.OwnerPhone ?? string.Empty,
+                request.SlackChannel ?? string.Empty,
                 request.OwnerName,
                 request.MaintenanceDate,
                 request.DaysUntilMaintenance);
@@ -109,7 +109,7 @@ public class NotificationController : ControllerBase
                 request.AssetId,
                 request.AssetName,
                 request.NewOwnerEmail,
-                request.NewOwnerPhone ?? string.Empty,
+                request.SlackChannel ?? string.Empty,
                 request.NewOwnerName,
                 request.AssignmentDate);
 
@@ -138,7 +138,7 @@ public record SendNotificationRequest(
     NotificationType Type,
     NotificationChannel Channel,
     string? EmailAddress,
-    string? PhoneNumber,
+    string? SlackChannel,
     string? RecipientName,
     string Subject,
     string Body,
@@ -150,7 +150,7 @@ public record WarrantyExpiryNotificationRequest(
     string AssetId,
     string AssetName,
     string OwnerEmail,
-    string? OwnerPhone,
+    string? SlackChannel,
     string OwnerName,
     DateTime WarrantyExpiryDate,
     int DaysUntilExpiry
@@ -160,7 +160,7 @@ public record MaintenanceDueNotificationRequest(
     string AssetId,
     string AssetName,
     string OwnerEmail,
-    string? OwnerPhone,
+    string? SlackChannel,
     string OwnerName,
     DateTime MaintenanceDate,
     int DaysUntilMaintenance
@@ -170,7 +170,7 @@ public record AssetAssignmentNotificationRequest(
     string AssetId,
     string AssetName,
     string NewOwnerEmail,
-    string? NewOwnerPhone,
+    string? SlackChannel,
     string NewOwnerName,
     DateTime AssignmentDate
 );

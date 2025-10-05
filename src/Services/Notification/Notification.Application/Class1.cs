@@ -7,18 +7,18 @@ public interface IEmailService
     Task<bool> SendEmailAsync(string to, string subject, string body, string? toName = null);
 }
 
-public interface ISmsService
+public interface ISlackService
 {
-    Task<bool> SendSmsAsync(string phoneNumber, string message);
+    Task<bool> SendSlackMessageAsync(string channel, string message, string? userName = null);
 }
 
 public interface INotificationService
 {
     Task<bool> SendNotificationAsync(NotificationMessage message);
     Task ProcessWarrantyExpiryAsync(string assetId, string assetName, string ownerEmail, 
-        string ownerPhone, string ownerName, DateTime expiryDate, int daysUntilExpiry);
+        string slackChannel, string ownerName, DateTime expiryDate, int daysUntilExpiry);
     Task ProcessMaintenanceDueAsync(string assetId, string assetName, string ownerEmail,
-        string ownerPhone, string ownerName, DateTime maintenanceDate, int daysUntilMaintenance);
+        string slackChannel, string ownerName, DateTime maintenanceDate, int daysUntilMaintenance);
     Task ProcessAssetAssignmentAsync(string assetId, string assetName, string newOwnerEmail,
-        string newOwnerPhone, string newOwnerName, DateTime assignmentDate);
+        string slackChannel, string newOwnerName, DateTime assignmentDate);
 }

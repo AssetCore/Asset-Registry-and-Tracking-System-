@@ -4,95 +4,115 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Notification.Application.Interfaces;
 using Notification.Infrastructure.Configuration;
-using Twilio;
-using Twilio.Rest.Api.V2010.Account;
+using System.Net.Http.Json;
+using System.Text.Json;
 
-public class SmsService : ISmsService
+public class SlackService : ISlackService
 {
-    private readonly SmsSettings _smsSettings;
-    private readonly ILogger<SmsService> _logger;
+    private readonly SlackSettings _slackSettings;
+    private readonly ILogger<SlackService> _logger;
+    private readonly HttpClient _httpClient;
 
-    public SmsService(IOptions<SmsSettings> smsSettings, ILogger<SmsService> logger)
+    public SlackService(IOptions<SlackSettings> slackSettings, ILogger<SlackService> logger, HttpClient httpClient)
     {
-        _smsSettings = smsSettings.Value;
+        _slackSettings = slackSettings.Value;
         _logger = logger;
-
-        // Initialize Twilio
-        if (!string.IsNullOrEmpty(_smsSettings.AccountSid) && !string.IsNullOrEmpty(_smsSettings.AuthToken))
-        {
-            TwilioClient.Init(_smsSettings.AccountSid, _smsSettings.AuthToken);
-        }
+        _httpClient = httpClient;
     }
 
-    public async Task<bool> SendSmsAsync(string phoneNumber, string message)
+    public async Task<bool> SendSlackMessageAsync(string channel, string message, string? userName = null)
     {
         try
         {
-            if (string.IsNullOrEmpty(phoneNumber))
+            if (string.IsNullOrEmpty(_slackSettings.WebhookUrl))
             {
-                _logger.LogWarning("Attempted to send SMS with empty phone number");
+                _logger.LogWarning("Slack webhook URL not configured. Message not sent.");
                 return false;
             }
 
-            if (string.IsNullOrEmpty(_smsSettings.AccountSid) || string.IsNullOrEmpty(_smsSettings.AuthToken))
+            if (string.IsNullOrEmpty(message))
             {
-                _logger.LogWarning("SMS service not configured. AccountSid or AuthToken is missing");
+                _logger.LogWarning("Attempted to send empty Slack message");
                 return false;
             }
 
-            // Clean the phone number (remove spaces, dashes, etc.)
-            var cleanPhoneNumber = CleanPhoneNumber(phoneNumber);
+            // Use the provided channel or fall back to default
+            var targetChannel = string.IsNullOrEmpty(channel) ? _slackSettings.DefaultChannel : channel;
             
-            // Truncate message if too long (SMS limit is typically 160 characters)
-            var truncatedMessage = message.Length > 160 
-                ? message.Substring(0, 157) + "..." 
-                : message;
-
-            var messageResource = await MessageResource.CreateAsync(
-                body: truncatedMessage,
-                from: new Twilio.Types.PhoneNumber(_smsSettings.FromNumber),
-                to: new Twilio.Types.PhoneNumber(cleanPhoneNumber)
-            );
-
-            if (messageResource.Status == MessageResource.StatusEnum.Sent ||
-                messageResource.Status == MessageResource.StatusEnum.Queued)
+            // Ensure channel starts with # or @
+            if (!targetChannel.StartsWith("#") && !targetChannel.StartsWith("@"))
             {
-                _logger.LogInformation("SMS sent successfully to {PhoneNumber} with SID {MessageSid}", 
-                    cleanPhoneNumber, messageResource.Sid);
+                targetChannel = "#" + targetChannel;
+            }
+
+            var slackMessage = new SlackMessage
+            {
+                Channel = targetChannel,
+                Text = message,
+                Username = userName ?? _slackSettings.BotName,
+                IconEmoji = _slackSettings.BotIconEmoji,
+                Attachments = CreateAttachment(message)
+            };
+
+            var json = JsonSerializer.Serialize(slackMessage, new JsonSerializerOptions
+            {
+                PropertyNamingPolicy = JsonNamingPolicy.SnakeCaseLower
+            });
+
+            var response = await _httpClient.PostAsJsonAsync(_slackSettings.WebhookUrl, slackMessage);
+
+            if (response.IsSuccessStatusCode)
+            {
+                _logger.LogInformation("Slack message sent successfully to {Channel}", targetChannel);
                 return true;
             }
             else
             {
-                _logger.LogWarning("SMS failed to send to {PhoneNumber}. Status: {Status}, Error: {ErrorMessage}", 
-                    cleanPhoneNumber, messageResource.Status, messageResource.ErrorMessage);
+                var errorContent = await response.Content.ReadAsStringAsync();
+                _logger.LogWarning("Failed to send Slack message to {Channel}. Status: {Status}, Error: {Error}", 
+                    targetChannel, response.StatusCode, errorContent);
                 return false;
             }
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Failed to send SMS to {PhoneNumber}", phoneNumber);
+            _logger.LogError(ex, "Failed to send Slack message to {Channel}", channel);
             return false;
         }
     }
 
-    private static string CleanPhoneNumber(string phoneNumber)
+    private static SlackAttachment[] CreateAttachment(string message)
     {
-        // Remove all non-digit characters except the + sign
-        var cleaned = new string(phoneNumber.Where(c => char.IsDigit(c) || c == '+').ToArray());
-        
-        // If no country code, assume US/CA (+1)
-        if (!cleaned.StartsWith("+"))
-        {
-            if (cleaned.Length == 10)
-            {
-                cleaned = "+1" + cleaned;
-            }
-            else if (cleaned.Length == 11 && cleaned.StartsWith("1"))
-            {
-                cleaned = "+" + cleaned;
-            }
-        }
+        var color = message.Contains("URGENT") ? "danger" : 
+                   message.Contains("REMINDER") ? "warning" : "good";
 
-        return cleaned;
+        return new[]
+        {
+            new SlackAttachment
+            {
+                Color = color,
+                Text = message,
+                Footer = "Asset Management System",
+                Timestamp = DateTimeOffset.UtcNow.ToUnixTimeSeconds()
+            }
+        };
     }
+}
+
+// Slack message models
+public class SlackMessage
+{
+    public string Channel { get; set; } = string.Empty;
+    public string Text { get; set; } = string.Empty;
+    public string Username { get; set; } = string.Empty;
+    public string IconEmoji { get; set; } = string.Empty;
+    public SlackAttachment[]? Attachments { get; set; }
+}
+
+public class SlackAttachment
+{
+    public string Color { get; set; } = string.Empty;
+    public string Text { get; set; } = string.Empty;
+    public string Footer { get; set; } = string.Empty;
+    public long Timestamp { get; set; }
 }

@@ -29,11 +29,12 @@ public class EmailSettings
     public string FromName { get; set; } = "Asset Management System";
 }
 
-public class SmsSettings
+public class SlackSettings
 {
-    public const string SectionName = "SMS";
+    public const string SectionName = "Slack";
     
-    public string AccountSid { get; set; } = string.Empty;
-    public string AuthToken { get; set; } = string.Empty;
-    public string FromNumber { get; set; } = string.Empty;
+    public string WebhookUrl { get; set; } = string.Empty;
+    public string DefaultChannel { get; set; } = "#general";
+    public string BotName { get; set; } = "Asset Bot";
+    public string BotIconEmoji { get; set; } = ":robot_face:";
 }

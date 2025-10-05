@@ -9,16 +9,16 @@ using Microsoft.Extensions.Logging;
 public class NotificationService : INotificationService
 {
     private readonly IEmailService _emailService;
-    private readonly ISmsService _smsService;
+    private readonly ISlackService _slackService;
     private readonly ILogger<NotificationService> _logger;
 
     public NotificationService(
         IEmailService emailService,
-        ISmsService smsService,
+        ISlackService slackService,
         ILogger<NotificationService> logger)
     {
         _emailService = emailService;
-        _smsService = smsService;
+        _slackService = slackService;
         _logger = logger;
     }
 
@@ -48,18 +48,21 @@ public class NotificationService : INotificationService
                 }
             }
 
-            // Send SMS if requested
-            if (message.Channel == NotificationChannel.SMS || message.Channel == NotificationChannel.Both)
+            // Send Slack message if requested
+            if (message.Channel == NotificationChannel.Slack || message.Channel == NotificationChannel.Both)
             {
-                if (!string.IsNullOrEmpty(message.PhoneNumber))
+                if (!string.IsNullOrEmpty(message.SlackChannel))
                 {
-                    var smsSent = await _smsService.SendSmsAsync(message.PhoneNumber, message.Body);
+                    var slackSent = await _slackService.SendSlackMessageAsync(
+                        message.SlackChannel, 
+                        message.Body, 
+                        message.RecipientName);
                     
-                    if (!smsSent)
+                    if (!slackSent)
                     {
                         success = false;
-                        _logger.LogWarning("Failed to send SMS to {Phone} for notification {Id}", 
-                            message.PhoneNumber, message.Id);
+                        _logger.LogWarning("Failed to send Slack message to {Channel} for notification {Id}", 
+                            message.SlackChannel, message.Id);
                     }
                 }
             }
@@ -82,14 +85,14 @@ public class NotificationService : INotificationService
     }
 
     public async Task ProcessWarrantyExpiryAsync(string assetId, string assetName, string ownerEmail, 
-        string ownerPhone, string ownerName, DateTime expiryDate, int daysUntilExpiry)
+        string slackChannel, string ownerName, DateTime expiryDate, int daysUntilExpiry)
     {
         var message = new NotificationMessage
         {
             Type = NotificationType.WarrantyExpiry,
-            Channel = NotificationChannel.Both, // Send both email and SMS
+            Channel = NotificationChannel.Both, // Send both email and Slack
             EmailAddress = ownerEmail,
-            PhoneNumber = ownerPhone,
+            SlackChannel = slackChannel,
             RecipientName = ownerName,
             AssetId = assetId,
             AssetName = assetName,
@@ -102,14 +105,14 @@ public class NotificationService : INotificationService
     }
 
     public async Task ProcessMaintenanceDueAsync(string assetId, string assetName, string ownerEmail,
-        string ownerPhone, string ownerName, DateTime maintenanceDate, int daysUntilMaintenance)
+        string slackChannel, string ownerName, DateTime maintenanceDate, int daysUntilMaintenance)
     {
         var message = new NotificationMessage
         {
             Type = NotificationType.MaintenanceDue,
-            Channel = NotificationChannel.Both, // Send both email and SMS
+            Channel = NotificationChannel.Both, // Send both email and Slack
             EmailAddress = ownerEmail,
-            PhoneNumber = ownerPhone,
+            SlackChannel = slackChannel,
             RecipientName = ownerName,
             AssetId = assetId,
             AssetName = assetName,
@@ -122,14 +125,14 @@ public class NotificationService : INotificationService
     }
 
     public async Task ProcessAssetAssignmentAsync(string assetId, string assetName, string newOwnerEmail,
-        string newOwnerPhone, string newOwnerName, DateTime assignmentDate)
+        string slackChannel, string newOwnerName, DateTime assignmentDate)
     {
         var message = new NotificationMessage
         {
             Type = NotificationType.AssetAssignment,
             Channel = NotificationChannel.Email, // Only email for assignment
             EmailAddress = newOwnerEmail,
-            PhoneNumber = newOwnerPhone,
+            SlackChannel = slackChannel,
             RecipientName = newOwnerName,
             AssetId = assetId,
             AssetName = assetName,

@@ -11,7 +11,7 @@ public enum NotificationType
 public enum NotificationChannel
 {
     Email = 1,
-    SMS = 2,
+    Slack = 2,
     Both = 3
 }
 
