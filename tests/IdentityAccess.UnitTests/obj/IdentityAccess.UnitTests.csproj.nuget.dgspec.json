@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\tests\\IdentityAccess.UnitTests\\IdentityAccess.UnitTests.csproj": {}
+    "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\tests\\IdentityAccess.UnitTests\\IdentityAccess.UnitTests.csproj": {}
   },
   "projects": {
-    "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\tests\\IdentityAccess.UnitTests\\IdentityAccess.UnitTests.csproj": {
+    "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\tests\\IdentityAccess.UnitTests\\IdentityAccess.UnitTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\tests\\IdentityAccess.UnitTests\\IdentityAccess.UnitTests.csproj",
+        "projectUniqueName": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\tests\\IdentityAccess.UnitTests\\IdentityAccess.UnitTests.csproj",
         "projectName": "IdentityAccess.UnitTests",
-        "projectPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\tests\\IdentityAccess.UnitTests\\IdentityAccess.UnitTests.csproj",
-        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\tests\\IdentityAccess.UnitTests\\obj\\",
+        "projectPath": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\tests\\IdentityAccess.UnitTests\\IdentityAccess.UnitTests.csproj",
+        "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
+        "outputPath": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\tests\\IdentityAccess.UnitTests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -84,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Api\\IdentityAccess.Api.csproj": {}
+    "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\IdentityAccess\\IdentityAccess.Api\\IdentityAccess.Api.csproj": {}
   },
   "projects": {
-    "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Api\\IdentityAccess.Api.csproj": {
+    "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\IdentityAccess\\IdentityAccess.Api\\IdentityAccess.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Api\\IdentityAccess.Api.csproj",
+        "projectUniqueName": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\IdentityAccess\\IdentityAccess.Api\\IdentityAccess.Api.csproj",
         "projectName": "IdentityAccess.Api",
-        "projectPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Api\\IdentityAccess.Api.csproj",
-        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Api\\obj\\",
+        "projectPath": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\IdentityAccess\\IdentityAccess.Api\\IdentityAccess.Api.csproj",
+        "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
+        "outputPath": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\IdentityAccess\\IdentityAccess.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -32,11 +32,11 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Application\\IdentityAccess.Application.csproj": {
-                "projectPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Application\\IdentityAccess.Application.csproj"
+              "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\IdentityAccess\\IdentityAccess.Application\\IdentityAccess.Application.csproj": {
+                "projectPath": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\IdentityAccess\\IdentityAccess.Application\\IdentityAccess.Application.csproj"
               },
-              "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Infrastructure\\IdentityAccess.Infrastructure.csproj": {
-                "projectPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Infrastructure\\IdentityAccess.Infrastructure.csproj"
+              "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\IdentityAccess\\IdentityAccess.Infrastructure\\IdentityAccess.Infrastructure.csproj": {
+                "projectPath": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\IdentityAccess\\IdentityAccess.Infrastructure\\IdentityAccess.Infrastructure.csproj"
               }
             }
           }
@@ -82,24 +82,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Application\\IdentityAccess.Application.csproj": {
+    "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\IdentityAccess\\IdentityAccess.Application\\IdentityAccess.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Application\\IdentityAccess.Application.csproj",
+        "projectUniqueName": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\IdentityAccess\\IdentityAccess.Application\\IdentityAccess.Application.csproj",
         "projectName": "IdentityAccess.Application",
-        "projectPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Application\\IdentityAccess.Application.csproj",
-        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Application\\obj\\",
+        "projectPath": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\IdentityAccess\\IdentityAccess.Application\\IdentityAccess.Application.csproj",
+        "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
+        "outputPath": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\IdentityAccess\\IdentityAccess.Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -114,14 +114,14 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Domain\\IdentityAccess.Domain.csproj": {
-                "projectPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Domain\\IdentityAccess.Domain.csproj"
+              "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\IdentityAccess\\IdentityAccess.Domain\\IdentityAccess.Domain.csproj": {
+                "projectPath": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\IdentityAccess\\IdentityAccess.Domain\\IdentityAccess.Domain.csproj"
               },
-              "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Shared\\BuildingBlocks\\BuildingBlocks.csproj": {
-                "projectPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Shared\\BuildingBlocks\\BuildingBlocks.csproj"
+              "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Shared\\BuildingBlocks\\BuildingBlocks.csproj": {
+                "projectPath": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Shared\\BuildingBlocks\\BuildingBlocks.csproj"
               },
-              "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Shared\\SharedKernel\\SharedKernel.csproj": {
-                "projectPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Shared\\SharedKernel\\SharedKernel.csproj"
+              "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Shared\\SharedKernel\\SharedKernel.csproj": {
+                "projectPath": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Shared\\SharedKernel\\SharedKernel.csproj"
               }
             }
           }
@@ -158,24 +158,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Domain\\IdentityAccess.Domain.csproj": {
+    "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\IdentityAccess\\IdentityAccess.Domain\\IdentityAccess.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Domain\\IdentityAccess.Domain.csproj",
+        "projectUniqueName": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\IdentityAccess\\IdentityAccess.Domain\\IdentityAccess.Domain.csproj",
         "projectName": "IdentityAccess.Domain",
-        "projectPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Domain\\IdentityAccess.Domain.csproj",
-        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Domain\\obj\\",
+        "projectPath": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\IdentityAccess\\IdentityAccess.Domain\\IdentityAccess.Domain.csproj",
+        "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
+        "outputPath": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\IdentityAccess\\IdentityAccess.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -224,24 +224,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Infrastructure\\IdentityAccess.Infrastructure.csproj": {
+    "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\IdentityAccess\\IdentityAccess.Infrastructure\\IdentityAccess.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Infrastructure\\IdentityAccess.Infrastructure.csproj",
+        "projectUniqueName": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\IdentityAccess\\IdentityAccess.Infrastructure\\IdentityAccess.Infrastructure.csproj",
         "projectName": "IdentityAccess.Infrastructure",
-        "projectPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Infrastructure\\IdentityAccess.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Infrastructure\\obj\\",
+        "projectPath": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\IdentityAccess\\IdentityAccess.Infrastructure\\IdentityAccess.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
+        "outputPath": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\IdentityAccess\\IdentityAccess.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -256,14 +256,14 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Application\\IdentityAccess.Application.csproj": {
-                "projectPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Application\\IdentityAccess.Application.csproj"
+              "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\IdentityAccess\\IdentityAccess.Application\\IdentityAccess.Application.csproj": {
+                "projectPath": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\IdentityAccess\\IdentityAccess.Application\\IdentityAccess.Application.csproj"
               },
-              "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Domain\\IdentityAccess.Domain.csproj": {
-                "projectPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\IdentityAccess\\IdentityAccess.Domain\\IdentityAccess.Domain.csproj"
+              "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\IdentityAccess\\IdentityAccess.Domain\\IdentityAccess.Domain.csproj": {
+                "projectPath": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\IdentityAccess\\IdentityAccess.Domain\\IdentityAccess.Domain.csproj"
               },
-              "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Shared\\BuildingBlocks\\BuildingBlocks.csproj": {
-                "projectPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Shared\\BuildingBlocks\\BuildingBlocks.csproj"
+              "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Shared\\BuildingBlocks\\BuildingBlocks.csproj": {
+                "projectPath": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Shared\\BuildingBlocks\\BuildingBlocks.csproj"
               }
             }
           }
@@ -300,24 +300,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Shared\\BuildingBlocks\\BuildingBlocks.csproj": {
+    "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Shared\\BuildingBlocks\\BuildingBlocks.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Shared\\BuildingBlocks\\BuildingBlocks.csproj",
+        "projectUniqueName": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Shared\\BuildingBlocks\\BuildingBlocks.csproj",
         "projectName": "BuildingBlocks",
-        "projectPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Shared\\BuildingBlocks\\BuildingBlocks.csproj",
-        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Shared\\BuildingBlocks\\obj\\",
+        "projectPath": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Shared\\BuildingBlocks\\BuildingBlocks.csproj",
+        "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
+        "outputPath": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Shared\\BuildingBlocks\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -366,24 +366,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Shared\\SharedKernel\\SharedKernel.csproj": {
+    "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Shared\\SharedKernel\\SharedKernel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Shared\\SharedKernel\\SharedKernel.csproj",
+        "projectUniqueName": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Shared\\SharedKernel\\SharedKernel.csproj",
         "projectName": "SharedKernel",
-        "projectPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Shared\\SharedKernel\\SharedKernel.csproj",
-        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Shared\\SharedKernel\\obj\\",
+        "projectPath": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Shared\\SharedKernel\\SharedKernel.csproj",
+        "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
+        "outputPath": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Shared\\SharedKernel\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -432,7 +432,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
