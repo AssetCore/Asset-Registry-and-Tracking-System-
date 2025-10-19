@@ -145,7 +145,7 @@ namespace MaintenanceScheduler.Application.Services
                     return ApiResponse<MaintenanceScheduleDto>.ErrorResponse("Maintenance schedule not found");
                 }
 
-                schedule.Description = dto.Description;
+                schedule.Description = dto.Description ?? string.Empty;
                 schedule.ScheduledDate = dto.ScheduledDate;
                 schedule.Status = dto.Status;
                 schedule.AssignedTo = dto.AssignedTo;

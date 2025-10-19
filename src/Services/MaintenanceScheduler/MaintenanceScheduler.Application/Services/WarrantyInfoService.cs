@@ -183,7 +183,7 @@ namespace MaintenanceScheduler.Application.Services
                     return ApiResponse<WarrantyInfoDto>.ErrorResponse("Warranty information not found");
                 }
 
-                warranty.WarrantyProvider = dto.WarrantyProvider;
+                warranty.WarrantyProvider = dto.WarrantyProvider??string.Empty;
                 warranty.WarrantyType = dto.WarrantyType;
                 warranty.ExpiryDate = dto.ExpiryDate;
                 warranty.CoverageDetails = dto.CoverageDetails;
