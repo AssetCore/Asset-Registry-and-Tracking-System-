@@ -212,6 +212,9 @@ PublishScripts/
 *.nuget.props
 *.nuget.targets
 
+# NuGet package restore lock files
+packages.lock.json
+
 # Microsoft Azure Build Output
 csx/
 *.build.csdef
