@@ -1,9 +1,0 @@
-﻿<Project>
-  <PropertyGroup>
-    <LangVersion>latest</LangVersion>
-    <Nullable>enable</Nullable>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Deterministic>true</Deterministic>
-  </PropertyGroup>
-</Project>
