@@ -1,6 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.9" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\AuditCompliance.Application\AuditCompliance.Application.csproj" />
     <ProjectReference Include="..\AuditCompliance.Domain\AuditCompliance.Domain.csproj" />
     <ProjectReference Include="..\..\..\Shared\BuildingBlocks\BuildingBlocks.csproj" />

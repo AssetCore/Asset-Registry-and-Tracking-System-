@@ -5,8 +5,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MaintenanceScheduler.Application\MaintenanceScheduler.Application.csproj" />
-    <ProjectReference Include="..\MaintenanceScheduler.Domain\MaintenanceScheduler.Domain.csproj" />
+    <ProjectReference Include="..\IdentityAccess.Domain\IdentityAccess.Domain.csproj" />
+    <ProjectReference Include="..\..\..\Shared\SharedKernel\SharedKernel.csproj" />
     <ProjectReference Include="..\..\..\Shared\BuildingBlocks\BuildingBlocks.csproj" />
   </ItemGroup>
 
