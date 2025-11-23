@@ -162,23 +162,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ACER\\.nuget\\packages\\": {},
+    "C:\\Users\\Hp\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\MaintenanceScheduler.Api.csproj",
+      "projectUniqueName": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\MaintenanceScheduler.Api.csproj",
       "projectName": "MaintenanceScheduler.Api",
-      "projectPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\MaintenanceScheduler.Api.csproj",
-      "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-      "outputPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\obj\\",
+      "projectPath": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\MaintenanceScheduler.Api.csproj",
+      "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
+      "outputPath": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -193,11 +193,11 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\MaintenanceScheduler.Application.csproj": {
-              "projectPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\MaintenanceScheduler.Application.csproj"
+            "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\MaintenanceScheduler.Application.csproj": {
+              "projectPath": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\MaintenanceScheduler.Application.csproj"
             },
-            "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\MaintenanceScheduler.Infrastructure.csproj": {
-              "projectPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\MaintenanceScheduler.Infrastructure.csproj"
+            "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\MaintenanceScheduler.Infrastructure.csproj": {
+              "projectPath": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\MaintenanceScheduler.Infrastructure.csproj"
             }
           }
         }
@@ -243,7 +243,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

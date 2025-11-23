@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aGgwRJpJGzg=",
+  "dgSpecHash": "n9om80Vs0pQ=",
   "success": true,
-  "projectFilePath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\AuditCompliance\\AuditCompliance.Infrastructure\\AuditCompliance.Infrastructure.csproj",
+  "projectFilePath": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\AuditCompliance\\AuditCompliance.Infrastructure\\AuditCompliance.Infrastructure.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

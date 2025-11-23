@@ -1,0 +1,12 @@
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\IdentityAccess\IdentityAccess.Domain\bin\Debug\net9.0\IdentityAccess.Domain.deps.json
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\IdentityAccess\IdentityAccess.Domain\bin\Debug\net9.0\IdentityAccess.Domain.dll
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\IdentityAccess\IdentityAccess.Domain\bin\Debug\net9.0\IdentityAccess.Domain.pdb
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\IdentityAccess\IdentityAccess.Domain\obj\Debug\net9.0\IdentityAccess.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\IdentityAccess\IdentityAccess.Domain\obj\Debug\net9.0\IdentityAccess.Domain.AssemblyInfoInputs.cache
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\IdentityAccess\IdentityAccess.Domain\obj\Debug\net9.0\IdentityAccess.Domain.AssemblyInfo.cs
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\IdentityAccess\IdentityAccess.Domain\obj\Debug\net9.0\IdentityAccess.Domain.csproj.CoreCompileInputs.cache
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\IdentityAccess\IdentityAccess.Domain\obj\Debug\net9.0\IdentityAccess.Domain.sourcelink.json
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\IdentityAccess\IdentityAccess.Domain\obj\Debug\net9.0\IdentityAccess.Domain.dll
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\IdentityAccess\IdentityAccess.Domain\obj\Debug\net9.0\refint\IdentityAccess.Domain.dll
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\IdentityAccess\IdentityAccess.Domain\obj\Debug\net9.0\IdentityAccess.Domain.pdb
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\IdentityAccess\IdentityAccess.Domain\obj\Debug\net9.0\ref\IdentityAccess.Domain.dll

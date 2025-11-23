@@ -1,0 +1,345 @@
+[
+  {
+    "ContainingType": "MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController",
+    "Method": "Create",
+    "RelativePath": "api/MaintenanceHistory",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "MaintenanceScheduler.Application.DTOs.CreateMaintenanceHistoryDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController",
+    "Method": "GetById",
+    "RelativePath": "api/MaintenanceHistory/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController",
+    "Method": "Delete",
+    "RelativePath": "api/MaintenanceHistory/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController",
+    "Method": "GetByAssetId",
+    "RelativePath": "api/MaintenanceHistory/asset/{assetId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "assetId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController",
+    "Method": "GetByDateRange",
+    "RelativePath": "api/MaintenanceHistory/asset/{assetId}/daterange",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "assetId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "startDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "endDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController",
+    "Method": "GetAll",
+    "RelativePath": "api/MaintenanceSchedule",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController",
+    "Method": "Create",
+    "RelativePath": "api/MaintenanceSchedule",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "MaintenanceScheduler.Application.DTOs.CreateMaintenanceScheduleDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController",
+    "Method": "GetById",
+    "RelativePath": "api/MaintenanceSchedule/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController",
+    "Method": "Update",
+    "RelativePath": "api/MaintenanceSchedule/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "MaintenanceScheduler.Application.DTOs.UpdateMaintenanceScheduleDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController",
+    "Method": "Delete",
+    "RelativePath": "api/MaintenanceSchedule/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController",
+    "Method": "CompleteMaintenance",
+    "RelativePath": "api/MaintenanceSchedule/{id}/complete",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "actualCost",
+        "Type": "System.Decimal",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController",
+    "Method": "GetByAssetId",
+    "RelativePath": "api/MaintenanceSchedule/asset/{assetId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "assetId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController",
+    "Method": "GetOverdue",
+    "RelativePath": "api/MaintenanceSchedule/overdue",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController",
+    "Method": "GetUpcoming",
+    "RelativePath": "api/MaintenanceSchedule/upcoming",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "days",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MaintenanceScheduler.Api.Controllers.WarrantyInfoController",
+    "Method": "Create",
+    "RelativePath": "api/WarrantyInfo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "MaintenanceScheduler.Application.DTOs.CreateWarrantyInfoDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MaintenanceScheduler.Api.Controllers.WarrantyInfoController",
+    "Method": "GetById",
+    "RelativePath": "api/WarrantyInfo/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MaintenanceScheduler.Api.Controllers.WarrantyInfoController",
+    "Method": "Update",
+    "RelativePath": "api/WarrantyInfo/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "MaintenanceScheduler.Application.DTOs.UpdateWarrantyInfoDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MaintenanceScheduler.Api.Controllers.WarrantyInfoController",
+    "Method": "Delete",
+    "RelativePath": "api/WarrantyInfo/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MaintenanceScheduler.Api.Controllers.WarrantyInfoController",
+    "Method": "GetActiveWarranties",
+    "RelativePath": "api/WarrantyInfo/active",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MaintenanceScheduler.Api.Controllers.WarrantyInfoController",
+    "Method": "GetByAssetId",
+    "RelativePath": "api/WarrantyInfo/asset/{assetId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "assetId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MaintenanceScheduler.Api.Controllers.WarrantyInfoController",
+    "Method": "GetExpiringWarranties",
+    "RelativePath": "api/WarrantyInfo/expiring",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "days",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

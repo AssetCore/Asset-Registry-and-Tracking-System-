@@ -1,0 +1,12 @@
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\AuditCompliance\AuditCompliance.Domain\bin\Debug\net9.0\AuditCompliance.Domain.deps.json
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\AuditCompliance\AuditCompliance.Domain\bin\Debug\net9.0\AuditCompliance.Domain.dll
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\AuditCompliance\AuditCompliance.Domain\bin\Debug\net9.0\AuditCompliance.Domain.pdb
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\AuditCompliance\AuditCompliance.Domain\obj\Debug\net9.0\AuditCompliance.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\AuditCompliance\AuditCompliance.Domain\obj\Debug\net9.0\AuditCompliance.Domain.AssemblyInfoInputs.cache
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\AuditCompliance\AuditCompliance.Domain\obj\Debug\net9.0\AuditCompliance.Domain.AssemblyInfo.cs
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\AuditCompliance\AuditCompliance.Domain\obj\Debug\net9.0\AuditCompliance.Domain.csproj.CoreCompileInputs.cache
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\AuditCompliance\AuditCompliance.Domain\obj\Debug\net9.0\AuditCompliance.Domain.sourcelink.json
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\AuditCompliance\AuditCompliance.Domain\obj\Debug\net9.0\AuditCompliance.Domain.dll
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\AuditCompliance\AuditCompliance.Domain\obj\Debug\net9.0\refint\AuditCompliance.Domain.dll
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\AuditCompliance\AuditCompliance.Domain\obj\Debug\net9.0\AuditCompliance.Domain.pdb
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\AuditCompliance\AuditCompliance.Domain\obj\Debug\net9.0\ref\AuditCompliance.Domain.dll

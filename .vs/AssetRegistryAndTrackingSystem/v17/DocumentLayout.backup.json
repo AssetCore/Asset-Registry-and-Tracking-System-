@@ -1,0 +1,730 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7153C901-D7E2-4503-BF7E-1E6F951BC848}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\MaintenanceScheduler.Domain.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\maintenancescheduler\\maintenancescheduler.domain\\entities\\maintenanceschedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7153C901-D7E2-4503-BF7E-1E6F951BC848}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\MaintenanceScheduler.Domain.csproj|solutionrelative:src\\services\\maintenancescheduler\\maintenancescheduler.domain\\entities\\maintenanceschedule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE632316-D68B-4789-B0A1-02483B1CE840}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\MaintenanceScheduler.Infrastructure.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\maintenancescheduler\\maintenancescheduler.infrastructure\\backgroundservices\\warrantyexpiryreminderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE632316-D68B-4789-B0A1-02483B1CE840}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\MaintenanceScheduler.Infrastructure.csproj|solutionrelative:src\\services\\maintenancescheduler\\maintenancescheduler.infrastructure\\backgroundservices\\warrantyexpiryreminderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3226704-2623-40C7-BFDA-EFC1DD7F25FE}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\MaintenanceScheduler.Application.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\maintenancescheduler\\maintenancescheduler.application\\validators\\createmaintenanceschedulevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3226704-2623-40C7-BFDA-EFC1DD7F25FE}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\MaintenanceScheduler.Application.csproj|solutionrelative:src\\services\\maintenancescheduler\\maintenancescheduler.application\\validators\\createmaintenanceschedulevalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3226704-2623-40C7-BFDA-EFC1DD7F25FE}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\MaintenanceScheduler.Application.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\maintenancescheduler\\maintenancescheduler.application\\services\\warrantyinfoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3226704-2623-40C7-BFDA-EFC1DD7F25FE}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\MaintenanceScheduler.Application.csproj|solutionrelative:src\\services\\maintenancescheduler\\maintenancescheduler.application\\services\\warrantyinfoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3226704-2623-40C7-BFDA-EFC1DD7F25FE}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\MaintenanceScheduler.Application.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\maintenancescheduler\\maintenancescheduler.application\\services\\maintenancescheduleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3226704-2623-40C7-BFDA-EFC1DD7F25FE}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\MaintenanceScheduler.Application.csproj|solutionrelative:src\\services\\maintenancescheduler\\maintenancescheduler.application\\services\\maintenancescheduleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3226704-2623-40C7-BFDA-EFC1DD7F25FE}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\MaintenanceScheduler.Application.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\maintenancescheduler\\maintenancescheduler.application\\mappings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3226704-2623-40C7-BFDA-EFC1DD7F25FE}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\MaintenanceScheduler.Application.csproj|solutionrelative:src\\services\\maintenancescheduler\\maintenancescheduler.application\\mappings\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3226704-2623-40C7-BFDA-EFC1DD7F25FE}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\MaintenanceScheduler.Application.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\maintenancescheduler\\maintenancescheduler.application\\dtos\\warrantyinfodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3226704-2623-40C7-BFDA-EFC1DD7F25FE}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\MaintenanceScheduler.Application.csproj|solutionrelative:src\\services\\maintenancescheduler\\maintenancescheduler.application\\dtos\\warrantyinfodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3226704-2623-40C7-BFDA-EFC1DD7F25FE}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\MaintenanceScheduler.Application.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\maintenancescheduler\\maintenancescheduler.application\\dtos\\maintenancescheduledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3226704-2623-40C7-BFDA-EFC1DD7F25FE}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\MaintenanceScheduler.Application.csproj|solutionrelative:src\\services\\maintenancescheduler\\maintenancescheduler.application\\dtos\\maintenancescheduledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3226704-2623-40C7-BFDA-EFC1DD7F25FE}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\MaintenanceScheduler.Application.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\maintenancescheduler\\maintenancescheduler.application\\dtos\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3226704-2623-40C7-BFDA-EFC1DD7F25FE}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\MaintenanceScheduler.Application.csproj|solutionrelative:src\\services\\maintenancescheduler\\maintenancescheduler.application\\dtos\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE632316-D68B-4789-B0A1-02483B1CE840}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\MaintenanceScheduler.Infrastructure.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\maintenancescheduler\\maintenancescheduler.infrastructure\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE632316-D68B-4789-B0A1-02483B1CE840}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\MaintenanceScheduler.Infrastructure.csproj|solutionrelative:src\\services\\maintenancescheduler\\maintenancescheduler.infrastructure\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7153C901-D7E2-4503-BF7E-1E6F951BC848}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\MaintenanceScheduler.Domain.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\maintenancescheduler\\maintenancescheduler.domain\\entities\\warrantyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7153C901-D7E2-4503-BF7E-1E6F951BC848}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\MaintenanceScheduler.Domain.csproj|solutionrelative:src\\services\\maintenancescheduler\\maintenancescheduler.domain\\entities\\warrantyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7153C901-D7E2-4503-BF7E-1E6F951BC848}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\MaintenanceScheduler.Domain.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\maintenancescheduler\\maintenancescheduler.domain\\interfaces\\imaintenanceschedulerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7153C901-D7E2-4503-BF7E-1E6F951BC848}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\MaintenanceScheduler.Domain.csproj|solutionrelative:src\\services\\maintenancescheduler\\maintenancescheduler.domain\\interfaces\\imaintenanceschedulerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7153C901-D7E2-4503-BF7E-1E6F951BC848}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\MaintenanceScheduler.Domain.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\maintenancescheduler\\maintenancescheduler.domain\\interfaces\\iwarrantyinforepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7153C901-D7E2-4503-BF7E-1E6F951BC848}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\MaintenanceScheduler.Domain.csproj|solutionrelative:src\\services\\maintenancescheduler\\maintenancescheduler.domain\\interfaces\\iwarrantyinforepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3226704-2623-40C7-BFDA-EFC1DD7F25FE}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\MaintenanceScheduler.Application.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\maintenancescheduler\\maintenancescheduler.application\\services\\maintenancehistoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3226704-2623-40C7-BFDA-EFC1DD7F25FE}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\MaintenanceScheduler.Application.csproj|solutionrelative:src\\services\\maintenancescheduler\\maintenancescheduler.application\\services\\maintenancehistoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE632316-D68B-4789-B0A1-02483B1CE840}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\MaintenanceScheduler.Infrastructure.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\maintenancescheduler\\maintenancescheduler.infrastructure\\repositories\\warrantyinforepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE632316-D68B-4789-B0A1-02483B1CE840}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\MaintenanceScheduler.Infrastructure.csproj|solutionrelative:src\\services\\maintenancescheduler\\maintenancescheduler.infrastructure\\repositories\\warrantyinforepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE632316-D68B-4789-B0A1-02483B1CE840}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\MaintenanceScheduler.Infrastructure.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\maintenancescheduler\\maintenancescheduler.infrastructure\\repositories\\maintenanceschedulerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE632316-D68B-4789-B0A1-02483B1CE840}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\MaintenanceScheduler.Infrastructure.csproj|solutionrelative:src\\services\\maintenancescheduler\\maintenancescheduler.infrastructure\\repositories\\maintenanceschedulerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE632316-D68B-4789-B0A1-02483B1CE840}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\MaintenanceScheduler.Infrastructure.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\maintenancescheduler\\maintenancescheduler.infrastructure\\repositories\\maintenancehistoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE632316-D68B-4789-B0A1-02483B1CE840}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\MaintenanceScheduler.Infrastructure.csproj|solutionrelative:src\\services\\maintenancescheduler\\maintenancescheduler.infrastructure\\repositories\\maintenancehistoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE632316-D68B-4789-B0A1-02483B1CE840}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\MaintenanceScheduler.Infrastructure.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\maintenancescheduler\\maintenancescheduler.infrastructure\\data\\maintenancedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE632316-D68B-4789-B0A1-02483B1CE840}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\MaintenanceScheduler.Infrastructure.csproj|solutionrelative:src\\services\\maintenancescheduler\\maintenancescheduler.infrastructure\\data\\maintenancedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE632316-D68B-4789-B0A1-02483B1CE840}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\MaintenanceScheduler.Infrastructure.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\maintenancescheduler\\maintenancescheduler.infrastructure\\backgroundservices\\maintenancereminderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE632316-D68B-4789-B0A1-02483B1CE840}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\MaintenanceScheduler.Infrastructure.csproj|solutionrelative:src\\services\\maintenancescheduler\\maintenancescheduler.infrastructure\\backgroundservices\\maintenancereminderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7153C901-D7E2-4503-BF7E-1E6F951BC848}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\MaintenanceScheduler.Domain.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\maintenancescheduler\\maintenancescheduler.domain\\interfaces\\imaintenancehistoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7153C901-D7E2-4503-BF7E-1E6F951BC848}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\MaintenanceScheduler.Domain.csproj|solutionrelative:src\\services\\maintenancescheduler\\maintenancescheduler.domain\\interfaces\\imaintenancehistoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7153C901-D7E2-4503-BF7E-1E6F951BC848}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\MaintenanceScheduler.Domain.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\maintenancescheduler\\maintenancescheduler.domain\\entities\\maintenancehistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7153C901-D7E2-4503-BF7E-1E6F951BC848}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\MaintenanceScheduler.Domain.csproj|solutionrelative:src\\services\\maintenancescheduler\\maintenancescheduler.domain\\entities\\maintenancehistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3226704-2623-40C7-BFDA-EFC1DD7F25FE}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\MaintenanceScheduler.Application.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\maintenancescheduler\\maintenancescheduler.application\\validators\\createwarrantyinfovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3226704-2623-40C7-BFDA-EFC1DD7F25FE}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\MaintenanceScheduler.Application.csproj|solutionrelative:src\\services\\maintenancescheduler\\maintenancescheduler.application\\validators\\createwarrantyinfovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3226704-2623-40C7-BFDA-EFC1DD7F25FE}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\MaintenanceScheduler.Application.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\maintenancescheduler\\maintenancescheduler.application\\services\\iwarrantyinfoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3226704-2623-40C7-BFDA-EFC1DD7F25FE}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\MaintenanceScheduler.Application.csproj|solutionrelative:src\\services\\maintenancescheduler\\maintenancescheduler.application\\services\\iwarrantyinfoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3226704-2623-40C7-BFDA-EFC1DD7F25FE}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\MaintenanceScheduler.Application.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\maintenancescheduler\\maintenancescheduler.application\\services\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3226704-2623-40C7-BFDA-EFC1DD7F25FE}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\MaintenanceScheduler.Application.csproj|solutionrelative:src\\services\\maintenancescheduler\\maintenancescheduler.application\\services\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3226704-2623-40C7-BFDA-EFC1DD7F25FE}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\MaintenanceScheduler.Application.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\maintenancescheduler\\maintenancescheduler.application\\services\\imaintenancescheduleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3226704-2623-40C7-BFDA-EFC1DD7F25FE}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\MaintenanceScheduler.Application.csproj|solutionrelative:src\\services\\maintenancescheduler\\maintenancescheduler.application\\services\\imaintenancescheduleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3226704-2623-40C7-BFDA-EFC1DD7F25FE}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\MaintenanceScheduler.Application.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\maintenancescheduler\\maintenancescheduler.application\\services\\imaintenancehistoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3226704-2623-40C7-BFDA-EFC1DD7F25FE}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\MaintenanceScheduler.Application.csproj|solutionrelative:src\\services\\maintenancescheduler\\maintenancescheduler.application\\services\\imaintenancehistoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3226704-2623-40C7-BFDA-EFC1DD7F25FE}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\MaintenanceScheduler.Application.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\maintenancescheduler\\maintenancescheduler.application\\dtos\\maintenancehistorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E3226704-2623-40C7-BFDA-EFC1DD7F25FE}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\MaintenanceScheduler.Application.csproj|solutionrelative:src\\services\\maintenancescheduler\\maintenancescheduler.application\\dtos\\maintenancehistorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3CCDC0C4-29ED-48ED-859E-379C4AB1DBF5}|src\\Services\\Notification\\Notification.Application\\Notification.Application.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\notification\\notification.application\\notification.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{3CCDC0C4-29ED-48ED-859E-379C4AB1DBF5}|src\\Services\\Notification\\Notification.Application\\Notification.Application.csproj|solutionrelative:src\\services\\notification\\notification.application\\notification.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DC58617C-C231-48CA-A124-92D1F98C9E94}|src\\Services\\Notification\\Notification.Api\\Notification.Api.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\notification\\notification.api\\notification.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{DC58617C-C231-48CA-A124-92D1F98C9E94}|src\\Services\\Notification\\Notification.Api\\Notification.Api.csproj|solutionrelative:src\\services\\notification\\notification.api\\notification.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE632316-D68B-4789-B0A1-02483B1CE840}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\MaintenanceScheduler.Infrastructure.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\maintenancescheduler\\maintenancescheduler.infrastructure\\maintenancescheduler.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{FE632316-D68B-4789-B0A1-02483B1CE840}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\MaintenanceScheduler.Infrastructure.csproj|solutionrelative:src\\services\\maintenancescheduler\\maintenancescheduler.infrastructure\\maintenancescheduler.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F778F012-21F2-4ECF-AD8A-2E919F074E7E}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\MaintenanceScheduler.Api.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\maintenancescheduler\\maintenancescheduler.api\\middleware\\exceptionhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F778F012-21F2-4ECF-AD8A-2E919F074E7E}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\MaintenanceScheduler.Api.csproj|solutionrelative:src\\services\\maintenancescheduler\\maintenancescheduler.api\\middleware\\exceptionhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F778F012-21F2-4ECF-AD8A-2E919F074E7E}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\MaintenanceScheduler.Api.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\maintenancescheduler\\maintenancescheduler.api\\extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F778F012-21F2-4ECF-AD8A-2E919F074E7E}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\MaintenanceScheduler.Api.csproj|solutionrelative:src\\services\\maintenancescheduler\\maintenancescheduler.api\\extensions\\servicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F778F012-21F2-4ECF-AD8A-2E919F074E7E}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\MaintenanceScheduler.Api.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\maintenancescheduler\\maintenancescheduler.api\\controllers\\warrantyinfocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F778F012-21F2-4ECF-AD8A-2E919F074E7E}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\MaintenanceScheduler.Api.csproj|solutionrelative:src\\services\\maintenancescheduler\\maintenancescheduler.api\\controllers\\warrantyinfocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F778F012-21F2-4ECF-AD8A-2E919F074E7E}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\MaintenanceScheduler.Api.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\maintenancescheduler\\maintenancescheduler.api\\controllers\\maintenanceschedulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F778F012-21F2-4ECF-AD8A-2E919F074E7E}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\MaintenanceScheduler.Api.csproj|solutionrelative:src\\services\\maintenancescheduler\\maintenancescheduler.api\\controllers\\maintenanceschedulecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F778F012-21F2-4ECF-AD8A-2E919F074E7E}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\MaintenanceScheduler.Api.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\maintenancescheduler\\maintenancescheduler.api\\controllers\\maintenancehistorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F778F012-21F2-4ECF-AD8A-2E919F074E7E}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\MaintenanceScheduler.Api.csproj|solutionrelative:src\\services\\maintenancescheduler\\maintenancescheduler.api\\controllers\\maintenancehistorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F778F012-21F2-4ECF-AD8A-2E919F074E7E}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\MaintenanceScheduler.Api.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\maintenancescheduler\\maintenancescheduler.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F778F012-21F2-4ECF-AD8A-2E919F074E7E}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\MaintenanceScheduler.Api.csproj|solutionrelative:src\\services\\maintenancescheduler\\maintenancescheduler.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F778F012-21F2-4ECF-AD8A-2E919F074E7E}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\MaintenanceScheduler.Api.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\maintenancescheduler\\maintenancescheduler.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F778F012-21F2-4ECF-AD8A-2E919F074E7E}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\MaintenanceScheduler.Api.csproj|solutionrelative:src\\services\\maintenancescheduler\\maintenancescheduler.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F778F012-21F2-4ECF-AD8A-2E919F074E7E}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\MaintenanceScheduler.Api.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\maintenancescheduler\\maintenancescheduler.api\\logs\\maintenance-log-20251018.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{F778F012-21F2-4ECF-AD8A-2E919F074E7E}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\MaintenanceScheduler.Api.csproj|solutionrelative:src\\services\\maintenancescheduler\\maintenancescheduler.api\\logs\\maintenance-log-20251018.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FE632316-D68B-4789-B0A1-02483B1CE840}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\MaintenanceScheduler.Infrastructure.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\maintenancescheduler\\maintenancescheduler.infrastructure\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FE632316-D68B-4789-B0A1-02483B1CE840}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\MaintenanceScheduler.Infrastructure.csproj|solutionrelative:src\\services\\maintenancescheduler\\maintenancescheduler.infrastructure\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7153C901-D7E2-4503-BF7E-1E6F951BC848}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\MaintenanceScheduler.Domain.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\maintenancescheduler\\maintenancescheduler.domain\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7153C901-D7E2-4503-BF7E-1E6F951BC848}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\MaintenanceScheduler.Domain.csproj|solutionrelative:src\\services\\maintenancescheduler\\maintenancescheduler.domain\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F778F012-21F2-4ECF-AD8A-2E919F074E7E}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\MaintenanceScheduler.Api.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\maintenancescheduler\\maintenancescheduler.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F778F012-21F2-4ECF-AD8A-2E919F074E7E}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\MaintenanceScheduler.Api.csproj|solutionrelative:src\\services\\maintenancescheduler\\maintenancescheduler.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E3226704-2623-40C7-BFDA-EFC1DD7F25FE}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\MaintenanceScheduler.Application.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\maintenancescheduler\\maintenancescheduler.application\\maintenancescheduler.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E3226704-2623-40C7-BFDA-EFC1DD7F25FE}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\MaintenanceScheduler.Application.csproj|solutionrelative:src\\services\\maintenancescheduler\\maintenancescheduler.application\\maintenancescheduler.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F778F012-21F2-4ECF-AD8A-2E919F074E7E}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\MaintenanceScheduler.Api.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\maintenancescheduler\\maintenancescheduler.api\\maintenancescheduler.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F778F012-21F2-4ECF-AD8A-2E919F074E7E}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\MaintenanceScheduler.Api.csproj|solutionrelative:src\\services\\maintenancescheduler\\maintenancescheduler.api\\maintenancescheduler.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7153C901-D7E2-4503-BF7E-1E6F951BC848}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\MaintenanceScheduler.Domain.csproj|d:\\wso2 project\\asset-registry-and-tracking-system-\\src\\services\\maintenancescheduler\\maintenancescheduler.domain\\maintenancescheduler.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7153C901-D7E2-4503-BF7E-1E6F951BC848}|src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\MaintenanceScheduler.Domain.csproj|solutionrelative:src\\services\\maintenancescheduler\\maintenancescheduler.domain\\maintenancescheduler.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MaintenanceSchedule.cs",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\Entities\\MaintenanceSchedule.cs",
+              "RelativeDocumentMoniker": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\Entities\\MaintenanceSchedule.cs",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\Entities\\MaintenanceSchedule.cs",
+              "RelativeToolTip": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\Entities\\MaintenanceSchedule.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAuwCoAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T11:13:31.652Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MaintenanceScheduleService.cs",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\Services\\MaintenanceScheduleService.cs",
+              "RelativeDocumentMoniker": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\Services\\MaintenanceScheduleService.cs",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\Services\\MaintenanceScheduleService.cs",
+              "RelativeToolTip": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\Services\\MaintenanceScheduleService.cs",
+              "ViewState": "AgIAANgAAAAAAAAAAAAawOEAAABgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T11:25:55.943Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "WarrantyInfoService.cs",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\Services\\WarrantyInfoService.cs",
+              "RelativeDocumentMoniker": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\Services\\WarrantyInfoService.cs",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\Services\\WarrantyInfoService.cs",
+              "RelativeToolTip": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\Services\\WarrantyInfoService.cs",
+              "ViewState": "AgIAANwAAAAAAAAAAAAAALwAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T11:57:19.486Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CreateMaintenanceScheduleValidator.cs",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\Validators\\CreateMaintenanceScheduleValidator.cs",
+              "RelativeDocumentMoniker": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\Validators\\CreateMaintenanceScheduleValidator.cs",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\Validators\\CreateMaintenanceScheduleValidator.cs",
+              "RelativeToolTip": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\Validators\\CreateMaintenanceScheduleValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T11:23:04.743Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WarrantyExpiryReminderService.cs",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\BackgroundServices\\WarrantyExpiryReminderService.cs",
+              "RelativeDocumentMoniker": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\BackgroundServices\\WarrantyExpiryReminderService.cs",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\BackgroundServices\\WarrantyExpiryReminderService.cs",
+              "RelativeToolTip": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\BackgroundServices\\WarrantyExpiryReminderService.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAYwGQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T11:37:27.29Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\Mappings\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\Mappings\\MappingProfile.cs",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\Mappings\\MappingProfile.cs",
+              "RelativeToolTip": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\Mappings\\MappingProfile.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T11:58:33.423Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "WarrantyInfoDto.cs",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\DTOs\\WarrantyInfoDto.cs",
+              "RelativeDocumentMoniker": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\DTOs\\WarrantyInfoDto.cs",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\DTOs\\WarrantyInfoDto.cs",
+              "RelativeToolTip": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\DTOs\\WarrantyInfoDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T11:21:10.527Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MaintenanceScheduleDto.cs",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\DTOs\\MaintenanceScheduleDto.cs",
+              "RelativeDocumentMoniker": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\DTOs\\MaintenanceScheduleDto.cs",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\DTOs\\MaintenanceScheduleDto.cs",
+              "RelativeToolTip": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\DTOs\\MaintenanceScheduleDto.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAA4wAkAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T11:19:47.112Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ApiResponse.cs",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\DTOs\\ApiResponse.cs",
+              "RelativeDocumentMoniker": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\DTOs\\ApiResponse.cs",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\DTOs\\ApiResponse.cs",
+              "RelativeToolTip": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\DTOs\\ApiResponse.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACAAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T11:21:56.532Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "NotificationService.cs",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\Services\\NotificationService.cs",
+              "RelativeDocumentMoniker": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\Services\\NotificationService.cs",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\Services\\NotificationService.cs",
+              "RelativeToolTip": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\Services\\NotificationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFUAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T11:35:23.837Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "WarrantyInfo.cs",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\Entities\\WarrantyInfo.cs",
+              "RelativeDocumentMoniker": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\Entities\\WarrantyInfo.cs",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\Entities\\WarrantyInfo.cs",
+              "RelativeToolTip": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\Entities\\WarrantyInfo.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAIA9wBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T11:15:15.031Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IMaintenanceScheduleRepository.cs",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\Interfaces\\IMaintenanceScheduleRepository.cs",
+              "RelativeDocumentMoniker": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\Interfaces\\IMaintenanceScheduleRepository.cs",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\Interfaces\\IMaintenanceScheduleRepository.cs",
+              "RelativeToolTip": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\Interfaces\\IMaintenanceScheduleRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T11:16:15.785Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IWarrantyInfoRepository.cs",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\Interfaces\\IWarrantyInfoRepository.cs",
+              "RelativeDocumentMoniker": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\Interfaces\\IWarrantyInfoRepository.cs",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\Interfaces\\IWarrantyInfoRepository.cs",
+              "RelativeToolTip": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\Interfaces\\IWarrantyInfoRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T11:17:55.082Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MaintenanceHistoryService.cs",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\Services\\MaintenanceHistoryService.cs",
+              "RelativeDocumentMoniker": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\Services\\MaintenanceHistoryService.cs",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\Services\\MaintenanceHistoryService.cs",
+              "RelativeToolTip": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\Services\\MaintenanceHistoryService.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAkwIAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T11:56:07.233Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "WarrantyInfoRepository.cs",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\Repositories\\WarrantyInfoRepository.cs",
+              "RelativeDocumentMoniker": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\Repositories\\WarrantyInfoRepository.cs",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\Repositories\\WarrantyInfoRepository.cs",
+              "RelativeToolTip": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\Repositories\\WarrantyInfoRepository.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAewDwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T11:42:40.614Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "MaintenanceScheduleRepository.cs",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\Repositories\\MaintenanceScheduleRepository.cs",
+              "RelativeDocumentMoniker": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\Repositories\\MaintenanceScheduleRepository.cs",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\Repositories\\MaintenanceScheduleRepository.cs",
+              "RelativeToolTip": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\Repositories\\MaintenanceScheduleRepository.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAwwB4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T11:41:28.382Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "MaintenanceHistoryRepository.cs",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\Repositories\\MaintenanceHistoryRepository.cs",
+              "RelativeDocumentMoniker": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\Repositories\\MaintenanceHistoryRepository.cs",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\Repositories\\MaintenanceHistoryRepository.cs",
+              "RelativeToolTip": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\Repositories\\MaintenanceHistoryRepository.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAuwA0AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T11:42:04.991Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "MaintenanceDbContext.cs",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\Data\\MaintenanceDbContext.cs",
+              "RelativeDocumentMoniker": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\Data\\MaintenanceDbContext.cs",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\Data\\MaintenanceDbContext.cs",
+              "RelativeToolTip": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\Data\\MaintenanceDbContext.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAowDgAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T11:40:36.262Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "MaintenanceReminderService.cs",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\BackgroundServices\\MaintenanceReminderService.cs",
+              "RelativeDocumentMoniker": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\BackgroundServices\\MaintenanceReminderService.cs",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\BackgroundServices\\MaintenanceReminderService.cs",
+              "RelativeToolTip": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\BackgroundServices\\MaintenanceReminderService.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAgwAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T11:36:47.939Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IMaintenanceHistoryRepository.cs",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\Interfaces\\IMaintenanceHistoryRepository.cs",
+              "RelativeDocumentMoniker": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\Interfaces\\IMaintenanceHistoryRepository.cs",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\Interfaces\\IMaintenanceHistoryRepository.cs",
+              "RelativeToolTip": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\Interfaces\\IMaintenanceHistoryRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T11:17:20.609Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "MaintenanceHistory.cs",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\Entities\\MaintenanceHistory.cs",
+              "RelativeDocumentMoniker": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\Entities\\MaintenanceHistory.cs",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\Entities\\MaintenanceHistory.cs",
+              "RelativeToolTip": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\Entities\\MaintenanceHistory.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAIA7wBgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T11:14:33.566Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CreateWarrantyInfoValidator.cs",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\Validators\\CreateWarrantyInfoValidator.cs",
+              "RelativeDocumentMoniker": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\Validators\\CreateWarrantyInfoValidator.cs",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\Validators\\CreateWarrantyInfoValidator.cs",
+              "RelativeToolTip": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\Validators\\CreateWarrantyInfoValidator.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAAACUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T11:23:49.991Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "IWarrantyInfoService.cs",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\Services\\IWarrantyInfoService.cs",
+              "RelativeDocumentMoniker": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\Services\\IWarrantyInfoService.cs",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\Services\\IWarrantyInfoService.cs",
+              "RelativeToolTip": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\Services\\IWarrantyInfoService.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T11:56:48.747Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "INotificationService.cs",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\Services\\INotificationService.cs",
+              "RelativeDocumentMoniker": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\Services\\INotificationService.cs",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\Services\\INotificationService.cs",
+              "RelativeToolTip": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\Services\\INotificationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T11:33:59.949Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "IMaintenanceScheduleService.cs",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\Services\\IMaintenanceScheduleService.cs",
+              "RelativeDocumentMoniker": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\Services\\IMaintenanceScheduleService.cs",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\Services\\IMaintenanceScheduleService.cs",
+              "RelativeToolTip": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\Services\\IMaintenanceScheduleService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T11:25:18.018Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "IMaintenanceHistoryService.cs",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\Services\\IMaintenanceHistoryService.cs",
+              "RelativeDocumentMoniker": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\Services\\IMaintenanceHistoryService.cs",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\Services\\IMaintenanceHistoryService.cs",
+              "RelativeToolTip": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\Services\\IMaintenanceHistoryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T11:55:26.491Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "MaintenanceHistoryDto.cs",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\DTOs\\MaintenanceHistoryDto.cs",
+              "RelativeDocumentMoniker": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\DTOs\\MaintenanceHistoryDto.cs",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\DTOs\\MaintenanceHistoryDto.cs",
+              "RelativeToolTip": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\DTOs\\MaintenanceHistoryDto.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAqwAcAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T11:20:34.749Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Notification.Application.csproj",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\Notification\\Notification.Application\\Notification.Application.csproj",
+              "RelativeDocumentMoniker": "src\\Services\\Notification\\Notification.Application\\Notification.Application.csproj",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\Notification\\Notification.Application\\Notification.Application.csproj",
+              "RelativeToolTip": "src\\Services\\Notification\\Notification.Application\\Notification.Application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-19T05:18:31.986Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Notification.Api.csproj",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\Notification\\Notification.Api\\Notification.Api.csproj",
+              "RelativeDocumentMoniker": "src\\Services\\Notification\\Notification.Api\\Notification.Api.csproj",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\Notification\\Notification.Api\\Notification.Api.csproj",
+              "RelativeToolTip": "src\\Services\\Notification\\Notification.Api\\Notification.Api.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-19T05:18:29.621Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "MaintenanceScheduler.Infrastructure.csproj",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\MaintenanceScheduler.Infrastructure.csproj",
+              "RelativeDocumentMoniker": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\MaintenanceScheduler.Infrastructure.csproj",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\MaintenanceScheduler.Infrastructure.csproj",
+              "RelativeToolTip": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\MaintenanceScheduler.Infrastructure.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-18T11:09:53.953Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ExceptionHandlingMiddleware.cs",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\Middleware\\ExceptionHandlingMiddleware.cs",
+              "RelativeDocumentMoniker": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\Middleware\\ExceptionHandlingMiddleware.cs",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\Middleware\\ExceptionHandlingMiddleware.cs",
+              "RelativeToolTip": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\Middleware\\ExceptionHandlingMiddleware.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T12:01:25.309Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ServiceCollectionExtensions.cs",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\Extensions\\ServiceCollectionExtensions.cs",
+              "RelativeDocumentMoniker": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\Extensions\\ServiceCollectionExtensions.cs",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\Extensions\\ServiceCollectionExtensions.cs",
+              "RelativeToolTip": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\Extensions\\ServiceCollectionExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T12:02:25.884Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "WarrantyInfoController.cs",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\Controllers\\WarrantyInfoController.cs",
+              "RelativeDocumentMoniker": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\Controllers\\WarrantyInfoController.cs",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\Controllers\\WarrantyInfoController.cs",
+              "RelativeToolTip": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\Controllers\\WarrantyInfoController.cs",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAwwGoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T11:28:58.394Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "MaintenanceScheduleController.cs",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\Controllers\\MaintenanceScheduleController.cs",
+              "RelativeDocumentMoniker": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\Controllers\\MaintenanceScheduleController.cs",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\Controllers\\MaintenanceScheduleController.cs",
+              "RelativeToolTip": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\Controllers\\MaintenanceScheduleController.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAkwHoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T11:27:38.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "MaintenanceHistoryController.cs",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\Controllers\\MaintenanceHistoryController.cs",
+              "RelativeDocumentMoniker": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\Controllers\\MaintenanceHistoryController.cs",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\Controllers\\MaintenanceHistoryController.cs",
+              "RelativeToolTip": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\Controllers\\MaintenanceHistoryController.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAkwEcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T11:28:19.202Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\Program.cs",
+              "RelativeDocumentMoniker": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\Program.cs",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\Program.cs",
+              "RelativeToolTip": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF0AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T12:00:17.172Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\Properties\\launchSettings.json",
+              "RelativeToolTip": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-19T05:13:20.921Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "maintenance-log-20251018.txt",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\logs\\maintenance-log-20251018.txt",
+              "RelativeDocumentMoniker": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\logs\\maintenance-log-20251018.txt",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\logs\\maintenance-log-20251018.txt",
+              "RelativeToolTip": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\logs\\maintenance-log-20251018.txt",
+              "ViewState": "AgIAAF8EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-10-19T05:12:45.66Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\UnitOfWork.cs",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\UnitOfWork.cs",
+              "RelativeToolTip": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Infrastructure\\UnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T11:43:22.051Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\Interfaces\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\Interfaces\\IUnitOfWork.cs",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\Interfaces\\IUnitOfWork.cs",
+              "RelativeToolTip": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\Interfaces\\IUnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T11:18:38.63Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\appsettings.json",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\appsettings.json",
+              "RelativeToolTip": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\appsettings.json",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-18T12:08:15.421Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "MaintenanceScheduler.Application.csproj",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\MaintenanceScheduler.Application.csproj",
+              "RelativeDocumentMoniker": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\MaintenanceScheduler.Application.csproj",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\MaintenanceScheduler.Application.csproj",
+              "RelativeToolTip": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Application\\MaintenanceScheduler.Application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-18T11:07:32.018Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "MaintenanceScheduler.Api.csproj",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\MaintenanceScheduler.Api.csproj",
+              "RelativeDocumentMoniker": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\MaintenanceScheduler.Api.csproj",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\MaintenanceScheduler.Api.csproj",
+              "RelativeToolTip": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Api\\MaintenanceScheduler.Api.csproj",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-18T11:02:44.431Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "MaintenanceScheduler.Domain.csproj",
+              "DocumentMoniker": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\MaintenanceScheduler.Domain.csproj",
+              "RelativeDocumentMoniker": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\MaintenanceScheduler.Domain.csproj",
+              "ToolTip": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\MaintenanceScheduler.Domain.csproj",
+              "RelativeToolTip": "src\\Services\\MaintenanceScheduler\\MaintenanceScheduler.Domain\\MaintenanceScheduler.Domain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-18T11:12:39.267Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

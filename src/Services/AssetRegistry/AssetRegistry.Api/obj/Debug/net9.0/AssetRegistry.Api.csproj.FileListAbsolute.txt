@@ -1,0 +1,8 @@
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\AssetRegistry\AssetRegistry.Api\obj\Debug\net9.0\AssetRegistry.Api.csproj.AssemblyReference.cache
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\AssetRegistry\AssetRegistry.Api\obj\Debug\net9.0\rpswa.dswa.cache.json
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\AssetRegistry\AssetRegistry.Api\obj\Debug\net9.0\AssetRegistry.Api.GeneratedMSBuildEditorConfig.editorconfig
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\AssetRegistry\AssetRegistry.Api\obj\Debug\net9.0\AssetRegistry.Api.AssemblyInfoInputs.cache
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\AssetRegistry\AssetRegistry.Api\obj\Debug\net9.0\AssetRegistry.Api.AssemblyInfo.cs
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\AssetRegistry\AssetRegistry.Api\obj\Debug\net9.0\AssetRegistry.Api.csproj.CoreCompileInputs.cache
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\AssetRegistry\AssetRegistry.Api\obj\Debug\net9.0\AssetRegistry.Api.MvcApplicationPartsAssemblyInfo.cache
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\AssetRegistry\AssetRegistry.Api\obj\Debug\net9.0\AssetRegistry.Api.sourcelink.json

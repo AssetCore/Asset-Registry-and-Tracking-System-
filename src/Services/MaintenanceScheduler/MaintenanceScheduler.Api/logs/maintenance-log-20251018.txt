@@ -1,0 +1,1137 @@
+2025-10-18 18:43:27.785 +05:30 [INF] No migrations were found in assembly 'MaintenanceScheduler.Infrastructure'. A migration needs to be added before the database can be updated.
+2025-10-18 18:43:37.919 +05:30 [INF] Executed DbCommand (388ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-10-18 18:43:37.975 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-10-18 18:43:39.421 +05:30 [INF] Executed DbCommand (1,425ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2025-10-18 18:43:43.782 +05:30 [INF] Executed DbCommand (3,540ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2025-10-18 18:43:43.900 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-10-18 18:43:43.951 +05:30 [INF] Executed DbCommand (40ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-10-18 18:43:46.755 +05:30 [INF] Executed DbCommand (2,764ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-10-18 18:43:46.773 +05:30 [INF] No migrations were applied. The database is already up to date.
+2025-10-18 18:43:47.063 +05:30 [INF] Executed DbCommand (284ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2025-10-18 18:43:47.068 +05:30 [INF] Database migration completed successfully
+2025-10-18 18:43:47.104 +05:30 [INF] Starting Maintenance Scheduler API
+2025-10-18 18:43:49.332 +05:30 [INF] Now listening on: https://localhost:7205
+2025-10-18 18:43:49.335 +05:30 [INF] Now listening on: http://localhost:5195
+2025-10-18 18:43:49.451 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-18 18:43:49.454 +05:30 [INF] Hosting environment: Development
+2025-10-18 18:43:49.456 +05:30 [INF] Content root path: D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\MaintenanceScheduler\MaintenanceScheduler.Api
+2025-10-18 18:46:07.905 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/ - null null
+2025-10-18 18:46:08.973 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/ - 404 0 null 1079.2886ms
+2025-10-18 18:46:08.992 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7205/, Response status code: 404
+2025-10-18 18:46:17.792 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/swagger/swagger-ui.css - null null
+2025-10-18 18:46:17.851 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/swagger/swagger-ui.css - 304 null null 58.3509ms
+2025-10-18 18:46:17.897 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/swagger/index.css - null null
+2025-10-18 18:46:17.937 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/swagger/index.css - 304 null null 40.0865ms
+2025-10-18 18:46:18.144 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/swagger/swagger-ui-bundle.js - null null
+2025-10-18 18:46:18.209 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/swagger/swagger-ui-standalone-preset.js - null null
+2025-10-18 18:46:18.210 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/swagger/index.js - null null
+2025-10-18 18:46:18.373 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/swagger/swagger-ui-standalone-preset.js - 304 null null 163.7024ms
+2025-10-18 18:46:18.385 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-18 18:46:18.460 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/_framework/aspnetcore-browser-refresh.js - 200 16533 application/javascript; charset=utf-8 75.0463ms
+2025-10-18 18:46:18.470 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/_vs/browserLink - null null
+2025-10-18 18:46:18.473 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/swagger/swagger-ui-bundle.js - 200 424767 text/javascript 329.2196ms
+2025-10-18 18:46:18.518 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/swagger/index.js - 200 null application/javascript;charset=utf-8 307.5931ms
+2025-10-18 18:46:19.931 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/_vs/browserLink - 200 null text/javascript; charset=UTF-8 1460.5661ms
+2025-10-18 18:46:20.275 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/swagger/v1/swagger.json - null null
+2025-10-18 18:46:20.412 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 136.5322ms
+2025-10-18 18:47:18.564 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/api/MaintenanceSchedule - null null
+2025-10-18 18:47:18.592 +05:30 [INF] Executing endpoint 'MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController.GetAll (MaintenanceScheduler.Api)'
+2025-10-18 18:47:18.661 +05:30 [INF] Route matched with {action = "GetAll", controller = "MaintenanceSchedule"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController (MaintenanceScheduler.Api).
+2025-10-18 18:47:18.724 +05:30 [INF] Executed action MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController.GetAll (MaintenanceScheduler.Api) in 47.8493ms
+2025-10-18 18:47:18.730 +05:30 [INF] Executed endpoint 'MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController.GetAll (MaintenanceScheduler.Api)'
+2025-10-18 18:47:18.737 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.MissingMethodException: Method not found: 'Void AutoMapper.MapperConfiguration..ctor(AutoMapper.MapperConfigurationExpression)'.
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.<>c.<AddAutoMapperClasses>b__12_2(IServiceProvider sp)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.<>c.<AddAutoMapperClasses>b__12_3(IServiceProvider sp)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at lambda_method13(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-10-18 18:47:18.845 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/api/MaintenanceSchedule - 500 null text/plain; charset=utf-8 280.7387ms
+2025-10-18 18:49:34.440 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/api/WarrantyInfo/active - null null
+2025-10-18 18:49:34.456 +05:30 [INF] Executing endpoint 'MaintenanceScheduler.Api.Controllers.WarrantyInfoController.GetActiveWarranties (MaintenanceScheduler.Api)'
+2025-10-18 18:49:34.469 +05:30 [INF] Route matched with {action = "GetActiveWarranties", controller = "WarrantyInfo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetActiveWarranties() on controller MaintenanceScheduler.Api.Controllers.WarrantyInfoController (MaintenanceScheduler.Api).
+2025-10-18 18:49:34.481 +05:30 [INF] Executed action MaintenanceScheduler.Api.Controllers.WarrantyInfoController.GetActiveWarranties (MaintenanceScheduler.Api) in 4.9874ms
+2025-10-18 18:49:34.486 +05:30 [INF] Executed endpoint 'MaintenanceScheduler.Api.Controllers.WarrantyInfoController.GetActiveWarranties (MaintenanceScheduler.Api)'
+2025-10-18 18:49:34.490 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.MissingMethodException: Method not found: 'Void AutoMapper.MapperConfiguration..ctor(AutoMapper.MapperConfigurationExpression)'.
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.<>c.<AddAutoMapperClasses>b__12_2(IServiceProvider sp)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.<>c.<AddAutoMapperClasses>b__12_3(IServiceProvider sp)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at lambda_method21(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-10-18 18:49:34.504 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/api/WarrantyInfo/active - 500 null text/plain; charset=utf-8 64.5819ms
+2025-10-18 18:54:04.834 +05:30 [INF] No migrations were found in assembly 'MaintenanceScheduler.Infrastructure'. A migration needs to be added before the database can be updated.
+2025-10-18 18:54:10.852 +05:30 [INF] Executed DbCommand (33ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-10-18 18:54:10.873 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-10-18 18:54:11.166 +05:30 [INF] Executed DbCommand (287ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2025-10-18 18:54:11.418 +05:30 [INF] Executed DbCommand (66ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2025-10-18 18:54:11.437 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-10-18 18:54:11.444 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-10-18 18:54:11.558 +05:30 [INF] Executed DbCommand (109ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-10-18 18:54:11.578 +05:30 [INF] No migrations were applied. The database is already up to date.
+2025-10-18 18:54:11.645 +05:30 [INF] Executed DbCommand (64ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2025-10-18 18:54:11.655 +05:30 [INF] Database migration completed successfully
+2025-10-18 18:54:11.663 +05:30 [INF] Starting Maintenance Scheduler API
+2025-10-18 18:54:12.175 +05:30 [INF] Now listening on: https://localhost:7205
+2025-10-18 18:54:12.178 +05:30 [INF] Now listening on: http://localhost:5195
+2025-10-18 18:54:12.272 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-18 18:54:12.274 +05:30 [INF] Hosting environment: Development
+2025-10-18 18:54:12.276 +05:30 [INF] Content root path: D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\MaintenanceScheduler\MaintenanceScheduler.Api
+2025-10-18 18:54:28.842 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-18 18:54:28.842 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/_vs/browserLink - null null
+2025-10-18 18:54:28.887 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/_framework/aspnetcore-browser-refresh.js - 200 16533 application/javascript; charset=utf-8 54.2466ms
+2025-10-18 18:54:29.059 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/_vs/browserLink - 200 null text/javascript; charset=UTF-8 227.1031ms
+2025-10-18 18:54:29.205 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/swagger/v1/swagger.json - null null
+2025-10-18 18:54:29.215 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/swagger/favicon-32x32.png - null null
+2025-10-18 18:54:29.330 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 124.5919ms
+2025-10-18 18:54:29.336 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/swagger/favicon-32x32.png - 304 null null 121.4308ms
+2025-10-18 18:54:39.073 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/api/WarrantyInfo/active - null null
+2025-10-18 18:54:39.090 +05:30 [INF] Executing endpoint 'MaintenanceScheduler.Api.Controllers.WarrantyInfoController.GetActiveWarranties (MaintenanceScheduler.Api)'
+2025-10-18 18:54:39.119 +05:30 [INF] Route matched with {action = "GetActiveWarranties", controller = "WarrantyInfo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetActiveWarranties() on controller MaintenanceScheduler.Api.Controllers.WarrantyInfoController (MaintenanceScheduler.Api).
+2025-10-18 18:54:39.165 +05:30 [INF] Executed action MaintenanceScheduler.Api.Controllers.WarrantyInfoController.GetActiveWarranties (MaintenanceScheduler.Api) in 33.6661ms
+2025-10-18 18:54:39.171 +05:30 [INF] Executed endpoint 'MaintenanceScheduler.Api.Controllers.WarrantyInfoController.GetActiveWarranties (MaintenanceScheduler.Api)'
+2025-10-18 18:54:39.180 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.MissingMethodException: Method not found: 'Void AutoMapper.MapperConfiguration..ctor(AutoMapper.MapperConfigurationExpression)'.
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.<>c.<AddAutoMapperClasses>b__12_2(IServiceProvider sp)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionExtensions.<>c.<AddAutoMapperClasses>b__12_3(IServiceProvider sp)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at lambda_method13(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-10-18 18:54:39.246 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/api/WarrantyInfo/active - 500 null text/plain; charset=utf-8 174.2545ms
+2025-10-18 18:59:50.695 +05:30 [INF] No migrations were found in assembly 'MaintenanceScheduler.Infrastructure'. A migration needs to be added before the database can be updated.
+2025-10-18 18:59:57.019 +05:30 [INF] Executed DbCommand (325ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-10-18 18:59:57.046 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-10-18 18:59:57.862 +05:30 [INF] Executed DbCommand (775ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2025-10-18 18:59:58.481 +05:30 [INF] Executed DbCommand (204ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2025-10-18 18:59:58.498 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-10-18 18:59:58.507 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-10-18 18:59:59.313 +05:30 [INF] Executed DbCommand (793ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-10-18 18:59:59.326 +05:30 [INF] No migrations were applied. The database is already up to date.
+2025-10-18 18:59:59.374 +05:30 [INF] Executed DbCommand (45ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2025-10-18 18:59:59.384 +05:30 [INF] Database migration completed successfully
+2025-10-18 18:59:59.409 +05:30 [INF] Starting Maintenance Scheduler API
+2025-10-18 18:59:59.993 +05:30 [INF] Now listening on: https://localhost:7205
+2025-10-18 18:59:59.997 +05:30 [INF] Now listening on: http://localhost:5195
+2025-10-18 19:00:00.077 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-18 19:00:00.080 +05:30 [INF] Hosting environment: Development
+2025-10-18 19:00:00.083 +05:30 [INF] Content root path: D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\MaintenanceScheduler\MaintenanceScheduler.Api
+2025-10-18 19:00:00.504 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/swagger/index.html - null null
+2025-10-18 19:00:01.246 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/swagger/index.html - 200 null text/html;charset=utf-8 754.0931ms
+2025-10-18 19:00:03.243 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-18 19:00:03.243 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/_vs/browserLink - null null
+2025-10-18 19:00:03.272 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/_framework/aspnetcore-browser-refresh.js - 200 16533 application/javascript; charset=utf-8 29.447ms
+2025-10-18 19:00:03.297 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/_vs/browserLink - 200 null text/javascript; charset=UTF-8 54.5589ms
+2025-10-18 19:00:03.739 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/swagger/v1/swagger.json - null null
+2025-10-18 19:00:03.785 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 45.9588ms
+2025-10-18 19:00:14.704 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/api/WarrantyInfo/active - null null
+2025-10-18 19:00:14.767 +05:30 [INF] Executing endpoint 'MaintenanceScheduler.Api.Controllers.WarrantyInfoController.GetActiveWarranties (MaintenanceScheduler.Api)'
+2025-10-18 19:00:14.800 +05:30 [INF] Route matched with {action = "GetActiveWarranties", controller = "WarrantyInfo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetActiveWarranties() on controller MaintenanceScheduler.Api.Controllers.WarrantyInfoController (MaintenanceScheduler.Api).
+2025-10-18 19:00:20.726 +05:30 [INF] Executed DbCommand (3,759ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[Id], [w].[AssetId], [w].[AssetName], [w].[ContactEmail], [w].[ContactPerson], [w].[ContactPhone], [w].[CoverageDetails], [w].[CreatedAt], [w].[CreatedBy], [w].[ExpiryDate], [w].[IsActive], [w].[LastNotificationDate], [w].[NotificationSent], [w].[StartDate], [w].[UpdatedAt], [w].[UpdatedBy], [w].[WarrantyCost], [w].[WarrantyProvider], [w].[WarrantyType]
+FROM [WarrantyInfos] AS [w]
+WHERE [w].[IsActive] = CAST(1 AS bit) AND [w].[ExpiryDate] >= GETUTCDATE()
+ORDER BY [w].[ExpiryDate]
+2025-10-18 19:00:20.998 +05:30 [ERR] An exception occurred while iterating over the results of a query for context type 'MaintenanceScheduler.Infrastructure.Data.MaintenanceDbContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.ThrowIfNull()
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method46(Closure, DbDataReader, Int32[])
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.ReadObject(DbDataReader reader, Int32 ordinal, ReaderColumn column)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.ReadRow()
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.InitializeAsync(DbDataReader reader, IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.ThrowIfNull()
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method46(Closure, DbDataReader, Int32[])
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.ReadObject(DbDataReader reader, Int32 ordinal, ReaderColumn column)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.ReadRow()
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.InitializeAsync(DbDataReader reader, IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-10-18 19:00:29.001 +05:30 [INF] Executing OkObjectResult, writing value of type 'MaintenanceScheduler.Application.DTOs.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[MaintenanceScheduler.Application.DTOs.WarrantyInfoDto, MaintenanceScheduler.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-18 19:00:29.027 +05:30 [INF] Executed action MaintenanceScheduler.Api.Controllers.WarrantyInfoController.GetActiveWarranties (MaintenanceScheduler.Api) in 14215.3484ms
+2025-10-18 19:00:29.030 +05:30 [INF] Executed endpoint 'MaintenanceScheduler.Api.Controllers.WarrantyInfoController.GetActiveWarranties (MaintenanceScheduler.Api)'
+2025-10-18 19:00:29.036 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/api/WarrantyInfo/active - 200 null application/json; charset=utf-8 14331.5666ms
+2025-10-18 19:03:11.834 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:7205/api/MaintenanceSchedule/3fa85f64-5717-4562-b3fc-2c963f66afa6 - application/json 224
+2025-10-18 19:03:11.948 +05:30 [INF] CORS policy execution successful.
+2025-10-18 19:03:11.955 +05:30 [INF] Executing endpoint 'MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController.Update (MaintenanceScheduler.Api)'
+2025-10-18 19:03:11.979 +05:30 [INF] Route matched with {action = "Update", controller = "MaintenanceSchedule"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(System.Guid, MaintenanceScheduler.Application.DTOs.UpdateMaintenanceScheduleDto) on controller MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController (MaintenanceScheduler.Api).
+2025-10-18 19:03:15.414 +05:30 [INF] Executed DbCommand (1,785ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m1].[Id], [m1].[ActualCost], [m1].[AssetId], [m1].[AssetName], [m1].[AssignedTo], [m1].[CompletedDate], [m1].[CreatedAt], [m1].[CreatedBy], [m1].[Description], [m1].[EstimatedCost], [m1].[FrequencyInDays], [m1].[MaintenanceType], [m1].[NextScheduledDate], [m1].[Notes], [m1].[ScheduledDate], [m1].[Status], [m1].[UpdatedAt], [m1].[UpdatedBy], [m0].[Id], [m0].[AssetId], [m0].[AttachmentUrls], [m0].[Cost], [m0].[CreatedAt], [m0].[CreatedBy], [m0].[Description], [m0].[DowntimeMinutes], [m0].[MaintenanceDate], [m0].[MaintenanceScheduleId], [m0].[MaintenanceType], [m0].[Notes], [m0].[PartsReplaced], [m0].[TechnicianName]
+FROM (
+    SELECT TOP(1) [m].[Id], [m].[ActualCost], [m].[AssetId], [m].[AssetName], [m].[AssignedTo], [m].[CompletedDate], [m].[CreatedAt], [m].[CreatedBy], [m].[Description], [m].[EstimatedCost], [m].[FrequencyInDays], [m].[MaintenanceType], [m].[NextScheduledDate], [m].[Notes], [m].[ScheduledDate], [m].[Status], [m].[UpdatedAt], [m].[UpdatedBy]
+    FROM [MaintenanceSchedules] AS [m]
+    WHERE [m].[Id] = @__id_0
+) AS [m1]
+LEFT JOIN [MaintenanceHistories] AS [m0] ON [m1].[Id] = [m0].[MaintenanceScheduleId]
+ORDER BY [m1].[Id]
+2025-10-18 19:03:15.558 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'MaintenanceScheduler.Application.DTOs.ApiResponse`1[[MaintenanceScheduler.Application.DTOs.MaintenanceScheduleDto, MaintenanceScheduler.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-18 19:03:15.570 +05:30 [INF] Executed action MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController.Update (MaintenanceScheduler.Api) in 3582.8242ms
+2025-10-18 19:03:15.571 +05:30 [INF] Executed endpoint 'MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController.Update (MaintenanceScheduler.Api)'
+2025-10-18 19:03:15.573 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:7205/api/MaintenanceSchedule/3fa85f64-5717-4562-b3fc-2c963f66afa6 - 400 null application/json; charset=utf-8 3739.5023ms
+2025-10-18 19:05:34.443 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7205/api/MaintenanceHistory - application/json 362
+2025-10-18 19:05:34.456 +05:30 [INF] CORS policy execution successful.
+2025-10-18 19:05:34.458 +05:30 [INF] Executing endpoint 'MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController.Create (MaintenanceScheduler.Api)'
+2025-10-18 19:05:34.470 +05:30 [INF] Route matched with {action = "Create", controller = "MaintenanceHistory"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(MaintenanceScheduler.Application.DTOs.CreateMaintenanceHistoryDto) on controller MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController (MaintenanceScheduler.Api).
+2025-10-18 19:05:34.578 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-10-18 19:05:34.620 +05:30 [INF] Executed action MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController.Create (MaintenanceScheduler.Api) in 143.2926ms
+2025-10-18 19:05:34.623 +05:30 [INF] Executed endpoint 'MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController.Create (MaintenanceScheduler.Api)'
+2025-10-18 19:05:34.627 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7205/api/MaintenanceHistory - 400 null application/problem+json; charset=utf-8 218.425ms
+2025-10-18 19:06:15.869 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7205/api/MaintenanceHistory - application/json 360
+2025-10-18 19:06:15.885 +05:30 [INF] CORS policy execution successful.
+2025-10-18 19:06:15.888 +05:30 [INF] Executing endpoint 'MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController.Create (MaintenanceScheduler.Api)'
+2025-10-18 19:06:15.889 +05:30 [INF] Route matched with {action = "Create", controller = "MaintenanceHistory"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(MaintenanceScheduler.Application.DTOs.CreateMaintenanceHistoryDto) on controller MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController (MaintenanceScheduler.Api).
+2025-10-18 19:06:15.893 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-10-18 19:06:15.896 +05:30 [INF] Executed action MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController.Create (MaintenanceScheduler.Api) in 4.8034ms
+2025-10-18 19:06:15.898 +05:30 [INF] Executed endpoint 'MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController.Create (MaintenanceScheduler.Api)'
+2025-10-18 19:06:15.901 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7205/api/MaintenanceHistory - 400 null application/problem+json; charset=utf-8 31.605ms
+2025-10-18 19:18:01.737 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7205/api/MaintenanceHistory - application/json 360
+2025-10-18 19:18:02.095 +05:30 [INF] CORS policy execution successful.
+2025-10-18 19:18:02.116 +05:30 [INF] Executing endpoint 'MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController.Create (MaintenanceScheduler.Api)'
+2025-10-18 19:18:02.188 +05:30 [INF] Route matched with {action = "Create", controller = "MaintenanceHistory"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(MaintenanceScheduler.Application.DTOs.CreateMaintenanceHistoryDto) on controller MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController (MaintenanceScheduler.Api).
+2025-10-18 19:18:02.651 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-10-18 19:18:02.697 +05:30 [INF] Executed action MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController.Create (MaintenanceScheduler.Api) in 498.9377ms
+2025-10-18 19:18:02.716 +05:30 [INF] Executed endpoint 'MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController.Create (MaintenanceScheduler.Api)'
+2025-10-18 19:18:02.723 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7205/api/MaintenanceHistory - 400 null application/problem+json; charset=utf-8 1026.9209ms
+2025-10-18 19:22:30.897 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7205/api/MaintenanceHistory - application/json 361
+2025-10-18 19:22:31.072 +05:30 [INF] CORS policy execution successful.
+2025-10-18 19:22:31.195 +05:30 [INF] Executing endpoint 'MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController.Create (MaintenanceScheduler.Api)'
+2025-10-18 19:22:31.241 +05:30 [INF] Route matched with {action = "Create", controller = "MaintenanceHistory"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(MaintenanceScheduler.Application.DTOs.CreateMaintenanceHistoryDto) on controller MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController (MaintenanceScheduler.Api).
+2025-10-18 19:22:40.132 +05:30 [ERR] Failed executing DbCommand (2,480ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (Size = 2000), @p3='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p4='?' (DbType = DateTime2), @p5='?' (Size = 100), @p6='?' (Size = 1000), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTime2), @p9='?' (DbType = Guid), @p10='?' (DbType = Int32), @p11='?' (Size = 2000), @p12='?' (Size = 1000), @p13='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [MaintenanceHistories] ([Id], [AssetId], [AttachmentUrls], [Cost], [CreatedAt], [CreatedBy], [Description], [DowntimeMinutes], [MaintenanceDate], [MaintenanceScheduleId], [MaintenanceType], [Notes], [PartsReplaced], [TechnicianName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+2025-10-18 19:22:40.466 +05:30 [ERR] An exception occurred in the database while saving changes for context type 'MaintenanceScheduler.Infrastructure.Data.MaintenanceDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK__Maintenan__Maint__403A8C7D". The conflict occurred in database "MaintenanceSchedulerDB", table "dbo.MaintenanceSchedules", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:ab9bc9bd-24af-4ce3-9033-6b3d4a03d72b
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK__Maintenan__Maint__403A8C7D". The conflict occurred in database "MaintenanceSchedulerDB", table "dbo.MaintenanceSchedules", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:ab9bc9bd-24af-4ce3-9033-6b3d4a03d72b
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-10-18 19:22:44.494 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'MaintenanceScheduler.Application.DTOs.ApiResponse`1[[MaintenanceScheduler.Application.DTOs.MaintenanceHistoryDto, MaintenanceScheduler.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-18 19:22:44.672 +05:30 [INF] Executed action MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController.Create (MaintenanceScheduler.Api) in 13420.8401ms
+2025-10-18 19:22:44.683 +05:30 [INF] Executed endpoint 'MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController.Create (MaintenanceScheduler.Api)'
+2025-10-18 19:22:44.697 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7205/api/MaintenanceHistory - 400 null application/json; charset=utf-8 13849.7038ms
+2025-10-18 19:22:53.512 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/swagger/index.html - null null
+2025-10-18 19:22:54.435 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/swagger/index.html - 200 null text/html;charset=utf-8 923.093ms
+2025-10-18 19:22:55.336 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-18 19:22:55.336 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/_vs/browserLink - null null
+2025-10-18 19:22:55.362 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/_framework/aspnetcore-browser-refresh.js - 200 16533 application/javascript; charset=utf-8 26.4764ms
+2025-10-18 19:22:55.938 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/_vs/browserLink - 200 null text/javascript; charset=UTF-8 601.9451ms
+2025-10-18 19:22:56.164 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/swagger/v1/swagger.json - null null
+2025-10-18 19:22:56.393 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 228.4524ms
+2025-10-18 19:24:31.460 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/api/MaintenanceSchedule/overdue - null null
+2025-10-18 19:24:31.876 +05:30 [INF] Executing endpoint 'MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController.GetOverdue (MaintenanceScheduler.Api)'
+2025-10-18 19:24:31.970 +05:30 [INF] Route matched with {action = "GetOverdue", controller = "MaintenanceSchedule"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetOverdue() on controller MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController (MaintenanceScheduler.Api).
+2025-10-18 19:24:34.203 +05:30 [INF] Executed DbCommand (1,701ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[ActualCost], [m].[AssetId], [m].[AssetName], [m].[AssignedTo], [m].[CompletedDate], [m].[CreatedAt], [m].[CreatedBy], [m].[Description], [m].[EstimatedCost], [m].[FrequencyInDays], [m].[MaintenanceType], [m].[NextScheduledDate], [m].[Notes], [m].[ScheduledDate], [m].[Status], [m].[UpdatedAt], [m].[UpdatedBy]
+FROM [MaintenanceSchedules] AS [m]
+WHERE [m].[ScheduledDate] < GETUTCDATE() AND [m].[Status] = 1
+ORDER BY [m].[ScheduledDate]
+2025-10-18 19:24:34.517 +05:30 [INF] Executing OkObjectResult, writing value of type 'MaintenanceScheduler.Application.DTOs.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[MaintenanceScheduler.Application.DTOs.MaintenanceScheduleDto, MaintenanceScheduler.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-18 19:24:34.559 +05:30 [INF] Executed action MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController.GetOverdue (MaintenanceScheduler.Api) in 2583.6539ms
+2025-10-18 19:24:34.564 +05:30 [INF] Executed endpoint 'MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController.GetOverdue (MaintenanceScheduler.Api)'
+2025-10-18 19:24:34.568 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/api/MaintenanceSchedule/overdue - 200 null application/json; charset=utf-8 3107.4774ms
+2025-10-18 19:24:58.488 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/api/MaintenanceSchedule/upcoming?days=30 - null null
+2025-10-18 19:24:58.498 +05:30 [INF] Executing endpoint 'MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController.GetUpcoming (MaintenanceScheduler.Api)'
+2025-10-18 19:24:58.515 +05:30 [INF] Route matched with {action = "GetUpcoming", controller = "MaintenanceSchedule"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUpcoming(Int32) on controller MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController (MaintenanceScheduler.Api).
+2025-10-18 19:24:59.073 +05:30 [INF] Executed DbCommand (105ms) [Parameters=[@__endDate_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[ActualCost], [m].[AssetId], [m].[AssetName], [m].[AssignedTo], [m].[CompletedDate], [m].[CreatedAt], [m].[CreatedBy], [m].[Description], [m].[EstimatedCost], [m].[FrequencyInDays], [m].[MaintenanceType], [m].[NextScheduledDate], [m].[Notes], [m].[ScheduledDate], [m].[Status], [m].[UpdatedAt], [m].[UpdatedBy]
+FROM [MaintenanceSchedules] AS [m]
+WHERE [m].[ScheduledDate] >= GETUTCDATE() AND [m].[ScheduledDate] <= @__endDate_0 AND [m].[Status] = 1
+ORDER BY [m].[ScheduledDate]
+2025-10-18 19:24:59.239 +05:30 [ERR] An exception occurred while iterating over the results of a query for context type 'MaintenanceScheduler.Infrastructure.Data.MaintenanceDbContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.ThrowIfNull()
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method454(Closure, DbDataReader, Int32[])
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.ReadObject(DbDataReader reader, Int32 ordinal, ReaderColumn column)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.ReadRow()
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.InitializeAsync(DbDataReader reader, IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.ThrowIfNull()
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method454(Closure, DbDataReader, Int32[])
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.ReadObject(DbDataReader reader, Int32 ordinal, ReaderColumn column)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.ReadRow()
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.InitializeAsync(DbDataReader reader, IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-10-18 19:25:00.178 +05:30 [INF] Executing OkObjectResult, writing value of type 'MaintenanceScheduler.Application.DTOs.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[MaintenanceScheduler.Application.DTOs.MaintenanceScheduleDto, MaintenanceScheduler.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-18 19:25:00.181 +05:30 [INF] Executed action MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController.GetUpcoming (MaintenanceScheduler.Api) in 1660.932ms
+2025-10-18 19:25:00.184 +05:30 [INF] Executed endpoint 'MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController.GetUpcoming (MaintenanceScheduler.Api)'
+2025-10-18 19:25:00.185 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/api/MaintenanceSchedule/upcoming?days=30 - 200 null application/json; charset=utf-8 1696.9634ms
+2025-10-18 19:26:23.193 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7205/api/MaintenanceHistory - application/json 364
+2025-10-18 19:26:23.202 +05:30 [INF] CORS policy execution successful.
+2025-10-18 19:26:23.206 +05:30 [INF] Executing endpoint 'MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController.Create (MaintenanceScheduler.Api)'
+2025-10-18 19:26:23.208 +05:30 [INF] Route matched with {action = "Create", controller = "MaintenanceHistory"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(MaintenanceScheduler.Application.DTOs.CreateMaintenanceHistoryDto) on controller MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController (MaintenanceScheduler.Api).
+2025-10-18 19:26:24.439 +05:30 [ERR] Failed executing DbCommand (1,205ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (Size = 2000), @p3='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p4='?' (DbType = DateTime2), @p5='?' (Size = 100), @p6='?' (Size = 1000), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTime2), @p9='?' (DbType = Guid), @p10='?' (DbType = Int32), @p11='?' (Size = 2000), @p12='?' (Size = 1000), @p13='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [MaintenanceHistories] ([Id], [AssetId], [AttachmentUrls], [Cost], [CreatedAt], [CreatedBy], [Description], [DowntimeMinutes], [MaintenanceDate], [MaintenanceScheduleId], [MaintenanceType], [Notes], [PartsReplaced], [TechnicianName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+2025-10-18 19:26:24.445 +05:30 [ERR] An exception occurred in the database while saving changes for context type 'MaintenanceScheduler.Infrastructure.Data.MaintenanceDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK__Maintenan__Maint__403A8C7D". The conflict occurred in database "MaintenanceSchedulerDB", table "dbo.MaintenanceSchedules", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:ab9bc9bd-24af-4ce3-9033-6b3d4a03d72b
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK__Maintenan__Maint__403A8C7D". The conflict occurred in database "MaintenanceSchedulerDB", table "dbo.MaintenanceSchedules", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:ab9bc9bd-24af-4ce3-9033-6b3d4a03d72b
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-10-18 19:26:25.237 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'MaintenanceScheduler.Application.DTOs.ApiResponse`1[[MaintenanceScheduler.Application.DTOs.MaintenanceHistoryDto, MaintenanceScheduler.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-18 19:26:25.239 +05:30 [INF] Executed action MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController.Create (MaintenanceScheduler.Api) in 2028.8995ms
+2025-10-18 19:26:25.241 +05:30 [INF] Executed endpoint 'MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController.Create (MaintenanceScheduler.Api)'
+2025-10-18 19:26:25.243 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7205/api/MaintenanceHistory - 400 null application/json; charset=utf-8 2049.9306ms
+2025-10-18 19:29:01.329 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/api/MaintenanceSchedule - null null
+2025-10-18 19:29:01.346 +05:30 [INF] Executing endpoint 'MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController.GetAll (MaintenanceScheduler.Api)'
+2025-10-18 19:29:01.354 +05:30 [INF] Route matched with {action = "GetAll", controller = "MaintenanceSchedule"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController (MaintenanceScheduler.Api).
+2025-10-18 19:29:03.288 +05:30 [INF] Executed DbCommand (1,563ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[ActualCost], [m].[AssetId], [m].[AssetName], [m].[AssignedTo], [m].[CompletedDate], [m].[CreatedAt], [m].[CreatedBy], [m].[Description], [m].[EstimatedCost], [m].[FrequencyInDays], [m].[MaintenanceType], [m].[NextScheduledDate], [m].[Notes], [m].[ScheduledDate], [m].[Status], [m].[UpdatedAt], [m].[UpdatedBy], [m0].[Id], [m0].[AssetId], [m0].[AttachmentUrls], [m0].[Cost], [m0].[CreatedAt], [m0].[CreatedBy], [m0].[Description], [m0].[DowntimeMinutes], [m0].[MaintenanceDate], [m0].[MaintenanceScheduleId], [m0].[MaintenanceType], [m0].[Notes], [m0].[PartsReplaced], [m0].[TechnicianName]
+FROM [MaintenanceSchedules] AS [m]
+LEFT JOIN [MaintenanceHistories] AS [m0] ON [m].[Id] = [m0].[MaintenanceScheduleId]
+ORDER BY [m].[ScheduledDate], [m].[Id]
+2025-10-18 19:29:03.295 +05:30 [ERR] An exception occurred while iterating over the results of a query for context type 'MaintenanceScheduler.Infrastructure.Data.MaintenanceDbContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.ThrowIfNull()
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method528(Closure, DbDataReader, Int32[])
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.ReadObject(DbDataReader reader, Int32 ordinal, ReaderColumn column)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.ReadRow()
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.InitializeAsync(DbDataReader reader, IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.ThrowIfNull()
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method528(Closure, DbDataReader, Int32[])
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.ReadObject(DbDataReader reader, Int32 ordinal, ReaderColumn column)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.ReadRow()
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.InitializeAsync(DbDataReader reader, IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-10-18 19:29:08.972 +05:30 [INF] Executing OkObjectResult, writing value of type 'MaintenanceScheduler.Application.DTOs.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[MaintenanceScheduler.Application.DTOs.MaintenanceScheduleDto, MaintenanceScheduler.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-18 19:29:08.978 +05:30 [INF] Executed action MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController.GetAll (MaintenanceScheduler.Api) in 7620.2624ms
+2025-10-18 19:29:08.982 +05:30 [INF] Executed endpoint 'MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController.GetAll (MaintenanceScheduler.Api)'
+2025-10-18 19:29:08.984 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/api/MaintenanceSchedule - 200 null application/json; charset=utf-8 7655.1633ms
+2025-10-18 19:32:26.849 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7205/api/WarrantyInfo - application/json 374
+2025-10-18 19:32:27.093 +05:30 [INF] CORS policy execution successful.
+2025-10-18 19:32:27.097 +05:30 [INF] Executing endpoint 'MaintenanceScheduler.Api.Controllers.WarrantyInfoController.Create (MaintenanceScheduler.Api)'
+2025-10-18 19:32:27.457 +05:30 [INF] Route matched with {action = "Create", controller = "WarrantyInfo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(MaintenanceScheduler.Application.DTOs.CreateWarrantyInfoDto) on controller MaintenanceScheduler.Api.Controllers.WarrantyInfoController (MaintenanceScheduler.Api).
+2025-10-18 19:32:33.940 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'MaintenanceScheduler.Application.DTOs.ApiResponse`1[[MaintenanceScheduler.Application.DTOs.WarrantyInfoDto, MaintenanceScheduler.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-18 19:32:33.944 +05:30 [INF] Executed action MaintenanceScheduler.Api.Controllers.WarrantyInfoController.Create (MaintenanceScheduler.Api) in 6484.7648ms
+2025-10-18 19:32:33.947 +05:30 [INF] Executed endpoint 'MaintenanceScheduler.Api.Controllers.WarrantyInfoController.Create (MaintenanceScheduler.Api)'
+2025-10-18 19:32:33.948 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7205/api/WarrantyInfo - 400 null application/json; charset=utf-8 7099.2517ms
+2025-10-18 19:36:12.220 +05:30 [INF] No migrations were found in assembly 'MaintenanceScheduler.Infrastructure'. A migration needs to be added before the database can be updated.
+2025-10-18 19:36:19.155 +05:30 [INF] Executed DbCommand (491ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-10-18 19:36:19.344 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-10-18 19:36:22.181 +05:30 [INF] Executed DbCommand (2,752ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2025-10-18 19:36:24.325 +05:30 [INF] Executed DbCommand (442ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2025-10-18 19:36:24.353 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-10-18 19:36:24.362 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-10-18 19:36:26.000 +05:30 [INF] Executed DbCommand (1,617ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-10-18 19:36:26.021 +05:30 [INF] No migrations were applied. The database is already up to date.
+2025-10-18 19:36:26.175 +05:30 [INF] Executed DbCommand (150ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2025-10-18 19:36:26.181 +05:30 [INF] Database migration completed successfully
+2025-10-18 19:36:26.215 +05:30 [INF] Starting Maintenance Scheduler API
+2025-10-18 19:36:26.962 +05:30 [INF] Now listening on: https://localhost:7205
+2025-10-18 19:36:26.964 +05:30 [INF] Now listening on: http://localhost:5195
+2025-10-18 19:36:28.124 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-18 19:36:28.126 +05:30 [INF] Hosting environment: Development
+2025-10-18 19:36:28.129 +05:30 [INF] Content root path: D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\MaintenanceScheduler\MaintenanceScheduler.Api
+2025-10-18 19:36:53.901 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-18 19:36:53.901 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/_vs/browserLink - null null
+2025-10-18 19:36:53.952 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/_framework/aspnetcore-browser-refresh.js - 200 16533 application/javascript; charset=utf-8 68.0392ms
+2025-10-18 19:36:54.176 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/_vs/browserLink - 200 null text/javascript; charset=UTF-8 292.5982ms
+2025-10-18 19:36:54.619 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/swagger/v1/swagger.json - null null
+2025-10-18 19:36:54.691 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 72.6482ms
+2025-10-18 19:37:14.021 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7205/api/MaintenanceHistory - application/json 479
+2025-10-18 19:37:14.234 +05:30 [INF] CORS policy execution successful.
+2025-10-18 19:37:14.246 +05:30 [INF] Executing endpoint 'MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController.Create (MaintenanceScheduler.Api)'
+2025-10-18 19:37:14.287 +05:30 [INF] Route matched with {action = "Create", controller = "MaintenanceHistory"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(MaintenanceScheduler.Application.DTOs.CreateMaintenanceHistoryDto) on controller MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController (MaintenanceScheduler.Api).
+2025-10-18 19:37:22.789 +05:30 [ERR] Failed executing DbCommand (5,315ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (Size = 2000), @p3='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p4='?' (DbType = DateTime2), @p5='?' (Size = 100), @p6='?' (Size = 1000), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTime2), @p9='?' (DbType = Guid), @p10='?' (DbType = Int32), @p11='?' (Size = 2000), @p12='?' (Size = 1000), @p13='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [MaintenanceHistories] ([Id], [AssetId], [AttachmentUrls], [Cost], [CreatedAt], [CreatedBy], [Description], [DowntimeMinutes], [MaintenanceDate], [MaintenanceScheduleId], [MaintenanceType], [Notes], [PartsReplaced], [TechnicianName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+2025-10-18 19:37:24.794 +05:30 [ERR] An exception occurred in the database while saving changes for context type 'MaintenanceScheduler.Infrastructure.Data.MaintenanceDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK__Maintenan__Maint__403A8C7D". The conflict occurred in database "MaintenanceSchedulerDB", table "dbo.MaintenanceSchedules", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:bbdce65d-91bf-418f-af4f-d446a06b53ea
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK__Maintenan__Maint__403A8C7D". The conflict occurred in database "MaintenanceSchedulerDB", table "dbo.MaintenanceSchedules", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:bbdce65d-91bf-418f-af4f-d446a06b53ea
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-10-18 19:37:30.044 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'MaintenanceScheduler.Application.DTOs.ApiResponse`1[[MaintenanceScheduler.Application.DTOs.MaintenanceHistoryDto, MaintenanceScheduler.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-18 19:37:30.072 +05:30 [INF] Executed action MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController.Create (MaintenanceScheduler.Api) in 15767.443ms
+2025-10-18 19:37:30.079 +05:30 [INF] Executed endpoint 'MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController.Create (MaintenanceScheduler.Api)'
+2025-10-18 19:37:30.086 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7205/api/MaintenanceHistory - 400 null application/json; charset=utf-8 16064.6139ms
+2025-10-18 19:40:16.797 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/swagger/index.html - null null
+2025-10-18 19:40:17.188 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/swagger/index.html - 200 null text/html;charset=utf-8 391.0297ms
+2025-10-18 19:40:17.225 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/_vs/browserLink - null null
+2025-10-18 19:40:17.237 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.2833ms
+2025-10-18 19:40:18.395 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-18 19:40:18.403 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/_framework/aspnetcore-browser-refresh.js - 200 16533 application/javascript; charset=utf-8 8.7919ms
+2025-10-18 19:40:18.559 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/swagger/v1/swagger.json - null null
+2025-10-18 19:40:18.578 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 18.8154ms
+2025-10-18 19:40:43.106 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7205/api/MaintenanceSchedule - application/json 342
+2025-10-18 19:40:43.131 +05:30 [INF] CORS policy execution successful.
+2025-10-18 19:40:43.134 +05:30 [INF] Executing endpoint 'MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController.Create (MaintenanceScheduler.Api)'
+2025-10-18 19:40:43.141 +05:30 [INF] Route matched with {action = "Create", controller = "MaintenanceSchedule"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(MaintenanceScheduler.Application.DTOs.CreateMaintenanceScheduleDto) on controller MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController (MaintenanceScheduler.Api).
+2025-10-18 19:40:43.252 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-10-18 19:40:43.291 +05:30 [INF] Executed action MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController.Create (MaintenanceScheduler.Api) in 147.3363ms
+2025-10-18 19:40:43.296 +05:30 [INF] Executed endpoint 'MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController.Create (MaintenanceScheduler.Api)'
+2025-10-18 19:40:43.300 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7205/api/MaintenanceSchedule - 400 null application/problem+json; charset=utf-8 194.024ms
+2025-10-18 19:41:52.687 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7205/api/MaintenanceHistory - application/json 445
+2025-10-18 19:41:52.691 +05:30 [INF] CORS policy execution successful.
+2025-10-18 19:41:52.693 +05:30 [INF] Executing endpoint 'MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController.Create (MaintenanceScheduler.Api)'
+2025-10-18 19:41:52.694 +05:30 [INF] Route matched with {action = "Create", controller = "MaintenanceHistory"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(MaintenanceScheduler.Application.DTOs.CreateMaintenanceHistoryDto) on controller MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController (MaintenanceScheduler.Api).
+2025-10-18 19:41:52.819 +05:30 [INF] Executed DbCommand (37ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (Size = 2000), @p3='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p4='?' (DbType = DateTime2), @p5='?' (Size = 100), @p6='?' (Size = 1000), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTime2), @p9='?' (DbType = Guid), @p10='?' (DbType = Int32), @p11='?' (Size = 2000), @p12='?' (Size = 1000), @p13='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [MaintenanceHistories] ([Id], [AssetId], [AttachmentUrls], [Cost], [CreatedAt], [CreatedBy], [Description], [DowntimeMinutes], [MaintenanceDate], [MaintenanceScheduleId], [MaintenanceType], [Notes], [PartsReplaced], [TechnicianName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+2025-10-18 19:41:52.949 +05:30 [INF] Executing CreatedAtActionResult, writing value of type 'MaintenanceScheduler.Application.DTOs.ApiResponse`1[[MaintenanceScheduler.Application.DTOs.MaintenanceHistoryDto, MaintenanceScheduler.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-18 19:41:52.999 +05:30 [INF] Executed action MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController.Create (MaintenanceScheduler.Api) in 300.9263ms
+2025-10-18 19:41:53.004 +05:30 [INF] Executed endpoint 'MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController.Create (MaintenanceScheduler.Api)'
+2025-10-18 19:41:53.006 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7205/api/MaintenanceHistory - 201 null application/json; charset=utf-8 319.3968ms
+2025-10-18 19:45:35.101 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/api/MaintenanceSchedule - null null
+2025-10-18 19:45:35.174 +05:30 [INF] Executing endpoint 'MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController.GetAll (MaintenanceScheduler.Api)'
+2025-10-18 19:45:35.187 +05:30 [INF] Route matched with {action = "GetAll", controller = "MaintenanceSchedule"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController (MaintenanceScheduler.Api).
+2025-10-18 19:45:37.130 +05:30 [INF] Executed DbCommand (752ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[ActualCost], [m].[AssetId], [m].[AssetName], [m].[AssignedTo], [m].[CompletedDate], [m].[CreatedAt], [m].[CreatedBy], [m].[Description], [m].[EstimatedCost], [m].[FrequencyInDays], [m].[MaintenanceType], [m].[NextScheduledDate], [m].[Notes], [m].[ScheduledDate], [m].[Status], [m].[UpdatedAt], [m].[UpdatedBy], [m0].[Id], [m0].[AssetId], [m0].[AttachmentUrls], [m0].[Cost], [m0].[CreatedAt], [m0].[CreatedBy], [m0].[Description], [m0].[DowntimeMinutes], [m0].[MaintenanceDate], [m0].[MaintenanceScheduleId], [m0].[MaintenanceType], [m0].[Notes], [m0].[PartsReplaced], [m0].[TechnicianName]
+FROM [MaintenanceSchedules] AS [m]
+LEFT JOIN [MaintenanceHistories] AS [m0] ON [m].[Id] = [m0].[MaintenanceScheduleId]
+ORDER BY [m].[ScheduledDate], [m].[Id]
+2025-10-18 19:45:37.242 +05:30 [ERR] An exception occurred while iterating over the results of a query for context type 'MaintenanceScheduler.Infrastructure.Data.MaintenanceDbContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.ThrowIfNull()
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method240(Closure, DbDataReader, Int32[])
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.ReadObject(DbDataReader reader, Int32 ordinal, ReaderColumn column)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.ReadRow()
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.InitializeAsync(DbDataReader reader, IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.ThrowIfNull()
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method240(Closure, DbDataReader, Int32[])
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.ReadObject(DbDataReader reader, Int32 ordinal, ReaderColumn column)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.ReadRow()
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.InitializeAsync(DbDataReader reader, IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-10-18 19:45:37.593 +05:30 [INF] Executing OkObjectResult, writing value of type 'MaintenanceScheduler.Application.DTOs.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[MaintenanceScheduler.Application.DTOs.MaintenanceScheduleDto, MaintenanceScheduler.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-18 19:45:37.614 +05:30 [INF] Executed action MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController.GetAll (MaintenanceScheduler.Api) in 2420.516ms
+2025-10-18 19:45:37.619 +05:30 [INF] Executed endpoint 'MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController.GetAll (MaintenanceScheduler.Api)'
+2025-10-18 19:45:37.621 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/api/MaintenanceSchedule - 200 null application/json; charset=utf-8 2520.4253ms
+2025-10-18 19:48:32.098 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/api/WarrantyInfo/active - null null
+2025-10-18 19:48:32.110 +05:30 [INF] Executing endpoint 'MaintenanceScheduler.Api.Controllers.WarrantyInfoController.GetActiveWarranties (MaintenanceScheduler.Api)'
+2025-10-18 19:48:32.119 +05:30 [INF] Route matched with {action = "GetActiveWarranties", controller = "WarrantyInfo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetActiveWarranties() on controller MaintenanceScheduler.Api.Controllers.WarrantyInfoController (MaintenanceScheduler.Api).
+2025-10-18 19:48:33.306 +05:30 [INF] Executed DbCommand (751ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[Id], [w].[AssetId], [w].[AssetName], [w].[ContactEmail], [w].[ContactPerson], [w].[ContactPhone], [w].[CoverageDetails], [w].[CreatedAt], [w].[CreatedBy], [w].[ExpiryDate], [w].[IsActive], [w].[LastNotificationDate], [w].[NotificationSent], [w].[StartDate], [w].[UpdatedAt], [w].[UpdatedBy], [w].[WarrantyCost], [w].[WarrantyProvider], [w].[WarrantyType]
+FROM [WarrantyInfos] AS [w]
+WHERE [w].[IsActive] = CAST(1 AS bit) AND [w].[ExpiryDate] >= GETUTCDATE()
+ORDER BY [w].[ExpiryDate]
+2025-10-18 19:48:33.314 +05:30 [ERR] An exception occurred while iterating over the results of a query for context type 'MaintenanceScheduler.Infrastructure.Data.MaintenanceDbContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.ThrowIfNull()
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method348(Closure, DbDataReader, Int32[])
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.ReadObject(DbDataReader reader, Int32 ordinal, ReaderColumn column)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.ReadRow()
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.InitializeAsync(DbDataReader reader, IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.ThrowIfNull()
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method348(Closure, DbDataReader, Int32[])
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.ReadObject(DbDataReader reader, Int32 ordinal, ReaderColumn column)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.ReadRow()
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.InitializeAsync(DbDataReader reader, IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-10-18 19:48:33.656 +05:30 [INF] Executing OkObjectResult, writing value of type 'MaintenanceScheduler.Application.DTOs.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[MaintenanceScheduler.Application.DTOs.WarrantyInfoDto, MaintenanceScheduler.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-18 19:48:33.663 +05:30 [INF] Executed action MaintenanceScheduler.Api.Controllers.WarrantyInfoController.GetActiveWarranties (MaintenanceScheduler.Api) in 1536.3274ms
+2025-10-18 19:48:33.669 +05:30 [INF] Executed endpoint 'MaintenanceScheduler.Api.Controllers.WarrantyInfoController.GetActiveWarranties (MaintenanceScheduler.Api)'
+2025-10-18 19:48:33.672 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/api/WarrantyInfo/active - 200 null application/json; charset=utf-8 1604.79ms
+2025-10-18 19:53:48.992 +05:30 [INF] No migrations were found in assembly 'MaintenanceScheduler.Infrastructure'. A migration needs to be added before the database can be updated.
+2025-10-18 19:53:56.472 +05:30 [INF] Executed DbCommand (707ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-10-18 19:53:56.565 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-10-18 19:54:00.714 +05:30 [INF] Executed DbCommand (4,088ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2025-10-18 19:54:03.380 +05:30 [INF] Executed DbCommand (964ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2025-10-18 19:54:03.463 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-10-18 19:54:03.475 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-10-18 19:54:05.002 +05:30 [INF] Executed DbCommand (1,442ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-10-18 19:54:05.023 +05:30 [INF] No migrations were applied. The database is already up to date.
+2025-10-18 19:54:05.311 +05:30 [INF] Executed DbCommand (285ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2025-10-18 19:54:05.320 +05:30 [INF] Database migration completed successfully
+2025-10-18 19:54:05.351 +05:30 [INF] Starting Maintenance Scheduler API
+2025-10-18 19:54:05.913 +05:30 [INF] Now listening on: https://localhost:7205
+2025-10-18 19:54:05.915 +05:30 [INF] Now listening on: http://localhost:5195
+2025-10-18 19:54:07.305 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-18 19:54:07.307 +05:30 [INF] Hosting environment: Development
+2025-10-18 19:54:07.309 +05:30 [INF] Content root path: D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\MaintenanceScheduler\MaintenanceScheduler.Api
+2025-10-18 19:55:19.848 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/api/WarrantyInfo/active - null null
+2025-10-18 19:55:19.953 +05:30 [INF] Executing endpoint 'MaintenanceScheduler.Api.Controllers.WarrantyInfoController.GetActiveWarranties (MaintenanceScheduler.Api)'
+2025-10-18 19:55:19.982 +05:30 [INF] Route matched with {action = "GetActiveWarranties", controller = "WarrantyInfo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetActiveWarranties() on controller MaintenanceScheduler.Api.Controllers.WarrantyInfoController (MaintenanceScheduler.Api).
+2025-10-18 19:55:26.527 +05:30 [INF] Executed DbCommand (4,812ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[Id], [w].[AssetId], [w].[AssetName], [w].[ContactEmail], [w].[ContactPerson], [w].[ContactPhone], [w].[CoverageDetails], [w].[CreatedAt], [w].[CreatedBy], [w].[ExpiryDate], [w].[IsActive], [w].[LastNotificationDate], [w].[NotificationSent], [w].[StartDate], [w].[UpdatedAt], [w].[UpdatedBy], [w].[WarrantyCost], [w].[WarrantyProvider], [w].[WarrantyType]
+FROM [WarrantyInfos] AS [w]
+WHERE [w].[IsActive] = CAST(1 AS bit) AND [w].[ExpiryDate] >= GETUTCDATE()
+ORDER BY [w].[ExpiryDate]
+2025-10-18 19:55:27.263 +05:30 [ERR] An exception occurred while iterating over the results of a query for context type 'MaintenanceScheduler.Infrastructure.Data.MaintenanceDbContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.ThrowIfNull()
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method46(Closure, DbDataReader, Int32[])
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.ReadObject(DbDataReader reader, Int32 ordinal, ReaderColumn column)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.ReadRow()
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.InitializeAsync(DbDataReader reader, IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.ThrowIfNull()
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method46(Closure, DbDataReader, Int32[])
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.ReadObject(DbDataReader reader, Int32 ordinal, ReaderColumn column)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.ReadRow()
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.InitializeAsync(DbDataReader reader, IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-10-18 19:55:38.449 +05:30 [INF] Executing OkObjectResult, writing value of type 'MaintenanceScheduler.Application.DTOs.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[MaintenanceScheduler.Application.DTOs.WarrantyInfoDto, MaintenanceScheduler.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-18 19:55:38.493 +05:30 [INF] Executed action MaintenanceScheduler.Api.Controllers.WarrantyInfoController.GetActiveWarranties (MaintenanceScheduler.Api) in 18500.4651ms
+2025-10-18 19:55:38.501 +05:30 [INF] Executed endpoint 'MaintenanceScheduler.Api.Controllers.WarrantyInfoController.GetActiveWarranties (MaintenanceScheduler.Api)'
+2025-10-18 19:55:38.510 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/api/WarrantyInfo/active - 200 null application/json; charset=utf-8 18675.5813ms
+2025-10-18 19:55:47.193 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-18 19:55:47.215 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/_framework/aspnetcore-browser-refresh.js - 200 16533 application/javascript; charset=utf-8 21.5027ms
+2025-10-18 19:55:47.513 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/_vs/browserLink - null null
+2025-10-18 19:55:47.789 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/_vs/browserLink - 200 null text/javascript; charset=UTF-8 276.0907ms
+2025-10-18 19:55:49.686 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/swagger/v1/swagger.json - null null
+2025-10-18 19:55:49.731 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 45.2569ms
+2025-10-18 19:57:25.902 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/api/WarrantyInfo/active - null null
+2025-10-18 19:57:25.925 +05:30 [INF] Executing endpoint 'MaintenanceScheduler.Api.Controllers.WarrantyInfoController.GetActiveWarranties (MaintenanceScheduler.Api)'
+2025-10-18 19:57:25.930 +05:30 [INF] Route matched with {action = "GetActiveWarranties", controller = "WarrantyInfo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetActiveWarranties() on controller MaintenanceScheduler.Api.Controllers.WarrantyInfoController (MaintenanceScheduler.Api).
+2025-10-18 19:57:26.343 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[Id], [w].[AssetId], [w].[AssetName], [w].[ContactEmail], [w].[ContactPerson], [w].[ContactPhone], [w].[CoverageDetails], [w].[CreatedAt], [w].[CreatedBy], [w].[ExpiryDate], [w].[IsActive], [w].[LastNotificationDate], [w].[NotificationSent], [w].[StartDate], [w].[UpdatedAt], [w].[UpdatedBy], [w].[WarrantyCost], [w].[WarrantyProvider], [w].[WarrantyType]
+FROM [WarrantyInfos] AS [w]
+WHERE [w].[IsActive] = CAST(1 AS bit) AND [w].[ExpiryDate] >= GETUTCDATE()
+ORDER BY [w].[ExpiryDate]
+2025-10-18 19:57:26.369 +05:30 [ERR] An exception occurred while iterating over the results of a query for context type 'MaintenanceScheduler.Infrastructure.Data.MaintenanceDbContext'.
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.ThrowIfNull()
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method46(Closure, DbDataReader, Int32[])
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.ReadObject(DbDataReader reader, Int32 ordinal, ReaderColumn column)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.ReadRow()
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.InitializeAsync(DbDataReader reader, IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.Data.SqlTypes.SqlNullValueException: Data is Null. This method or property cannot be called on Null values.
+   at Microsoft.Data.SqlClient.SqlBuffer.ThrowIfNull()
+   at Microsoft.Data.SqlClient.SqlBuffer.get_String()
+   at Microsoft.Data.SqlClient.SqlDataReader.GetString(Int32 i)
+   at lambda_method46(Closure, DbDataReader, Int32[])
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.ReadObject(DbDataReader reader, Int32 ordinal, ReaderColumn column)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.ReadRow()
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.BufferedDataRecord.InitializeAsync(DbDataReader reader, IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.BufferedDataReader.InitializeAsync(IReadOnlyList`1 columns, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2025-10-18 19:57:28.352 +05:30 [INF] Executing OkObjectResult, writing value of type 'MaintenanceScheduler.Application.DTOs.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[MaintenanceScheduler.Application.DTOs.WarrantyInfoDto, MaintenanceScheduler.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-18 19:57:28.360 +05:30 [INF] Executed action MaintenanceScheduler.Api.Controllers.WarrantyInfoController.GetActiveWarranties (MaintenanceScheduler.Api) in 2425.7465ms
+2025-10-18 19:57:28.364 +05:30 [INF] Executed endpoint 'MaintenanceScheduler.Api.Controllers.WarrantyInfoController.GetActiveWarranties (MaintenanceScheduler.Api)'
+2025-10-18 19:57:28.366 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/api/WarrantyInfo/active - 200 null application/json; charset=utf-8 2464.0781ms
+2025-10-18 20:04:38.277 +05:30 [INF] No migrations were found in assembly 'MaintenanceScheduler.Infrastructure'. A migration needs to be added before the database can be updated.
+2025-10-18 20:04:42.617 +05:30 [INF] Executed DbCommand (501ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-10-18 20:04:42.643 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-10-18 20:04:48.330 +05:30 [INF] Executed DbCommand (5,680ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2025-10-18 20:04:49.810 +05:30 [INF] Executed DbCommand (352ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2025-10-18 20:04:49.836 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-10-18 20:04:49.873 +05:30 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-10-18 20:04:52.952 +05:30 [INF] Executed DbCommand (3,068ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-10-18 20:04:52.970 +05:30 [INF] No migrations were applied. The database is already up to date.
+2025-10-18 20:04:53.239 +05:30 [INF] Executed DbCommand (265ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2025-10-18 20:04:53.246 +05:30 [INF] Database migration completed successfully
+2025-10-18 20:04:53.312 +05:30 [INF] Starting Maintenance Scheduler API
+2025-10-18 20:04:53.841 +05:30 [INF] Now listening on: https://localhost:7205
+2025-10-18 20:04:53.844 +05:30 [INF] Now listening on: http://localhost:5195
+2025-10-18 20:04:53.955 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-18 20:04:53.957 +05:30 [INF] Hosting environment: Development
+2025-10-18 20:04:54.394 +05:30 [INF] Content root path: D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\MaintenanceScheduler\MaintenanceScheduler.Api
+2025-10-18 20:04:54.675 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/_vs/browserLink - null null
+2025-10-18 20:04:54.675 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-18 20:04:54.853 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/_framework/aspnetcore-browser-refresh.js - 200 16533 application/javascript; charset=utf-8 184.4647ms
+2025-10-18 20:04:55.154 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/_vs/browserLink - 200 null text/javascript; charset=UTF-8 486.9682ms
+2025-10-18 20:04:55.204 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/swagger/v1/swagger.json - null null
+2025-10-18 20:04:55.293 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 89.6407ms
+2025-10-18 20:05:08.591 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7205/api/WarrantyInfo - application/json 364
+2025-10-18 20:05:08.736 +05:30 [INF] CORS policy execution successful.
+2025-10-18 20:05:08.769 +05:30 [INF] Executing endpoint 'MaintenanceScheduler.Api.Controllers.WarrantyInfoController.Create (MaintenanceScheduler.Api)'
+2025-10-18 20:05:08.826 +05:30 [INF] Route matched with {action = "Create", controller = "WarrantyInfo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(MaintenanceScheduler.Application.DTOs.CreateWarrantyInfoDto) on controller MaintenanceScheduler.Api.Controllers.WarrantyInfoController (MaintenanceScheduler.Api).
+2025-10-18 20:05:10.370 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'MaintenanceScheduler.Application.DTOs.ApiResponse`1[[MaintenanceScheduler.Application.DTOs.WarrantyInfoDto, MaintenanceScheduler.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-18 20:05:10.387 +05:30 [INF] Executed action MaintenanceScheduler.Api.Controllers.WarrantyInfoController.Create (MaintenanceScheduler.Api) in 1547.2217ms
+2025-10-18 20:05:10.390 +05:30 [INF] Executed endpoint 'MaintenanceScheduler.Api.Controllers.WarrantyInfoController.Create (MaintenanceScheduler.Api)'
+2025-10-18 20:05:10.394 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7205/api/WarrantyInfo - 400 null application/json; charset=utf-8 1803.0373ms
+2025-10-18 20:05:49.645 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/api/WarrantyInfo/active - null null
+2025-10-18 20:05:49.667 +05:30 [INF] Executing endpoint 'MaintenanceScheduler.Api.Controllers.WarrantyInfoController.GetActiveWarranties (MaintenanceScheduler.Api)'
+2025-10-18 20:05:49.671 +05:30 [INF] Route matched with {action = "GetActiveWarranties", controller = "WarrantyInfo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetActiveWarranties() on controller MaintenanceScheduler.Api.Controllers.WarrantyInfoController (MaintenanceScheduler.Api).
+2025-10-18 20:05:53.015 +05:30 [INF] Executed DbCommand (1,557ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[Id], [w].[AssetId], [w].[AssetName], [w].[ContactEmail], [w].[ContactPerson], [w].[ContactPhone], [w].[CoverageDetails], [w].[CreatedAt], [w].[CreatedBy], [w].[ExpiryDate], [w].[IsActive], [w].[LastNotificationDate], [w].[NotificationSent], [w].[StartDate], [w].[UpdatedAt], [w].[UpdatedBy], [w].[WarrantyCost], [w].[WarrantyProvider], [w].[WarrantyType]
+FROM [WarrantyInfos] AS [w]
+WHERE [w].[IsActive] = CAST(1 AS bit) AND [w].[ExpiryDate] >= GETUTCDATE()
+ORDER BY [w].[ExpiryDate]
+2025-10-18 20:05:53.189 +05:30 [INF] Executing OkObjectResult, writing value of type 'MaintenanceScheduler.Application.DTOs.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[MaintenanceScheduler.Application.DTOs.WarrantyInfoDto, MaintenanceScheduler.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-18 20:05:53.260 +05:30 [INF] Executed action MaintenanceScheduler.Api.Controllers.WarrantyInfoController.GetActiveWarranties (MaintenanceScheduler.Api) in 3586.7122ms
+2025-10-18 20:05:53.265 +05:30 [INF] Executed endpoint 'MaintenanceScheduler.Api.Controllers.WarrantyInfoController.GetActiveWarranties (MaintenanceScheduler.Api)'
+2025-10-18 20:05:53.267 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/api/WarrantyInfo/active - 200 null application/json; charset=utf-8 3622.4478ms
+2025-10-18 20:06:16.368 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/api/WarrantyInfo/expiring?days=30 - null null
+2025-10-18 20:06:16.373 +05:30 [INF] Executing endpoint 'MaintenanceScheduler.Api.Controllers.WarrantyInfoController.GetExpiringWarranties (MaintenanceScheduler.Api)'
+2025-10-18 20:06:16.379 +05:30 [INF] Route matched with {action = "GetExpiringWarranties", controller = "WarrantyInfo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetExpiringWarranties(Int32) on controller MaintenanceScheduler.Api.Controllers.WarrantyInfoController (MaintenanceScheduler.Api).
+2025-10-18 20:06:16.874 +05:30 [INF] Executed DbCommand (299ms) [Parameters=[@__startDate_0='?' (DbType = DateTime2), @__endDate_1='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [w].[Id], [w].[AssetId], [w].[AssetName], [w].[ContactEmail], [w].[ContactPerson], [w].[ContactPhone], [w].[CoverageDetails], [w].[CreatedAt], [w].[CreatedBy], [w].[ExpiryDate], [w].[IsActive], [w].[LastNotificationDate], [w].[NotificationSent], [w].[StartDate], [w].[UpdatedAt], [w].[UpdatedBy], [w].[WarrantyCost], [w].[WarrantyProvider], [w].[WarrantyType]
+FROM [WarrantyInfos] AS [w]
+WHERE [w].[IsActive] = CAST(1 AS bit) AND [w].[ExpiryDate] >= @__startDate_0 AND [w].[ExpiryDate] <= @__endDate_1
+ORDER BY [w].[ExpiryDate]
+2025-10-18 20:06:16.881 +05:30 [INF] Executing OkObjectResult, writing value of type 'MaintenanceScheduler.Application.DTOs.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[MaintenanceScheduler.Application.DTOs.WarrantyInfoDto, MaintenanceScheduler.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-18 20:06:16.884 +05:30 [INF] Executed action MaintenanceScheduler.Api.Controllers.WarrantyInfoController.GetExpiringWarranties (MaintenanceScheduler.Api) in 499.941ms
+2025-10-18 20:06:16.886 +05:30 [INF] Executed endpoint 'MaintenanceScheduler.Api.Controllers.WarrantyInfoController.GetExpiringWarranties (MaintenanceScheduler.Api)'
+2025-10-18 20:06:16.888 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/api/WarrantyInfo/expiring?days=30 - 200 null application/json; charset=utf-8 520.8928ms
+2025-10-18 20:06:38.522 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/api/MaintenanceSchedule/upcoming?days=30 - null null
+2025-10-18 20:06:38.544 +05:30 [INF] Executing endpoint 'MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController.GetUpcoming (MaintenanceScheduler.Api)'
+2025-10-18 20:06:38.554 +05:30 [INF] Route matched with {action = "GetUpcoming", controller = "MaintenanceSchedule"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUpcoming(Int32) on controller MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController (MaintenanceScheduler.Api).
+2025-10-18 20:06:39.273 +05:30 [INF] Executed DbCommand (584ms) [Parameters=[@__endDate_0='?' (DbType = DateTime2)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[ActualCost], [m].[AssetId], [m].[AssetName], [m].[AssignedTo], [m].[CompletedDate], [m].[CreatedAt], [m].[CreatedBy], [m].[Description], [m].[EstimatedCost], [m].[FrequencyInDays], [m].[MaintenanceType], [m].[NextScheduledDate], [m].[Notes], [m].[ScheduledDate], [m].[Status], [m].[UpdatedAt], [m].[UpdatedBy]
+FROM [MaintenanceSchedules] AS [m]
+WHERE [m].[ScheduledDate] >= GETUTCDATE() AND [m].[ScheduledDate] <= @__endDate_0 AND [m].[Status] = 1
+ORDER BY [m].[ScheduledDate]
+2025-10-18 20:06:39.358 +05:30 [INF] Executing OkObjectResult, writing value of type 'MaintenanceScheduler.Application.DTOs.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[MaintenanceScheduler.Application.DTOs.MaintenanceScheduleDto, MaintenanceScheduler.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-18 20:06:39.390 +05:30 [INF] Executed action MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController.GetUpcoming (MaintenanceScheduler.Api) in 828.7897ms
+2025-10-18 20:06:39.394 +05:30 [INF] Executed endpoint 'MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController.GetUpcoming (MaintenanceScheduler.Api)'
+2025-10-18 20:06:39.397 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/api/MaintenanceSchedule/upcoming?days=30 - 200 null application/json; charset=utf-8 875.5233ms
+2025-10-18 20:08:35.232 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/api/MaintenanceHistory/5FA85F64-5717-4562-B3FC-2C963F66AFA8 - null null
+2025-10-18 20:08:35.238 +05:30 [INF] Executing endpoint 'MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController.GetById (MaintenanceScheduler.Api)'
+2025-10-18 20:08:35.245 +05:30 [INF] Route matched with {action = "GetById", controller = "MaintenanceHistory"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.Guid) on controller MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController (MaintenanceScheduler.Api).
+2025-10-18 20:08:35.660 +05:30 [INF] Executed DbCommand (182ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[Id], [m].[AssetId], [m].[AttachmentUrls], [m].[Cost], [m].[CreatedAt], [m].[CreatedBy], [m].[Description], [m].[DowntimeMinutes], [m].[MaintenanceDate], [m].[MaintenanceScheduleId], [m].[MaintenanceType], [m].[Notes], [m].[PartsReplaced], [m].[TechnicianName], [m0].[Id], [m0].[ActualCost], [m0].[AssetId], [m0].[AssetName], [m0].[AssignedTo], [m0].[CompletedDate], [m0].[CreatedAt], [m0].[CreatedBy], [m0].[Description], [m0].[EstimatedCost], [m0].[FrequencyInDays], [m0].[MaintenanceType], [m0].[NextScheduledDate], [m0].[Notes], [m0].[ScheduledDate], [m0].[Status], [m0].[UpdatedAt], [m0].[UpdatedBy]
+FROM [MaintenanceHistories] AS [m]
+LEFT JOIN [MaintenanceSchedules] AS [m0] ON [m].[MaintenanceScheduleId] = [m0].[Id]
+WHERE [m].[Id] = @__id_0
+2025-10-18 20:08:36.738 +05:30 [INF] Executing NotFoundObjectResult, writing value of type 'MaintenanceScheduler.Application.DTOs.ApiResponse`1[[MaintenanceScheduler.Application.DTOs.MaintenanceHistoryDto, MaintenanceScheduler.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-18 20:08:36.755 +05:30 [INF] Executed action MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController.GetById (MaintenanceScheduler.Api) in 1505.6867ms
+2025-10-18 20:08:36.760 +05:30 [INF] Executed endpoint 'MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController.GetById (MaintenanceScheduler.Api)'
+2025-10-18 20:08:36.763 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/api/MaintenanceHistory/5FA85F64-5717-4562-B3FC-2C963F66AFA8 - 404 null application/json; charset=utf-8 1534.8908ms
+2025-10-18 20:09:13.119 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/api/MaintenanceHistory/EB5DC9F2-DCBD-4BA0-8876-231389AFE0DE - null null
+2025-10-18 20:09:13.141 +05:30 [INF] Executing endpoint 'MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController.GetById (MaintenanceScheduler.Api)'
+2025-10-18 20:09:13.143 +05:30 [INF] Route matched with {action = "GetById", controller = "MaintenanceHistory"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.Guid) on controller MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController (MaintenanceScheduler.Api).
+2025-10-18 20:09:13.192 +05:30 [INF] Executed DbCommand (27ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[Id], [m].[AssetId], [m].[AttachmentUrls], [m].[Cost], [m].[CreatedAt], [m].[CreatedBy], [m].[Description], [m].[DowntimeMinutes], [m].[MaintenanceDate], [m].[MaintenanceScheduleId], [m].[MaintenanceType], [m].[Notes], [m].[PartsReplaced], [m].[TechnicianName], [m0].[Id], [m0].[ActualCost], [m0].[AssetId], [m0].[AssetName], [m0].[AssignedTo], [m0].[CompletedDate], [m0].[CreatedAt], [m0].[CreatedBy], [m0].[Description], [m0].[EstimatedCost], [m0].[FrequencyInDays], [m0].[MaintenanceType], [m0].[NextScheduledDate], [m0].[Notes], [m0].[ScheduledDate], [m0].[Status], [m0].[UpdatedAt], [m0].[UpdatedBy]
+FROM [MaintenanceHistories] AS [m]
+LEFT JOIN [MaintenanceSchedules] AS [m0] ON [m].[MaintenanceScheduleId] = [m0].[Id]
+WHERE [m].[Id] = @__id_0
+2025-10-18 20:09:13.263 +05:30 [INF] Executing OkObjectResult, writing value of type 'MaintenanceScheduler.Application.DTOs.ApiResponse`1[[MaintenanceScheduler.Application.DTOs.MaintenanceHistoryDto, MaintenanceScheduler.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-18 20:09:13.273 +05:30 [INF] Executed action MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController.GetById (MaintenanceScheduler.Api) in 124.9243ms
+2025-10-18 20:09:13.278 +05:30 [INF] Executed endpoint 'MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController.GetById (MaintenanceScheduler.Api)'
+2025-10-18 20:09:13.280 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/api/MaintenanceHistory/EB5DC9F2-DCBD-4BA0-8876-231389AFE0DE - 200 null application/json; charset=utf-8 160.5015ms

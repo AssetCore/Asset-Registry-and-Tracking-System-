@@ -1,0 +1,24 @@
+﻿using System;
+
+namespace MaintenanceScheduler.Domain.Entities
+{
+    public class MaintenanceHistory
+    {
+        public Guid Id { get; set; }
+        public Guid AssetId { get; set; }
+        public Guid? MaintenanceScheduleId { get; set; }
+        public DateTime MaintenanceDate { get; set; }
+        public MaintenanceType MaintenanceType { get; set; }
+        public required string Description { get; set; }
+        public required string PartsReplaced { get; set; }
+        public decimal Cost { get; set; }
+        public required string TechnicianName { get; set; }
+        public int DowntimeMinutes { get; set; }
+        public required string Notes { get; set; }
+        public required string AttachmentUrls { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public required string CreatedBy { get; set; }
+
+        public required MaintenanceSchedule MaintenanceSchedule { get; set; }
+    }
+}

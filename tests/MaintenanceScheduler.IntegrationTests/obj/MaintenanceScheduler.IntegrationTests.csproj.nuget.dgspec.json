@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\tests\\MaintenanceScheduler.IntegrationTests\\MaintenanceScheduler.IntegrationTests.csproj": {}
+    "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\tests\\MaintenanceScheduler.IntegrationTests\\MaintenanceScheduler.IntegrationTests.csproj": {}
   },
   "projects": {
-    "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\tests\\MaintenanceScheduler.IntegrationTests\\MaintenanceScheduler.IntegrationTests.csproj": {
+    "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\tests\\MaintenanceScheduler.IntegrationTests\\MaintenanceScheduler.IntegrationTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\tests\\MaintenanceScheduler.IntegrationTests\\MaintenanceScheduler.IntegrationTests.csproj",
+        "projectUniqueName": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\tests\\MaintenanceScheduler.IntegrationTests\\MaintenanceScheduler.IntegrationTests.csproj",
         "projectName": "MaintenanceScheduler.IntegrationTests",
-        "projectPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\tests\\MaintenanceScheduler.IntegrationTests\\MaintenanceScheduler.IntegrationTests.csproj",
-        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\tests\\MaintenanceScheduler.IntegrationTests\\obj\\",
+        "projectPath": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\tests\\MaintenanceScheduler.IntegrationTests\\MaintenanceScheduler.IntegrationTests.csproj",
+        "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
+        "outputPath": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\tests\\MaintenanceScheduler.IntegrationTests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -84,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,0 +1,12 @@
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\Notification\Notification.Domain\bin\Debug\net9.0\Notification.Domain.deps.json
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\Notification\Notification.Domain\bin\Debug\net9.0\Notification.Domain.dll
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\Notification\Notification.Domain\bin\Debug\net9.0\Notification.Domain.pdb
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\Notification\Notification.Domain\obj\Debug\net9.0\Notification.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\Notification\Notification.Domain\obj\Debug\net9.0\Notification.Domain.AssemblyInfoInputs.cache
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\Notification\Notification.Domain\obj\Debug\net9.0\Notification.Domain.AssemblyInfo.cs
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\Notification\Notification.Domain\obj\Debug\net9.0\Notification.Domain.csproj.CoreCompileInputs.cache
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\Notification\Notification.Domain\obj\Debug\net9.0\Notification.Domain.sourcelink.json
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\Notification\Notification.Domain\obj\Debug\net9.0\Notification.Domain.dll
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\Notification\Notification.Domain\obj\Debug\net9.0\refint\Notification.Domain.dll
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\Notification\Notification.Domain\obj\Debug\net9.0\Notification.Domain.pdb
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\Notification\Notification.Domain\obj\Debug\net9.0\ref\Notification.Domain.dll

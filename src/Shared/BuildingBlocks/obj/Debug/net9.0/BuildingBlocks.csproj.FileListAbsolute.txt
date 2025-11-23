@@ -1,0 +1,12 @@
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Shared\BuildingBlocks\bin\Debug\net9.0\BuildingBlocks.deps.json
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Shared\BuildingBlocks\bin\Debug\net9.0\BuildingBlocks.dll
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Shared\BuildingBlocks\bin\Debug\net9.0\BuildingBlocks.pdb
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Shared\BuildingBlocks\obj\Debug\net9.0\BuildingBlocks.GeneratedMSBuildEditorConfig.editorconfig
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Shared\BuildingBlocks\obj\Debug\net9.0\BuildingBlocks.AssemblyInfoInputs.cache
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Shared\BuildingBlocks\obj\Debug\net9.0\BuildingBlocks.AssemblyInfo.cs
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Shared\BuildingBlocks\obj\Debug\net9.0\BuildingBlocks.csproj.CoreCompileInputs.cache
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Shared\BuildingBlocks\obj\Debug\net9.0\BuildingBlocks.sourcelink.json
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Shared\BuildingBlocks\obj\Debug\net9.0\BuildingBlocks.dll
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Shared\BuildingBlocks\obj\Debug\net9.0\refint\BuildingBlocks.dll
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Shared\BuildingBlocks\obj\Debug\net9.0\BuildingBlocks.pdb
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Shared\BuildingBlocks\obj\Debug\net9.0\ref\BuildingBlocks.dll

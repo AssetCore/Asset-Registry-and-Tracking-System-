@@ -1,0 +1,252 @@
+2025-11-05 08:48:17.367 +05:30 [INF] No migrations were found in assembly 'MaintenanceScheduler.Infrastructure'. A migration needs to be added before the database can be updated.
+2025-11-05 08:48:20.823 +05:30 [INF] Executed DbCommand (41ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-11-05 08:48:20.934 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-11-05 08:48:21.366 +05:30 [INF] Executed DbCommand (424ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2025-11-05 08:48:21.634 +05:30 [INF] Executed DbCommand (65ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2025-11-05 08:48:21.657 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-11-05 08:48:21.681 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-11-05 08:48:21.953 +05:30 [INF] Executed DbCommand (260ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-11-05 08:48:21.965 +05:30 [INF] No migrations were applied. The database is already up to date.
+2025-11-05 08:48:22.022 +05:30 [INF] Executed DbCommand (53ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2025-11-05 08:48:22.029 +05:30 [INF] Database migration completed successfully
+2025-11-05 08:48:22.039 +05:30 [INF] Starting Maintenance Scheduler API
+2025-11-05 08:48:22.524 +05:30 [INF] Now listening on: https://localhost:7205
+2025-11-05 08:48:22.526 +05:30 [INF] Now listening on: http://localhost:5195
+2025-11-05 08:48:22.591 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-05 08:48:22.594 +05:30 [INF] Hosting environment: Development
+2025-11-05 08:48:22.595 +05:30 [INF] Content root path: D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\MaintenanceScheduler\MaintenanceScheduler.Api
+2025-11-05 08:49:05.047 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/ - null null
+2025-11-05 08:49:05.905 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/ - 404 0 null 883.739ms
+2025-11-05 08:49:05.937 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7205/, Response status code: 404
+2025-11-05 08:53:02.020 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/ - null null
+2025-11-05 08:53:02.235 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/ - 404 0 null 223.4111ms
+2025-11-05 08:53:02.247 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7205/, Response status code: 404
+2025-11-05 08:53:06.198 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/ - null null
+2025-11-05 08:53:06.248 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/ - 404 0 null 50.0383ms
+2025-11-05 08:53:06.260 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7205/, Response status code: 404
+2025-11-05 08:53:24.729 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5195/ - null null
+2025-11-05 08:53:24.837 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5195/ - 307 0 null 108.0945ms
+2025-11-05 08:53:24.850 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/ - null null
+2025-11-05 08:53:24.862 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/ - 404 0 null 12.0988ms
+2025-11-05 08:53:24.871 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7205/, Response status code: 404
+2025-11-05 08:53:37.372 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/swagger/index.html - null null
+2025-11-05 08:53:40.232 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/swagger/index.html - 200 null text/html;charset=utf-8 2859.8018ms
+2025-11-05 08:53:40.293 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/swagger/swagger-ui.css - null null
+2025-11-05 08:53:40.317 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/swagger/swagger-ui-bundle.js - null null
+2025-11-05 08:53:40.297 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/swagger/index.css - null null
+2025-11-05 08:53:40.388 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/swagger/swagger-ui-standalone-preset.js - null null
+2025-11-05 08:53:40.389 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/swagger/index.js - null null
+2025-11-05 08:53:40.443 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-05 08:53:40.497 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/_vs/browserLink - null null
+2025-11-05 08:53:40.535 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/swagger/index.js - 200 null application/javascript;charset=utf-8 145.2223ms
+2025-11-05 08:53:40.570 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/_framework/aspnetcore-browser-refresh.js - 200 16533 application/javascript; charset=utf-8 160.8267ms
+2025-11-05 08:53:40.600 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/swagger/index.css - 304 null null 303.4859ms
+2025-11-05 08:53:40.601 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/swagger/swagger-ui.css - 304 null null 308.7983ms
+2025-11-05 08:53:40.602 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/swagger/swagger-ui-standalone-preset.js - 304 null null 246.8956ms
+2025-11-05 08:53:40.614 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/swagger/swagger-ui-bundle.js - 304 null null 301.6702ms
+2025-11-05 08:53:41.053 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/_vs/browserLink - 200 null text/javascript; charset=UTF-8 598.9142ms
+2025-11-05 08:53:41.125 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/swagger/v1/swagger.json - null null
+2025-11-05 08:53:41.169 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/swagger/favicon-32x32.png - null null
+2025-11-05 08:53:41.184 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/swagger/favicon-32x32.png - 200 628 image/png 15.309ms
+2025-11-05 08:53:41.676 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 551.163ms
+2025-11-05 09:00:29.584 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5195/api/WarrantyInfo/{id} - null null
+2025-11-05 09:00:30.858 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5195/api/WarrantyInfo/{id} - 307 0 null 1689.5813ms
+2025-11-05 09:00:36.229 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5195/api/WarrantyInfo/{id} - null null
+2025-11-05 09:00:36.281 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5195/api/WarrantyInfo/{id} - 307 0 null 52.8857ms
+2025-11-05 09:00:36.301 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7205/api/WarrantyInfo/{id} - null null
+2025-11-05 09:00:36.453 +05:30 [INF] Executing endpoint 'MaintenanceScheduler.Api.Controllers.WarrantyInfoController.GetById (MaintenanceScheduler.Api)'
+2025-11-05 09:00:37.749 +05:30 [INF] Route matched with {action = "GetById", controller = "WarrantyInfo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.Guid) on controller MaintenanceScheduler.Api.Controllers.WarrantyInfoController (MaintenanceScheduler.Api).
+2025-11-05 09:00:39.353 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-11-05 09:00:39.569 +05:30 [INF] Executed action MaintenanceScheduler.Api.Controllers.WarrantyInfoController.GetById (MaintenanceScheduler.Api) in 1803.0071ms
+2025-11-05 09:00:39.573 +05:30 [INF] Executed endpoint 'MaintenanceScheduler.Api.Controllers.WarrantyInfoController.GetById (MaintenanceScheduler.Api)'
+2025-11-05 09:00:39.703 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7205/api/WarrantyInfo/{id} - 400 null application/problem+json; charset=utf-8 3402.3142ms
+2025-11-05 09:00:48.528 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5195/api/WarrantyInfo/{id} - null null
+2025-11-05 09:00:48.544 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5195/api/WarrantyInfo/{id} - 307 0 null 15.8955ms
+2025-11-05 09:00:48.547 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7205/api/WarrantyInfo/{id} - null null
+2025-11-05 09:00:48.572 +05:30 [INF] Executing endpoint 'MaintenanceScheduler.Api.Controllers.WarrantyInfoController.GetById (MaintenanceScheduler.Api)'
+2025-11-05 09:00:48.577 +05:30 [INF] Route matched with {action = "GetById", controller = "WarrantyInfo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.Guid) on controller MaintenanceScheduler.Api.Controllers.WarrantyInfoController (MaintenanceScheduler.Api).
+2025-11-05 09:00:48.624 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-11-05 09:00:48.632 +05:30 [INF] Executed action MaintenanceScheduler.Api.Controllers.WarrantyInfoController.GetById (MaintenanceScheduler.Api) in 47.2064ms
+2025-11-05 09:00:48.639 +05:30 [INF] Executed endpoint 'MaintenanceScheduler.Api.Controllers.WarrantyInfoController.GetById (MaintenanceScheduler.Api)'
+2025-11-05 09:00:48.645 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7205/api/WarrantyInfo/{id} - 400 null application/problem+json; charset=utf-8 97.89ms
+2025-11-05 09:01:05.547 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5195/api/WarrantyInfo/{id} - null null
+2025-11-05 09:01:05.590 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5195/api/WarrantyInfo/{id} - 307 0 null 42.7316ms
+2025-11-05 09:01:05.594 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7205/api/WarrantyInfo/{id} - null null
+2025-11-05 09:01:05.620 +05:30 [INF] Executing endpoint 'MaintenanceScheduler.Api.Controllers.WarrantyInfoController.GetById (MaintenanceScheduler.Api)'
+2025-11-05 09:01:05.626 +05:30 [INF] Route matched with {action = "GetById", controller = "WarrantyInfo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.Guid) on controller MaintenanceScheduler.Api.Controllers.WarrantyInfoController (MaintenanceScheduler.Api).
+2025-11-05 09:01:05.649 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-11-05 09:01:05.656 +05:30 [INF] Executed action MaintenanceScheduler.Api.Controllers.WarrantyInfoController.GetById (MaintenanceScheduler.Api) in 18.8691ms
+2025-11-05 09:01:05.661 +05:30 [INF] Executed endpoint 'MaintenanceScheduler.Api.Controllers.WarrantyInfoController.GetById (MaintenanceScheduler.Api)'
+2025-11-05 09:01:05.664 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7205/api/WarrantyInfo/{id} - 400 null application/problem+json; charset=utf-8 69.984ms
+2025-11-05 09:02:01.079 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5195/api/WarrantyInfo/active
+ - null null
+2025-11-05 09:02:01.098 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5195/api/WarrantyInfo/active
+ - 307 0 null 48.5613ms
+2025-11-05 09:02:01.105 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7205/api/WarrantyInfo/active
+ - null null
+2025-11-05 09:02:01.141 +05:30 [INF] Executing endpoint 'MaintenanceScheduler.Api.Controllers.WarrantyInfoController.GetById (MaintenanceScheduler.Api)'
+2025-11-05 09:02:01.145 +05:30 [INF] Route matched with {action = "GetById", controller = "WarrantyInfo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.Guid) on controller MaintenanceScheduler.Api.Controllers.WarrantyInfoController (MaintenanceScheduler.Api).
+2025-11-05 09:02:01.156 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-11-05 09:02:01.187 +05:30 [INF] Executed action MaintenanceScheduler.Api.Controllers.WarrantyInfoController.GetById (MaintenanceScheduler.Api) in 34.0089ms
+2025-11-05 09:02:01.193 +05:30 [INF] Executed endpoint 'MaintenanceScheduler.Api.Controllers.WarrantyInfoController.GetById (MaintenanceScheduler.Api)'
+2025-11-05 09:02:01.199 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7205/api/WarrantyInfo/active
+ - 400 null application/problem+json; charset=utf-8 96.5072ms
+2025-11-05 09:02:10.819 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5195/api/WarrantyInfo/active
+ - null null
+2025-11-05 09:02:10.835 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5195/api/WarrantyInfo/active
+ - 307 0 null 15.5238ms
+2025-11-05 09:02:10.838 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7205/api/WarrantyInfo/active
+ - null null
+2025-11-05 09:02:10.867 +05:30 [INF] Executing endpoint 'MaintenanceScheduler.Api.Controllers.WarrantyInfoController.GetById (MaintenanceScheduler.Api)'
+2025-11-05 09:02:10.874 +05:30 [INF] Route matched with {action = "GetById", controller = "WarrantyInfo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.Guid) on controller MaintenanceScheduler.Api.Controllers.WarrantyInfoController (MaintenanceScheduler.Api).
+2025-11-05 09:02:10.886 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-11-05 09:02:10.893 +05:30 [INF] Executed action MaintenanceScheduler.Api.Controllers.WarrantyInfoController.GetById (MaintenanceScheduler.Api) in 9.754ms
+2025-11-05 09:02:10.899 +05:30 [INF] Executed endpoint 'MaintenanceScheduler.Api.Controllers.WarrantyInfoController.GetById (MaintenanceScheduler.Api)'
+2025-11-05 09:02:10.905 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7205/api/WarrantyInfo/active
+ - 400 null application/problem+json; charset=utf-8 67.2388ms
+2025-11-05 09:02:16.016 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5195/api/WarrantyInfo/
+ - null null
+2025-11-05 09:02:16.031 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5195/api/WarrantyInfo/
+ - 307 0 null 14.8191ms
+2025-11-05 09:02:16.033 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7205/api/WarrantyInfo/
+ - null null
+2025-11-05 09:02:16.057 +05:30 [INF] Executing endpoint 'MaintenanceScheduler.Api.Controllers.WarrantyInfoController.GetById (MaintenanceScheduler.Api)'
+2025-11-05 09:02:16.060 +05:30 [INF] Route matched with {action = "GetById", controller = "WarrantyInfo"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.Guid) on controller MaintenanceScheduler.Api.Controllers.WarrantyInfoController (MaintenanceScheduler.Api).
+2025-11-05 09:02:16.067 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-11-05 09:02:16.072 +05:30 [INF] Executed action MaintenanceScheduler.Api.Controllers.WarrantyInfoController.GetById (MaintenanceScheduler.Api) in 6.6567ms
+2025-11-05 09:02:16.076 +05:30 [INF] Executed endpoint 'MaintenanceScheduler.Api.Controllers.WarrantyInfoController.GetById (MaintenanceScheduler.Api)'
+2025-11-05 09:02:16.078 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7205/api/WarrantyInfo/
+ - 400 null application/problem+json; charset=utf-8 44.8571ms
+2025-11-05 09:02:45.338 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5195/api/MaintenanceSchedule
+ - null null
+2025-11-05 09:02:45.393 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5195/api/MaintenanceSchedule
+ - 307 0 null 55.0733ms
+2025-11-05 09:02:45.410 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7205/api/MaintenanceSchedule
+ - null null
+2025-11-05 09:02:45.433 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7205/api/MaintenanceSchedule
+ - 404 0 null 35.7934ms
+2025-11-05 09:02:45.440 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7205/api/MaintenanceSchedule%0A, Response status code: 404
+2025-11-05 09:02:52.379 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5195/api/MaintenanceSchedule
+ - null null
+2025-11-05 09:02:52.424 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5195/api/MaintenanceSchedule
+ - 307 0 null 45.4862ms
+2025-11-05 09:02:52.428 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7205/api/MaintenanceSchedule
+ - null null
+2025-11-05 09:02:52.577 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7205/api/MaintenanceSchedule
+ - 404 0 null 148.8299ms
+2025-11-05 09:02:52.589 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7205/api/MaintenanceSchedule%0A, Response status code: 404
+2025-11-05 09:03:56.078 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5195/api/MaintenanceHistory/asset/{assetId}/daterange?startDate=2024-01-01&endDate=2024-12-31%0A - null null
+2025-11-05 09:03:56.092 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5195/api/MaintenanceHistory/asset/{assetId}/daterange?startDate=2024-01-01&endDate=2024-12-31%0A - 307 0 null 70.7334ms
+2025-11-05 09:03:56.095 +05:30 [INF] Request starting HTTP/1.1 GET https://localhost:7205/api/MaintenanceHistory/asset/{assetId}/daterange?startDate=2024-01-01&endDate=2024-12-31%0A - null null
+2025-11-05 09:03:56.114 +05:30 [INF] Executing endpoint 'MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController.GetByDateRange (MaintenanceScheduler.Api)'
+2025-11-05 09:03:56.130 +05:30 [INF] Route matched with {action = "GetByDateRange", controller = "MaintenanceHistory"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetByDateRange(System.Guid, System.DateTime, System.DateTime) on controller MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController (MaintenanceScheduler.Api).
+2025-11-05 09:03:56.217 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-11-05 09:03:56.225 +05:30 [INF] Executed action MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController.GetByDateRange (MaintenanceScheduler.Api) in 87.5926ms
+2025-11-05 09:03:56.231 +05:30 [INF] Executed endpoint 'MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController.GetByDateRange (MaintenanceScheduler.Api)'
+2025-11-05 09:03:56.235 +05:30 [INF] Request finished HTTP/1.1 GET https://localhost:7205/api/MaintenanceHistory/asset/{assetId}/daterange?startDate=2024-01-01&endDate=2024-12-31%0A - 400 null application/problem+json; charset=utf-8 139.6236ms
+2025-11-05 09:04:42.342 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7205/api/MaintenanceHistory - application/json 369
+2025-11-05 09:04:42.386 +05:30 [INF] CORS policy execution successful.
+2025-11-05 09:04:42.403 +05:30 [INF] Executing endpoint 'MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController.Create (MaintenanceScheduler.Api)'
+2025-11-05 09:04:42.416 +05:30 [INF] Route matched with {action = "Create", controller = "MaintenanceHistory"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(MaintenanceScheduler.Application.DTOs.CreateMaintenanceHistoryDto) on controller MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController (MaintenanceScheduler.Api).
+2025-11-05 09:04:47.596 +05:30 [ERR] Failed executing DbCommand (1,931ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Guid), @p2='?' (Size = 2000), @p3='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p4='?' (DbType = DateTime2), @p5='?' (Size = 100), @p6='?' (Size = 1000), @p7='?' (DbType = Int32), @p8='?' (DbType = DateTime2), @p9='?' (DbType = Guid), @p10='?' (DbType = Int32), @p11='?' (Size = 2000), @p12='?' (Size = 1000), @p13='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [MaintenanceHistories] ([Id], [AssetId], [AttachmentUrls], [Cost], [CreatedAt], [CreatedBy], [Description], [DowntimeMinutes], [MaintenanceDate], [MaintenanceScheduleId], [MaintenanceType], [Notes], [PartsReplaced], [TechnicianName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13);
+2025-11-05 09:04:47.924 +05:30 [ERR] An exception occurred in the database while saving changes for context type 'MaintenanceScheduler.Infrastructure.Data.MaintenanceDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK__Maintenan__Maint__403A8C7D". The conflict occurred in database "MaintenanceSchedulerDB", table "dbo.MaintenanceSchedules", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:fc15a75e-a9ab-4314-880a-73c615d1aed6
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK__Maintenan__Maint__403A8C7D". The conflict occurred in database "MaintenanceSchedulerDB", table "dbo.MaintenanceSchedules", column 'Id'.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__211_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:fc15a75e-a9ab-4314-880a-73c615d1aed6
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-11-05 09:04:51.122 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'MaintenanceScheduler.Application.DTOs.ApiResponse`1[[MaintenanceScheduler.Application.DTOs.MaintenanceHistoryDto, MaintenanceScheduler.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-05 09:04:51.150 +05:30 [INF] Executed action MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController.Create (MaintenanceScheduler.Api) in 8726.0203ms
+2025-11-05 09:04:51.158 +05:30 [INF] Executed endpoint 'MaintenanceScheduler.Api.Controllers.MaintenanceHistoryController.Create (MaintenanceScheduler.Api)'
+2025-11-05 09:04:51.166 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7205/api/MaintenanceHistory - 400 null application/json; charset=utf-8 8824.0287ms
+2025-11-05 09:05:10.222 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7205/api/MaintenanceSchedule - null null
+2025-11-05 09:05:10.229 +05:30 [INF] Executing endpoint 'MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController.GetAll (MaintenanceScheduler.Api)'
+2025-11-05 09:05:10.240 +05:30 [INF] Route matched with {action = "GetAll", controller = "MaintenanceSchedule"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController (MaintenanceScheduler.Api).
+2025-11-05 09:05:12.625 +05:30 [INF] Executed DbCommand (432ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[ActualCost], [m].[AssetId], [m].[AssetName], [m].[AssignedTo], [m].[CompletedDate], [m].[CreatedAt], [m].[CreatedBy], [m].[Description], [m].[EstimatedCost], [m].[FrequencyInDays], [m].[MaintenanceType], [m].[NextScheduledDate], [m].[Notes], [m].[ScheduledDate], [m].[Status], [m].[UpdatedAt], [m].[UpdatedBy], [m0].[Id], [m0].[AssetId], [m0].[AttachmentUrls], [m0].[Cost], [m0].[CreatedAt], [m0].[CreatedBy], [m0].[Description], [m0].[DowntimeMinutes], [m0].[MaintenanceDate], [m0].[MaintenanceScheduleId], [m0].[MaintenanceType], [m0].[Notes], [m0].[PartsReplaced], [m0].[TechnicianName]
+FROM [MaintenanceSchedules] AS [m]
+LEFT JOIN [MaintenanceHistories] AS [m0] ON [m].[Id] = [m0].[MaintenanceScheduleId]
+ORDER BY [m].[ScheduledDate], [m].[Id]
+2025-11-05 09:05:13.025 +05:30 [INF] Executing OkObjectResult, writing value of type 'MaintenanceScheduler.Application.DTOs.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[MaintenanceScheduler.Application.DTOs.MaintenanceScheduleDto, MaintenanceScheduler.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-05 09:05:13.100 +05:30 [INF] Executed action MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController.GetAll (MaintenanceScheduler.Api) in 2851.8544ms
+2025-11-05 09:05:13.103 +05:30 [INF] Executed endpoint 'MaintenanceScheduler.Api.Controllers.MaintenanceScheduleController.GetAll (MaintenanceScheduler.Api)'
+2025-11-05 09:05:13.107 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7205/api/MaintenanceSchedule - 200 null application/json; charset=utf-8 2884.8175ms

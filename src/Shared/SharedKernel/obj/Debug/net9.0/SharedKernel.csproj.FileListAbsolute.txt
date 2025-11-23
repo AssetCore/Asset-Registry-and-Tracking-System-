@@ -1,0 +1,12 @@
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Shared\SharedKernel\bin\Debug\net9.0\SharedKernel.deps.json
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Shared\SharedKernel\bin\Debug\net9.0\SharedKernel.dll
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Shared\SharedKernel\bin\Debug\net9.0\SharedKernel.pdb
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Shared\SharedKernel\obj\Debug\net9.0\SharedKernel.GeneratedMSBuildEditorConfig.editorconfig
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Shared\SharedKernel\obj\Debug\net9.0\SharedKernel.AssemblyInfoInputs.cache
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Shared\SharedKernel\obj\Debug\net9.0\SharedKernel.AssemblyInfo.cs
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Shared\SharedKernel\obj\Debug\net9.0\SharedKernel.csproj.CoreCompileInputs.cache
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Shared\SharedKernel\obj\Debug\net9.0\SharedKernel.sourcelink.json
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Shared\SharedKernel\obj\Debug\net9.0\SharedKernel.dll
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Shared\SharedKernel\obj\Debug\net9.0\refint\SharedKernel.dll
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Shared\SharedKernel\obj\Debug\net9.0\SharedKernel.pdb
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Shared\SharedKernel\obj\Debug\net9.0\ref\SharedKernel.dll

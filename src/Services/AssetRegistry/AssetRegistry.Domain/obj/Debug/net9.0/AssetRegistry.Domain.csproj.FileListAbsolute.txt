@@ -1,0 +1,12 @@
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\AssetRegistry\AssetRegistry.Domain\bin\Debug\net9.0\AssetRegistry.Domain.deps.json
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\AssetRegistry\AssetRegistry.Domain\bin\Debug\net9.0\AssetRegistry.Domain.dll
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\AssetRegistry\AssetRegistry.Domain\bin\Debug\net9.0\AssetRegistry.Domain.pdb
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\AssetRegistry\AssetRegistry.Domain\obj\Debug\net9.0\AssetRegistry.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\AssetRegistry\AssetRegistry.Domain\obj\Debug\net9.0\AssetRegistry.Domain.AssemblyInfoInputs.cache
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\AssetRegistry\AssetRegistry.Domain\obj\Debug\net9.0\AssetRegistry.Domain.AssemblyInfo.cs
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\AssetRegistry\AssetRegistry.Domain\obj\Debug\net9.0\AssetRegistry.Domain.csproj.CoreCompileInputs.cache
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\AssetRegistry\AssetRegistry.Domain\obj\Debug\net9.0\AssetRegistry.Domain.sourcelink.json
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\AssetRegistry\AssetRegistry.Domain\obj\Debug\net9.0\AssetRegistry.Domain.dll
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\AssetRegistry\AssetRegistry.Domain\obj\Debug\net9.0\refint\AssetRegistry.Domain.dll
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\AssetRegistry\AssetRegistry.Domain\obj\Debug\net9.0\AssetRegistry.Domain.pdb
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\AssetRegistry\AssetRegistry.Domain\obj\Debug\net9.0\ref\AssetRegistry.Domain.dll

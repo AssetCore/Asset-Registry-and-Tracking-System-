@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+xaaGmad1ro=",
+  "dgSpecHash": "thCDzzsQ+kQ=",
   "success": true,
-  "projectFilePath": "D:\\WSO2_works\\Project\\Asset Registry and Tracking System\\src\\Services\\AssetRegistry\\AssetRegistry.Domain\\AssetRegistry.Domain.csproj",
+  "projectFilePath": "D:\\WSO2 Project\\Asset-Registry-and-Tracking-System-\\src\\Services\\AssetRegistry\\AssetRegistry.Domain\\AssetRegistry.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

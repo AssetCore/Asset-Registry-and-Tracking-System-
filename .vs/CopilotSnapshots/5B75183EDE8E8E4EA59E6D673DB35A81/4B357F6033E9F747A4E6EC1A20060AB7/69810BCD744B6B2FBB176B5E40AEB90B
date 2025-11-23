@@ -1,0 +1,46 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace MaintenanceScheduler.Domain.Entities
+{
+    public class MaintenanceSchedule
+    {
+        public Guid Id { get; set; }
+        public Guid AssetId { get; set; }
+        public required string AssetName { get; set; }
+        public MaintenanceType MaintenanceType { get; set; }
+        public required string Description { get; set; }
+        public DateTime ScheduledDate { get; set; }
+        public DateTime? CompletedDate { get; set; }
+        public MaintenanceStatus Status { get; set; }
+        public int FrequencyInDays { get; set; }
+        public DateTime? NextScheduledDate { get; set; }
+        public required string AssignedTo { get; set; }
+        public decimal? EstimatedCost { get; set; }
+        public decimal? ActualCost { get; set; }
+        public required string Notes { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public required string CreatedBy { get; set; }
+        public required string UpdatedBy { get; set; }
+
+        public required ICollection<MaintenanceHistory> MaintenanceHistories { get; set; }
+    }
+
+    public enum MaintenanceType
+    {
+        Preventive = 1,
+        Corrective = 2,
+        Predictive = 3,
+        Routine = 4
+    }
+
+    public enum MaintenanceStatus
+    {
+        Scheduled = 1,
+        InProgress = 2,
+        Completed = 3,
+        Cancelled = 4,
+        Overdue = 5
+    }
+}

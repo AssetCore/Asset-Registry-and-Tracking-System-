@@ -1,0 +1,31 @@
+﻿{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=DESKTOP-60VHJM3;Database=MaintenanceSchedulerDB;Trusted_Connection=True;TrustServerCertificate=True;MultipleActiveResultSets=true"
+  },
+  "NotificationService": {
+    "BaseUrl": "https://localhost:7002",
+    "Enabled": true
+  },
+  "BackgroundServices": {
+    "MaintenanceReminder": {
+      "CheckIntervalHours": 6,
+      "ReminderDaysAhead": 3
+    },
+    "WarrantyExpiryReminder": {
+      "CheckIntervalHours": 24,
+      "ReminderDaysAhead": 30
+    }
+  },
+  "Serilog": {
+    "MinimumLevel": {
+      "Default": "Information"
+    }
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*"
+}

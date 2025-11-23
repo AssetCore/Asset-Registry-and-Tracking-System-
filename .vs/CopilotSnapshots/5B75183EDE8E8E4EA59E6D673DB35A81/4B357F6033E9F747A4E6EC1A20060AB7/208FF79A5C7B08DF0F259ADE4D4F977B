@@ -1,0 +1,27 @@
+﻿using System;
+
+namespace MaintenanceScheduler.Domain.Entities
+{
+    public class WarrantyInfo
+    {
+        public Guid Id { get; set; }
+        public Guid AssetId { get; set; }
+        public required string AssetName { get; set; }
+        public required string WarrantyProvider { get; set; }
+        public required string WarrantyType { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime ExpiryDate { get; set; }
+        public required string CoverageDetails { get; set; }
+        public decimal WarrantyCost { get; set; }
+        public required string ContactPerson { get; set; }
+        public required string ContactEmail { get; set; }
+        public required string ContactPhone { get; set; }
+        public bool IsActive { get; set; }
+        public bool NotificationSent { get; set; }
+        public DateTime? LastNotificationDate { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+        public required string CreatedBy { get; set; }
+        public required string UpdatedBy { get; set; }
+    }
+}

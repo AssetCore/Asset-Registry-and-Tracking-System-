@@ -1,0 +1,12 @@
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\MaintenanceScheduler\MaintenanceScheduler.Domain\bin\Debug\net9.0\MaintenanceScheduler.Domain.deps.json
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\MaintenanceScheduler\MaintenanceScheduler.Domain\bin\Debug\net9.0\MaintenanceScheduler.Domain.dll
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\MaintenanceScheduler\MaintenanceScheduler.Domain\bin\Debug\net9.0\MaintenanceScheduler.Domain.pdb
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\MaintenanceScheduler\MaintenanceScheduler.Domain\obj\Debug\net9.0\MaintenanceScheduler.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\MaintenanceScheduler\MaintenanceScheduler.Domain\obj\Debug\net9.0\MaintenanceScheduler.Domain.AssemblyInfoInputs.cache
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\MaintenanceScheduler\MaintenanceScheduler.Domain\obj\Debug\net9.0\MaintenanceScheduler.Domain.AssemblyInfo.cs
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\MaintenanceScheduler\MaintenanceScheduler.Domain\obj\Debug\net9.0\MaintenanceScheduler.Domain.csproj.CoreCompileInputs.cache
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\MaintenanceScheduler\MaintenanceScheduler.Domain\obj\Debug\net9.0\MaintenanceScheduler.Domain.sourcelink.json
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\MaintenanceScheduler\MaintenanceScheduler.Domain\obj\Debug\net9.0\MaintenanceScheduler.Domain.dll
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\MaintenanceScheduler\MaintenanceScheduler.Domain\obj\Debug\net9.0\refint\MaintenanceScheduler.Domain.dll
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\MaintenanceScheduler\MaintenanceScheduler.Domain\obj\Debug\net9.0\MaintenanceScheduler.Domain.pdb
+D:\WSO2 Project\Asset-Registry-and-Tracking-System-\src\Services\MaintenanceScheduler\MaintenanceScheduler.Domain\obj\Debug\net9.0\ref\MaintenanceScheduler.Domain.dll
