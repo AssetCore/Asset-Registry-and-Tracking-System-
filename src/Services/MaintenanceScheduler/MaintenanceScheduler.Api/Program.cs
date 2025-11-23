@@ -69,19 +69,18 @@ builder.Services.AddCors(options =>
 
 // Health Checks
 //builder.Services.AddHealthChecks()
-    //.AddDbContextCheck<MaintenanceDbContext>();
+//.AddDbContextCheck<MaintenanceDbContext>();
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline
-if (app.Environment.IsDevelopment())
+// Enable Swagger in all environments for easier debugging
+app.UseSwagger();
+app.UseSwaggerUI(c =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI(c =>
-    {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Maintenance Scheduler API v1");
-    });
-}
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Maintenance Scheduler API v1");
+    c.RoutePrefix = "swagger"; // Access at /swagger
+});
 
 app.UseHttpsRedirection();
 
