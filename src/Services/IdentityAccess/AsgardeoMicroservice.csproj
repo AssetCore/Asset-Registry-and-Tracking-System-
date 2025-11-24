@@ -9,6 +9,12 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IdentityAccess.Application\IdentityAccess.Application.csproj" />
+    <ProjectReference Include="..\IdentityAccess.Infrastructure\IdentityAccess.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

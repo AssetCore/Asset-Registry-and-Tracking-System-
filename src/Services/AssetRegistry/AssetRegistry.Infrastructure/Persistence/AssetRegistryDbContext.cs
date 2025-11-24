@@ -9,6 +9,20 @@ public class AssetRegistryDbContext : DbContext
 
     public DbSet<Asset> Assets => Set<Asset>();
 
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        // This runs for design-time tools if DI didn't configure options
+        if (!optionsBuilder.IsConfigured)
+        {
+            // Prefer environment variable for security/portability
+            var cs =
+                Environment.GetEnvironmentVariable("ASSETREGISTRY_CS") // e.g., set to your connection string
+                ?? "Server=localhost;Database=AssetRegistry;Trusted_Connection=True;TrustServerCertificate=True;";
+
+            optionsBuilder.UseSqlServer(cs);
+        }
+    }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Asset>(entity =>
