@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using MaintenanceScheduler.Domain.Entities;
+
+namespace MaintenanceScheduler.Domain.Interfaces
+{
+    public interface IWarrantyInfoRepository
+    {
+        Task<WarrantyInfo> GetByIdAsync(Guid id);
+        Task<WarrantyInfo?> GetByAssetIdAsync(Guid assetId);
+        Task<IEnumerable<WarrantyInfo>> GetExpiringWarrantiesAsync(int days);
+        Task<IEnumerable<WarrantyInfo>> GetActiveWarrantiesAsync();
+        Task<WarrantyInfo> AddAsync(WarrantyInfo warranty);
+        Task<WarrantyInfo> UpdateAsync(WarrantyInfo warranty);
+        Task<bool> DeleteAsync(Guid id);
+    }
+}
