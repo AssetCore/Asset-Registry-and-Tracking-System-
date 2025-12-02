@@ -74,15 +74,6 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ${{ secrets.AWS_REGION }}
 
-    - name: Debug AWS identity
-      run: aws sts get-caller-identity
-
-    - name: Test upload
-      run: |
-        echo "test" > test.txt
-        aws s3 cp test.txt s3://assetcore-sonarqube-report-bucket/test.txt
-
-
     - name: Upload SonarQube report to S3
       env:
         BUCKET: ${{ secrets.S3_BUCKET }}
