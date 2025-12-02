@@ -79,5 +79,5 @@ jobs:
         BUCKET: ${{ secrets.S3_BUCKET }}
       run: |
         OUTFILE=$(ls sonarqube-report-*.json | head -n1)
-        aws s3 cp "$OUTFILE" "s3://$BUCKET/sonarqube-reports/$OUTFILE" --acl private
+        aws s3 cp "$OUTFILE" "s3://$BUCKET/sonarqube-reports/$OUTFILE"
         echo "Uploaded $OUTFILE to s3://$BUCKET/sonarqube-reports/"
