@@ -1,0 +1,63 @@
+version: "3.9"
+
+services:
+  # ============================
+  # Asset Registry Service
+  # ============================
+  asset-registry:
+    build:
+      context: ./src/Services/AssetRegistry
+      dockerfile: Dockerfile
+    container_name: asset-registry
+    ports:
+      - "5001:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    restart: unless-stopped
+
+  # ============================
+  # Identity Access Service
+  # ============================
+  identity-access:
+    build:
+      context: ./src/Services/IdentityAccess
+      dockerfile: Dockerfile
+    container_name: identity-access
+    ports:
+      - "5003:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    restart: unless-stopped
+
+  # ============================
+  # Maintenance Scheduler Service
+  # ============================
+  maintenance-scheduler:
+    build:
+      context: ./src/Services/MaintenanceScheduler
+      dockerfile: Dockerfile
+    container_name: maintenance-scheduler
+    ports:
+      - "5004:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    restart: unless-stopped
+
+  # ============================
+  # Notification Service
+  # ============================
+  notification:
+    build:
+      context: ./src/Services/Notification
+      dockerfile: Dockerfile
+    container_name: notification
+    ports:
+      - "5005:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    restart: unless-stopped
+
+networks:
+  default:
+    name: microservices-network
+    driver: bridge  
