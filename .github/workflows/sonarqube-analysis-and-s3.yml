@@ -3,7 +3,7 @@ name: SonarQube analysis and upload report to S3
 on:
   push:
     branches:
-      - main   # change to the branch(es) you want
+      - feature/add-sonarqube-workflow   # change to the branch(es) you want
 
 env:
   DOTNET_VERSION: "7.0.x"  # change to your target .NET version if needed
