@@ -27,52 +27,52 @@ jobs:
       # ------------------------------------------------------------
       - name: Build User Service Image
         run: |
-          docker build -t ghcr.io/${{ github.repository_owner }}/assetregistry:latest ./src/Services/AssetRegistry
+          docker build -t ghcr.io/assetcore/assetregistry:latest ./src/Services/AssetRegistry
 
       - name: Push User Service Image
         run: |
-          docker push ghcr.io/${{ github.repository_owner }}/assetregistry:latest
+          docker push ghcr.io/assetcore/assetregistry:latest
 
       # ------------------------------------------------------------
       # AuditCompliance SERVICE
       # ------------------------------------------------------------
       - name: Build User Service Image
         run: |
-          docker build -t ghcr.io/${{ github.repository_owner }}/auditcompliance:latest ./src/Services/AuditCompliance
+          docker build -t ghcr.io/assetcore/auditcompliance:latest ./src/Services/AuditCompliance
 
       - name: Push User Service Image
         run: |
-          docker push ghcr.io/${{ github.repository_owner }}/auditcompliance:latest
+          docker push ghcr.io/assetcore/auditcompliance:latest
 
       # ------------------------------------------------------------
       # IdentityAccess SERVICE
       # ------------------------------------------------------------
       - name: Build Order Service Image
         run: |
-          docker build -t ghcr.io/${{ github.repository_owner }}/identityaccess:latest ./src/Services/IdentityAccess
+          docker build -t ghcr.io/assetcore/identityaccess:latest ./src/Services/IdentityAccess
 
       - name: Push Order Service Image
         run: |
-          docker push ghcr.io/${{ github.repository_owner }}/identityaccess:latest
+          docker push ghcr.io/assetcore/identityaccess:latest
 
       # ------------------------------------------------------------
       # MaintenanceScheduler SERVICE
       # ------------------------------------------------------------
       - name: Build Payment Service Image
         run: |
-          docker build -t ghcr.io/${{ github.repository_owner }}/maintenancescheduler:latest ./src/Services/MaintenanceScheduler
+          docker build -t ghcr.io/assetcore/maintenancescheduler:latest ./src/Services/MaintenanceScheduler
 
       - name: Push Payment Service Image
         run: |
-          docker push ghcr.io/${{ github.repository_owner }}/maintenancescheduler:latest
+          docker push ghcr.io/assetcore/maintenancescheduler:latest
 
       # ------------------------------------------------------------
       # Notification SERVICE
       # ------------------------------------------------------------
       - name: Build Gateway Service Image
         run: |
-          docker build -t ghcr.io/${{ github.repository_owner }}/notification:latest ./src/Services/Notification
+          docker build -t ghcr.io/assetcore/notification:latest ./src/Services/Notification
 
       - name: Push Gateway Service Image
         run: |
-          docker push ghcr.io/${{ github.repository_owner }}/notification:latest
+          docker push ghcr.io/assetcore/notification:latest
