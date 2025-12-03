@@ -8,15 +8,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    env:
-      OWNER: ${{ github.repository_owner }}
+    #env:
+      #OWNER: ${{ github.repository_owner }}
 
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name: Convert OWNER to lowercase
-        run: echo "OWNER_LC=$(echo $OWNER | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
+     #- name: Convert OWNER to lowercase
+     #   run: echo "OWNER_LC=$(echo $OWNER | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
 
 
       # ------------------------------------------------------------
