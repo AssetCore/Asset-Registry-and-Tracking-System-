@@ -27,11 +27,11 @@ jobs:
       # ------------------------------------------------------------
       - name: Build User Service Image
         run: |
-          docker build -t ghcr.io/assetcore/assetregistry:latest ./src/Services/AssetRegistry
+          docker build -t ghcr.io/wasantha99/assetregistry:latest ./src/Services/AssetRegistry
 
       - name: Push User Service Image
         run: |
-          docker push ghcr.io/assetcore/assetregistry:latest
+          docker push ghcr.io/wasantha99/assetregistry:latest
 
       # ------------------------------------------------------------
       # AuditCompliance SERVICE
