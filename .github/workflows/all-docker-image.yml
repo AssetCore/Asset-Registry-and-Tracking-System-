@@ -27,52 +27,52 @@ jobs:
       # ------------------------------------------------------------
       - name: Build User Service Image
         run: |
-          docker build -t ghcr.io/${{ github.Samyuktha-sam }}/AssetRegistry:latest ./src/Services/AssetRegistry
+          docker build -t ghcr.io/${{ github.repository_owner }}/AssetRegistry:latest ./src/Services/AssetRegistry
 
       - name: Push User Service Image
         run: |
-          docker push ghcr.io/${{ github.Samyuktha-sam }}/AssetRegistry:latest
+          docker push ghcr.io/${{ github.repository_owner }}/AssetRegistry:latest
 
       # ------------------------------------------------------------
       # AuditCompliance SERVICE
       # ------------------------------------------------------------
       - name: Build User Service Image
         run: |
-          docker build -t ghcr.io/${{ github.ChandulaJ }}/AuditCompliance:latest ./src/Services/AuditCompliance
+          docker build -t ghcr.io/${{ github.repository_owner }}/AuditCompliance:latest ./src/Services/AuditCompliance
 
       - name: Push User Service Image
         run: |
-          docker push ghcr.io/${{ github.ChandulaJ }}/AuditCompliance:latest
+          docker push ghcr.io/${{ github.repository_owner }}/AuditCompliance:latest
 
       # ------------------------------------------------------------
       # IdentityAccess SERVICE
       # ------------------------------------------------------------
       - name: Build Order Service Image
         run: |
-          docker build -t ghcr.io/${{ github.ChandulaJ }}/IdentityAccess:latest ./src/Services/IdentityAccess
+          docker build -t ghcr.io/${{ github.repository_owner }}/IdentityAccess:latest ./src/Services/IdentityAccess
 
       - name: Push Order Service Image
         run: |
-          docker push ghcr.io/${{ github.ChandulaJ }}/IdentityAccess:latest
+          docker push ghcr.io/${{ github.repository_owner }}/IdentityAccess:latest
 
       # ------------------------------------------------------------
       # MaintenanceScheduler SERVICE
       # ------------------------------------------------------------
       - name: Build Payment Service Image
         run: |
-          docker build -t ghcr.io/${{ github.ChandulaJ }}/MaintenanceScheduler:latest ./src/Services/MaintenanceScheduler
+          docker build -t ghcr.io/${{ github.repository_owner }}/MaintenanceScheduler:latest ./src/Services/MaintenanceScheduler
 
       - name: Push Payment Service Image
         run: |
-          docker push ghcr.io/${{ github.ChandulaJ }}/MaintenanceScheduler:latest
+          docker push ghcr.io/${{ github.repository_owner }}/MaintenanceScheduler:latest
 
       # ------------------------------------------------------------
       # Notification SERVICE
       # ------------------------------------------------------------
       - name: Build Gateway Service Image
         run: |
-          docker build -t ghcr.io/${{ github.Samyuktha-sam }}/Notification:latest ./src/Services/Notification
+          docker build -t ghcr.io/${{ github.repository_owner }}/Notification:latest ./src/Services/Notification
 
       - name: Push Gateway Service Image
         run: |
-          docker push ghcr.io/${{ github.Samyuktha-sam }}/Notification:latest
+          docker push ghcr.io/${{ github.repository_owner }}/Notification:latest
