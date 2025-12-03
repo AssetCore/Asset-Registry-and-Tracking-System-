@@ -8,9 +8,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    env:
+      OWNER: ${{ github.repository_owner }}
+
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
+
+      - name: Convert OWNER to lowercase
+        run: echo "OWNER_LC=$(echo $OWNER | tr '[:upper:]' '[:lower:]')" >> $GITHUB_ENV
+
 
       # ------------------------------------------------------------
       # Login once – used for all pushes
@@ -27,11 +34,11 @@ jobs:
       # ------------------------------------------------------------
       - name: Build User Service Image
         run: |
-          docker build -t ghcr.io/${{ env.OWNER }}/assetregistry:latest ./src/Services/AssetRegistry
+          docker build -t ghcr.io/${{ env.OWNER_LC }}/assetregistry:latest ./src/Services/AssetRegistry
 
       - name: Push User Service Image
         run: |
-          docker push ghcr.io/${{ env.OWNER }}/assetregistry
+          docker push ghcr.io/${{ env.OWNER_LC}}/assetregistry
 
       # ------------------------------------------------------------
       # AuditCompliance SERVICE
