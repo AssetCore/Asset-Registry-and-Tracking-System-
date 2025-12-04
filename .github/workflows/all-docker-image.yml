@@ -30,7 +30,7 @@ jobs:
         run: |
           docker build -t ghcr.io/wasantha99/assetregistry:latest ./src/Services/AssetRegistry
 
-      - name: Push User Audit Image
+      - name: Push User Asset Image
         run: |
           docker push ghcr.io/wasantha99/assetregistry:latest
 
@@ -48,13 +48,13 @@ jobs:
       # ------------------------------------------------------------
       # IdentityAccess SERVICE
       # ------------------------------------------------------------
-      - name: Build Order Identity Image
-        run: |
-          docker build -t ghcr.io/wasantha99/identityaccess:latest ./src/Services/IdentityAccess
+      # - name: Build Order Identity Image
+      #   run: |
+      #     docker build -t ghcr.io/wasantha99/identityaccess:latest ./src/Services/IdentityAccess
 
-      - name: Push Order Identity Image
-        run: |
-          docker push ghcr.io/wasantha99/identityaccess:latest
+      # - name: Push Order Identity Image
+      #   run: |
+      #     docker push ghcr.io/wasantha99/identityaccess:latest
 
       # ------------------------------------------------------------
       # MaintenanceScheduler SERVICE
