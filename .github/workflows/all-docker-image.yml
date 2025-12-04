@@ -37,13 +37,13 @@ jobs:
       # ------------------------------------------------------------
       # AuditCompliance SERVICE
       # ------------------------------------------------------------
-      - name: Build User Audit Image
-        run: |
-          docker build -t ghcr.io/wasantha99/auditcompliance:latest ./src/Services/AuditCompliance
+      # - name: Build User Audit Image
+      #   run: |
+      #     docker build -t ghcr.io/wasantha99/auditcompliance:latest ./src/Services/AuditCompliance
 
-      - name: Push User Audit Image
-        run: |
-          docker push ghcr.io/wasantha99/auditcompliance:latest
+      # - name: Push User Audit Image
+      #   run: |
+      #     docker push ghcr.io/wasantha99/auditcompliance:latest
 
       # ------------------------------------------------------------
       # IdentityAccess SERVICE
