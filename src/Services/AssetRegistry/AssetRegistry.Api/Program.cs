@@ -1,4 +1,7 @@
 using AssetRegistry.Application.Assets;
+using AssetRegistry.Application.Interfaces;
+using AssetRegistry.Infrastructure.Configuration;
+using AssetRegistry.Infrastructure.Messaging;
 using AssetRegistry.Infrastructure.Persistence;
 using AssetRegistry.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
@@ -6,7 +9,6 @@ using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Services
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
@@ -25,9 +27,13 @@ builder.Services.AddDbContext<AssetRegistryDbContext>(opts =>
 builder.Services.AddScoped<IAssetRepository, AssetRepository>();
 builder.Services.AddScoped<IAssetService, AssetService>();
 
+builder.Services.Configure<RabbitMqSettings>(
+    builder.Configuration.GetSection(RabbitMqSettings.SectionName));
+
+builder.Services.AddSingleton<INotificationEventPublisher, RabbitMqNotificationEventPublisher>();
+
 var app = builder.Build();
 
-// Pipeline
 if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
@@ -35,13 +41,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI(c =>
     {
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "Asset Registry API v1");
-        c.RoutePrefix = "swagger"; // browse at /swagger
+        c.RoutePrefix = "swagger"; 
     });
 }
 
 app.UseHttpsRedirection();
 app.UseAuthorization();
-
-app.MapControllers();
+app.MapControllers();   
 
 app.Run();
