@@ -26,54 +26,54 @@ jobs:
       # ------------------------------------------------------------
       # AssetRegistry SERVICE
       # ------------------------------------------------------------
-      - name: Build User Service Image
+      - name: Build User Asset Image
         run: |
           docker build -t ghcr.io/wasantha99/assetregistry:latest ./src/Services/AssetRegistry
 
-      - name: Push User Service Image
+      - name: Push User Audit Image
         run: |
           docker push ghcr.io/wasantha99/assetregistry:latest
 
       # ------------------------------------------------------------
       # AuditCompliance SERVICE
       # ------------------------------------------------------------
-      - name: Build User Service Image
+      - name: Build User Audit Image
         run: |
-          docker build -t ghcr.io/assetcore/auditcompliance:latest ./src/Services/AuditCompliance
+          docker build -t ghcr.io/wasantha99/auditcompliance:latest ./src/Services/AuditCompliance
 
-      - name: Push User Service Image
+      - name: Push User Audit Image
         run: |
-          docker push ghcr.io/assetcore/auditcompliance:latest
+          docker push ghcr.io/wasantha99/auditcompliance:latest
 
       # ------------------------------------------------------------
       # IdentityAccess SERVICE
       # ------------------------------------------------------------
-      - name: Build Order Service Image
+      - name: Build Order Identity Image
         run: |
-          docker build -t ghcr.io/assetcore/identityaccess:latest ./src/Services/IdentityAccess
+          docker build -t ghcr.io/wasantha99/identityaccess:latest ./src/Services/IdentityAccess
 
-      - name: Push Order Service Image
+      - name: Push Order Identity Image
         run: |
-          docker push ghcr.io/assetcore/identityaccess:latest
+          docker push ghcr.io/wasantha99/identityaccess:latest
 
       # ------------------------------------------------------------
       # MaintenanceScheduler SERVICE
       # ------------------------------------------------------------
       - name: Build Payment Service Image
         run: |
-          docker build -t ghcr.io/assetcore/maintenancescheduler:latest ./src/Services/MaintenanceScheduler
+          docker build -t ghcr.io/wasantha99/maintenancescheduler:latest ./src/Services/MaintenanceScheduler
 
       - name: Push Payment Service Image
         run: |
-          docker push ghcr.io/assetcore/maintenancescheduler:latest
+          docker push ghcr.io/wasantha99/maintenancescheduler:latest
 
       # ------------------------------------------------------------
       # Notification SERVICE
       # ------------------------------------------------------------
-      - name: Build Gateway Service Image
+      - name: Build Notification Service Image
         run: |
-          docker build -t ghcr.io/assetcore/notification:latest ./src/Services/Notification
+          docker build -t ghcr.io/wasantha99/notification:latest ./src/Services/Notification
 
-      - name: Push Gateway Service Image
+      - name: Push Notification Service Image
         run: |
-          docker push ghcr.io/assetcore/notification:latest
+          docker push ghcr.io/wasantha99/notification:latest
