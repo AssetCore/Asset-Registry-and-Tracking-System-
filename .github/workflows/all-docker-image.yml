@@ -32,7 +32,7 @@ jobs:
 
       - name: Push User Service Image
         run: |
-          docker push ghcr.io/wasantha99/assetregistry
+          docker push ghcr.io/wasantha99/assetregistry:latest
 
       # ------------------------------------------------------------
       # AuditCompliance SERVICE
