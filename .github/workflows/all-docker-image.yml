@@ -59,21 +59,21 @@ jobs:
       # ------------------------------------------------------------
       # MaintenanceScheduler SERVICE
       # ------------------------------------------------------------
-      - name: Build Payment Service Image
+      - name: Build MaintenanceScheduler Service Image
         run: |
           docker build -t ghcr.io/wasantha99/maintenancescheduler:latest ./src/Services/MaintenanceScheduler
 
-      - name: Push Payment Service Image
+      - name: Push MaintenanceScheduler Service Image
         run: |
           docker push ghcr.io/wasantha99/maintenancescheduler:latest
 
       # ------------------------------------------------------------
       # Notification SERVICE
       # ------------------------------------------------------------
-      - name: Build Notification Service Image
-        run: |
-          docker build -t ghcr.io/wasantha99/notification:latest ./src/Services/Notification
+      # - name: Build Notification Service Image
+      #   run: |
+      #     docker build -t ghcr.io/wasantha99/notification:latest ./src/Services/Notification
 
-      - name: Push Notification Service Image
-        run: |
-          docker push ghcr.io/wasantha99/notification:latest
+      # - name: Push Notification Service Image
+      #   run: |
+      #     docker push ghcr.io/wasantha99/notification:latest
