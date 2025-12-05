@@ -24,11 +24,27 @@ jobs:
           password: ${{ secrets.GHCR_TOKEN }}
 
       # ------------------------------------------------------------
+      # Install Trivy (Security Scanner)
+      # ------------------------------------------------------------
+      - name: Install Trivy
+        run: |
+          sudo apt-get update
+          sudo apt-get install wget apt-transport-https gnupg lsb-release -y
+          wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo apt-key add -
+          echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main | sudo tee /etc/apt/sources.list.d/trivy.list
+          sudo apt-get update
+          sudo apt-get install trivy -y
+
+      # ------------------------------------------------------------
       # AssetRegistry SERVICE
       # ------------------------------------------------------------
       - name: Build User Asset Image
         run: |
           docker build -t ghcr.io/wasantha99/assetregistry:latest ./src/Services/AssetRegistry
+
+      - name: Scan AssetRegistry Image with Trivy
+        run: |
+          trivy image --exit-code 1 --severity HIGH,CRITICAL ghcr.io/wasantha99/assetregistry:latest
 
       - name: Push User Asset Image
         run: |
@@ -62,6 +78,10 @@ jobs:
       - name: Build MaintenanceScheduler Service Image
         run: |
           docker build -t ghcr.io/wasantha99/maintenancescheduler:latest ./src/Services/MaintenanceScheduler
+
+      - name: Scan MaintenanceScheduler Image with Trivy
+        run: |
+          trivy image --exit-code 1 --severity HIGH,CRITICAL ghcr.io/wasantha99/maintenancescheduler:latest
 
       - name: Push MaintenanceScheduler Service Image
         run: |
