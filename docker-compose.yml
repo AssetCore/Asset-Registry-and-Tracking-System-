@@ -1,6 +1,26 @@
-version: "3.9"
-
 services:
+  # ============================
+  # SQL Server Database
+  # ============================
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver
+    ports:
+      - "1433:1433"
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "YourStrong@Passw0rd"
+      MSSQL_PID: "Express"
+    volumes:
+      - sqlserver-data:/var/opt/mssql
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/mssql-tools18/bin/sqlcmd -C -S localhost -U sa -P YourStrong@Passw0rd -Q 'SELECT 1' || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 60s
+
   # ============================
   # Asset Registry Service
   # ============================
@@ -13,6 +33,10 @@ services:
       - "5001:8080"
     environment:
       ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__AssetRegistryDb: "Server=sqlserver;Database=AssetRegistry;User Id=sa;Password=YourStrong@Passw0rd;Encrypt=True;TrustServerCertificate=True"
+    depends_on:
+      sqlserver:
+        condition: service_healthy
     restart: unless-stopped
 
   # ============================
@@ -41,6 +65,10 @@ services:
       - "5004:8080"
     environment:
       ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__DefaultConnection: "Server=sqlserver;Database=MaintenanceSchedulerDB;User Id=sa;Password=YourStrong@Passw0rd;Encrypt=True;TrustServerCertificate=True;MultipleActiveResultSets=true"
+    depends_on:
+      sqlserver:
+        condition: service_healthy
     restart: unless-stopped
 
   # ============================
@@ -56,6 +84,10 @@ services:
     environment:
       ASPNETCORE_ENVIRONMENT: Development
     restart: unless-stopped
+
+volumes:
+  sqlserver-data:
+    driver: local
 
 networks:
   default:

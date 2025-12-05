@@ -98,12 +98,13 @@ using (var scope = app.Services.CreateScope())
     var dbContext = scope.ServiceProvider.GetRequiredService<MaintenanceDbContext>();
     try
     {
-        dbContext.Database.Migrate();
-        Log.Information("Database migration completed successfully");
+        // Use EnsureCreated for development - creates database from DbContext model
+        dbContext.Database.EnsureCreated();
+        Log.Information("Database created/verified successfully");
     }
     catch (Exception ex)
     {
-        Log.Error(ex, "An error occurred while migrating the database");
+        Log.Error(ex, "An error occurred while creating the database");
     }
 }
 
