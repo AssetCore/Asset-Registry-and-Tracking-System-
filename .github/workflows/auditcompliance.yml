@@ -5,6 +5,7 @@ on:
     branches: ["main"]
     paths:
       - "src/Services/AuditCompliance/**"
+      - ".github/workflows/auditcompliance.yml"
 
 jobs:
   call-build:
@@ -13,3 +14,5 @@ jobs:
       service_name: "AuditCompliance"
       service_path: "./src/Services/AuditCompliance"
       image_name: "auditcompliance"
+    secrets:
+      DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
