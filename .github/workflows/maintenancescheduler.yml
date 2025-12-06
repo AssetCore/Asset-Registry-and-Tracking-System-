@@ -1,0 +1,15 @@
+name: MaintenanceScheduler - Build & Push
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "src/Services/MaintenanceScheduler/**"
+
+jobs:
+  call-build:
+    uses: ./.github/workflows/reusable-build.yml
+    with:
+      service_name: "MaintenanceScheduler"
+      service_path: "./src/Services/MaintenanceScheduler"
+      image_name: "maintenancescheduler"
