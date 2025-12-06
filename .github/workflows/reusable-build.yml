@@ -15,7 +15,6 @@ on:
     secrets:
       DOCKER_TOKEN:
         required: true
-        type: string
 
 jobs:
   build_push:
