@@ -12,7 +12,7 @@ jobs:
     uses: ./.github/workflows/reusable-build.yml
     with:
       service_name: "MaintenanceScheduler"
-      service_path: "./src/services/maintenancescheduler"
+      service_path: "./src/Services/Maintenancescheduler"
       image_name: "maintenancescheduler"
     secrets:
       DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
