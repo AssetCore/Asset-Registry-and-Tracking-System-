@@ -16,4 +16,4 @@ jobs:
       image_name: "maintenancescheduler"
 
     secrets:
-      DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
+      DOCKER_TOKEN: ${{ secrets.GHCR_TOKEN }}
