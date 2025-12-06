@@ -1,0 +1,57 @@
+name: Reusable Docker Build & Push
+
+on:
+  workflow_call:
+    inputs:
+      service_name:
+        required: true
+        type: string
+      service_path:
+        required: true
+        type: string
+      image_name:
+        required: true
+        type: string
+
+jobs:
+  build_push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # Login once for GHCR
+      - name: Login to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GHCR_TOKEN }}
+
+      # Install Trivy for vulnerability scanning
+      - name: Install Trivy
+        run: |
+          sudo apt-get update
+          sudo apt-get install wget apt-transport-https gnupg lsb-release -y
+          wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo apt-key add -
+          echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main | sudo tee /etc/apt/sources.list.d/trivy.list
+          sudo apt-get update
+          sudo apt-get install trivy -y
+
+      # Build Docker image
+      - name: Build Docker Image
+        run: |
+          docker build -t ghcr.io/${{ github.actor }}/${{ inputs.image_name }}:latest \
+          ${{ inputs.service_path }}
+
+      # Scan image security
+      - name: Scan Docker Image with Trivy
+        run: |
+          trivy image --severity HIGH,CRITICAL --exit-code 0 \
+          ghcr.io/${{ github.actor }}/${{ inputs.image_name }}:latest
+
+      # Push image
+      - name: Push Docker Image
+        run: |
+          docker push ghcr.io/${{ github.actor }}/${{ inputs.image_name }}:latest
