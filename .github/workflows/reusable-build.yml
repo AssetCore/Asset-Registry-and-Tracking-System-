@@ -42,16 +42,16 @@ jobs:
       # Build Docker image
       - name: Build Docker Image
         run: |
-          docker build -t ghcr.io/wasantha99/${{ inputs.image_name }}:latest \
+          docker build -t ghcr.io/${{ github.actor }}/${{ inputs.image_name }}:latest \
           ${{ inputs.service_path }}
 
       # Scan image security
       - name: Scan Docker Image with Trivy
         run: |
           trivy image --severity HIGH,CRITICAL --exit-code 0 \
-          ghcr.io/wasantha99/${{ inputs.image_name }}:latest
+          ghcr.io/${{ github.actor }}/${{ inputs.image_name }}:latest
 
       # Push image
       - name: Push Docker Image
         run: |
-          docker push ghcr.io/wasantha99/${{ inputs.image_name }}:latest
+          docker push ghcr.io/${{ github.actor }}/${{ inputs.image_name }}:latest
