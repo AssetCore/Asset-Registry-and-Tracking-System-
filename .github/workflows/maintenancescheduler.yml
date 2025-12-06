@@ -4,7 +4,7 @@ on:
   push:
     branches: ["main"]
     paths:
-      - "src/Services/MaintenanceScheduler/**"
+      - "src/Services/MaintenanceScheduler"
 
 jobs:
   call-build:
