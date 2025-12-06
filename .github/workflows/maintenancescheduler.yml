@@ -15,5 +15,5 @@ jobs:
       service_path: "./src/Services/MaintenanceScheduler"
       image_name: "maintenancescheduler"
 
-      secrets:
+    secrets:
       DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
