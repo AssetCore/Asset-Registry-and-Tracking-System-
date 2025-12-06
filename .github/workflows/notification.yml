@@ -5,6 +5,7 @@ on:
     branches: ["main"]
     paths:
       - "src/Services/Notification/**"
+      - ".github/workflows/notification.yml"
 
 jobs:
   call-build:
@@ -13,3 +14,5 @@ jobs:
       service_name: "Notification"
       service_path: "./src/Services/Notification"
       image_name: "notification"
+    secrets:
+      DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
