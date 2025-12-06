@@ -6,7 +6,7 @@ WORKDIR /src
 
 COPY . .
 
-RUN dotnet restore "MaintenanceScheduler.Api/MaintenanceScheduler.Api.csproj"
+RUN dotnet restore "Services/MaintenanceScheduler.Api/MaintenanceScheduler.Api.csproj"
 
 RUN dotnet publish "MaintenanceScheduler.Api/MaintenanceScheduler.Api.csproj" \
     -c Release -o /app/publish
