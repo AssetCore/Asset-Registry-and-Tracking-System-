@@ -8,13 +8,27 @@ using MaintenanceScheduler.Application.Validators;
 using MaintenanceScheduler.Application.DTOs;
 using MaintenanceScheduler.Application.Mappings;
 using Serilog;
+using Serilog.Sinks.OpenSearch;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// ---------------------------------------------------------
+// ADD THIS NAMESPACE AT THE VERY TOP OF THE FILE:
+// using Serilog.Sinks.OpenSearch;
+// ---------------------------------------------------------
+
 // Configure Serilog
 Log.Logger = new LoggerConfiguration()
-    .WriteTo.Console()
+    .WriteTo.Console() // Keep this for debugging
     .WriteTo.File("logs/maintenance-log-.txt", rollingInterval: RollingInterval.Day)
+// Update the URL to your NEW Public IP
+.WriteTo.OpenSearch(new OpenSearchSinkOptions(new Uri("http://3.150.64.215:9200"))
+{
+    IndexFormat = "maintenance-logs-{0:yyyy.MM.dd}",
+    ModifyConnectionSettings = c => c
+        .BasicAuthentication("admin", "MyStrongPassword123!")
+        .ServerCertificateValidationCallback((o, c, ch, er) => true)
+})
     .CreateLogger();
 
 builder.Host.UseSerilog();
