@@ -4,14 +4,17 @@
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /src
 
+# Copy Shared dependencies first
+COPY Shared/ ./Shared/
+
 # Copy all source under src/ into the image
-COPY . .
+COPY Services/IdentityAccess/ ./Services/IdentityAccess/
 
 # Restore NuGet packages for the IdentityAccess service
-RUN dotnet restore "IdentityAccess/AsgardeoMicroservice.csproj"
+RUN dotnet restore "Services/IdentityAccess/AsgardeoMicroservice.csproj"
 
 # Publish the service
-RUN dotnet publish "IdentityAccess/AsgardeoMicroservice.csproj" \
+RUN dotnet publish "Services/IdentityAccess/AsgardeoMicroservice.csproj" \
     -c Release -o /app/publish
 
 # ===========================================

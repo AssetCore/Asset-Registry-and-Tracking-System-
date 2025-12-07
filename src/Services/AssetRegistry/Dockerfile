@@ -4,14 +4,17 @@
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /src
 
+# Copy Shared dependencies first
+COPY Shared/ ./Shared/
+
 # Copy *all* source from src/ into the image
-COPY . .
+COPY Services/AssetRegistry/ ./Services/AssetRegistry/
 
 # Restore for the API project
-RUN dotnet restore "AssetRegistry.Api/AssetRegistry.Api.csproj"
+RUN dotnet restore "Services/AssetRegistry/AssetRegistry.Api/AssetRegistry.Api.csproj"
 
 # Publish the API project
-RUN dotnet publish "AssetRegistry.Api/AssetRegistry.Api.csproj" \
+RUN dotnet publish "Services/AssetRegistry/AssetRegistry.Api/AssetRegistry.Api.csproj" \
     -c Release -o /app/publish
 
 # ===========================================

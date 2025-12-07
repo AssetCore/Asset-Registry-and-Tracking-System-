@@ -6,8 +6,8 @@ services:
   # ============================
   asset-registry:
     build:
-      context: ./src/Services/AssetRegistry
-      dockerfile: Dockerfile
+      context: ./src
+      dockerfile: Services/AssetRegistry/Dockerfile
     container_name: asset-registry
     ports:
       - "5001:8080"
@@ -20,8 +20,8 @@ services:
   # ============================
   identity-access:
     build:
-      context: ./src/Services/IdentityAccess
-      dockerfile: Dockerfile
+      context: ./src
+      dockerfile: Services/IdentityAccess/DockerFile
     container_name: identity-access
     ports:
       - "5003:8080"
@@ -34,8 +34,8 @@ services:
   # ============================
   maintenance-scheduler:
     build:
-      context: ./src/Services/MaintenanceScheduler
-      dockerfile: Dockerfile
+      context: ./src
+      dockerfile: Services/MaintenanceScheduler/Dockerfile
     container_name: maintenance-scheduler
     ports:
       - "5004:8080"
@@ -48,8 +48,8 @@ services:
   # ============================
   notification:
     build:
-      context: ./src/Services/Notification
-      dockerfile: Dockerfile
+      context: ./src
+      dockerfile: Services/Notification/Dockerfile
     container_name: notification
     ports:
       - "5005:8080"

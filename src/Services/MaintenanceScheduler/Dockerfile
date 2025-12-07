@@ -4,11 +4,15 @@
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /src
 
-COPY . .
+# Copy Shared dependencies first
+COPY Shared/ ./Shared/
 
-RUN dotnet restore "MaintenanceScheduler.Api/MaintenanceScheduler.Api.csproj"
+# Copy service directory
+COPY Services/MaintenanceScheduler/ ./Services/MaintenanceScheduler/
 
-RUN dotnet publish "MaintenanceScheduler.Api/MaintenanceScheduler.Api.csproj" \
+RUN dotnet restore "Services/MaintenanceScheduler/MaintenanceScheduler.Api/MaintenanceScheduler.Api.csproj"
+
+RUN dotnet publish "Services/MaintenanceScheduler/MaintenanceScheduler.Api/MaintenanceScheduler.Api.csproj" \
     -c Release -o /app/publish
 
 # ===========================================
