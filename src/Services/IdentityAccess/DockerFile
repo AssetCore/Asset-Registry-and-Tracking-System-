@@ -1,0 +1,29 @@
+# ===========================================
+# BUILD STAGE
+# ===========================================
+FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
+WORKDIR /src
+
+# Copy all source under src/ into the image
+COPY . .
+
+# Restore NuGet packages for the IdentityAccess service
+RUN dotnet restore "IdentityAccess/AsgardeoMicroservice.csproj"
+
+# Publish the service
+RUN dotnet publish "IdentityAccess/AsgardeoMicroservice.csproj" \
+    -c Release -o /app/publish
+
+# ===========================================
+# RUNTIME STAGE
+# ===========================================
+FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS runtime
+WORKDIR /app
+
+COPY --from=build /app/publish .
+
+# Service listens on port 8080 inside container
+ENV ASPNETCORE_URLS=http://+:8080
+EXPOSE 8080
+
+ENTRYPOINT ["dotnet", "AsgardeoMicroservice.dll"]
