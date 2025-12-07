@@ -8,10 +8,10 @@ WORKDIR /src
 COPY . .
 
 # Restore NuGet packages for Notification API
-RUN dotnet restore "Notification.Api/Notification.Api.csproj"
+RUN dotnet restore "Services/Notification/Notification.Api/Notification.Api.csproj"
 
 # Publish the Notification API
-RUN dotnet publish "Notification.Api/Notification.Api.csproj" \
+RUN dotnet publish "Services/Notification/Notification.Api/Notification.Api.csproj" \
     -c Release -o /app/publish
 
 # ===========================================

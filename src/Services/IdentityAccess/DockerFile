@@ -8,10 +8,10 @@ WORKDIR /src
 COPY . .
 
 # Restore NuGet packages for the IdentityAccess service
-RUN dotnet restore "IdentityAccess/AsgardeoMicroservice.csproj"
+RUN dotnet restore "AsgardeoMicroservice.csproj"
 
 # Publish the service
-RUN dotnet publish "IdentityAccess/AsgardeoMicroservice.csproj" \
+RUN dotnet publish "AsgardeoMicroservice.csproj" \
     -c Release -o /app/publish
 
 # ===========================================
