@@ -1,0 +1,18 @@
+name: MaintenanceScheduler - Build & Push
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "src/Services/MaintenanceScheduler/**"
+      - ".github/workflows/maintenancescheduler.yml"
+
+jobs:
+  call-build:
+    uses: ./.github/workflows/reusable-build.yml
+    with:
+      service_name: "MaintenanceScheduler"
+      service_path: "./src/Services/MaintenanceScheduler"
+      image_name: "maintenancescheduler"
+    secrets:
+      DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
