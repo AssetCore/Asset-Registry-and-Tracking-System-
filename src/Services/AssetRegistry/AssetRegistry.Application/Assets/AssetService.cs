@@ -1,14 +1,20 @@
 ﻿using AssetRegistry.Domain.Entities;
+using AssetRegistry.Application.Interfaces;
+using AssetRegistry.Domain.Events;
 
 namespace AssetRegistry.Application.Assets
 {
     public sealed class AssetService : IAssetService
     {
         private readonly IAssetRepository _assetRepository;
+        private readonly INotificationEventPublisher _notificationEventPublisher;
 
-        public AssetService(IAssetRepository assetRepository)
+        public AssetService(
+            IAssetRepository assetRepository,
+            INotificationEventPublisher notificationEventPublisher)
         {
             _assetRepository = assetRepository ?? throw new ArgumentNullException(nameof(assetRepository));
+            _notificationEventPublisher = notificationEventPublisher ?? throw new ArgumentNullException(nameof(notificationEventPublisher));
         }
 
         public Task<Asset?> GetByIdAsync(Guid id, CancellationToken cancellationToken) =>
@@ -30,14 +36,33 @@ namespace AssetRegistry.Application.Assets
         {
             if (asset.Id == Guid.Empty) asset.Id = Guid.NewGuid();
 
-            if (string.IsNullOrWhiteSpace(asset.Code)) throw new ArgumentException("Code is required.", nameof(asset));
-            if (string.IsNullOrWhiteSpace(asset.Name)) throw new ArgumentException("Name is required.", nameof(asset));
+            if (string.IsNullOrWhiteSpace(asset.Code))
+                throw new ArgumentException("Code is required.", nameof(asset));
+
+            if (string.IsNullOrWhiteSpace(asset.Name))
+                throw new ArgumentException("Name is required.", nameof(asset));
 
             var existing = await _assetRepository.GetByCodeAsync(asset.Code, cancellationToken);
-            if (existing is not null) throw new InvalidOperationException("Asset code already exists.");
+            if (existing is not null)
+                throw new InvalidOperationException("Asset code already exists.");
 
             await _assetRepository.AddAsync(asset, cancellationToken);
             await _assetRepository.SaveChangesAsync(cancellationToken);
+
+            var assignmentEvent = new AssetAssignmentEvent
+            {
+                AssetId = asset.Id,
+                AssetName = asset.Name,
+                NewOwnerEmail = string.Empty,   
+                NewOwnerName = string.Empty,    
+                SlackChannel = null,            
+                AssignmentDate = DateTime.UtcNow
+            };
+
+            await _notificationEventPublisher.PublishAssetAssignmentAsync(
+                assignmentEvent,
+                cancellationToken);
+
             return asset.Id;
         }
 
@@ -55,6 +80,8 @@ namespace AssetRegistry.Application.Assets
 
             await _assetRepository.UpdateAsync(asset, cancellationToken);
             await _assetRepository.SaveChangesAsync(cancellationToken);
+
+
             return true;
         }
 
