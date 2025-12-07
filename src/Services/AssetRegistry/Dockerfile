@@ -8,10 +8,10 @@ WORKDIR /src
 COPY . .
 
 # Restore for the API project
-RUN dotnet restore "AssetRegistry.Api/AssetRegistry.Api.csproj"
+RUN dotnet restore "Services/AssetRegistry/AssetRegistry.Api/AssetRegistry.Api.csproj"
 
 # Publish the API project
-RUN dotnet publish "AssetRegistry.Api/AssetRegistry.Api.csproj" \
+RUN dotnet publish "Services/AssetRegistry/AssetRegistry.Api/AssetRegistry.Api.csproj" \
     -c Release -o /app/publish
 
 # ===========================================
