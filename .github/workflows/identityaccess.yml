@@ -12,7 +12,7 @@ jobs:
     uses: ./.github/workflows/reusable-build.yml
     with:
       service_name: "IdentityAccess"
-      service_path: "./src/Services/IdentityAccess"
+      dockerfile_path: "./src/Services/IdentityAccess/DockerFile"
       image_name: "identityaccess"
     secrets:
       DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}

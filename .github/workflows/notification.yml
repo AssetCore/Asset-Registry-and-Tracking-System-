@@ -12,7 +12,7 @@ jobs:
     uses: ./.github/workflows/reusable-build.yml
     with:
       service_name: "Notification"
-      service_path: "./src/Services/Notification"
+      dockerfile_path: "./src/Services/Notification/Dockerfile"
       image_name: "notification"
     secrets:
       DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
