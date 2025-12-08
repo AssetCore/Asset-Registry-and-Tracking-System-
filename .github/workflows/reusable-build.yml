@@ -16,6 +16,8 @@ on:
 jobs:
   build_push:
     runs-on: ubuntu-latest
+    env:
+      OWNER_LC: ${{ github.repository_owner }}
 
     steps:
       - name: Checkout Code
@@ -42,9 +44,8 @@ jobs:
       # Build Docker image
       - name: Build Docker Image
         run: |
-          OWNER_LC=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
           docker build -f ${{ inputs.dockerfile_path }} \
-          -t ghcr.io/${OWNER_LC}/${{ inputs.image_name }}:latest \
+          -t ghcr.io/${OWNER_LC,,}/${{ inputs.image_name }}:latest \
           .
         env:
           DOCKER_BUILDKIT: 1
@@ -52,12 +53,10 @@ jobs:
       # Scan image security
       - name: Scan Docker Image with Trivy
         run: |
-          OWNER_LC=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
           trivy image --severity HIGH,CRITICAL --exit-code 0 \
-          ghcr.io/${OWNER_LC}/${{ inputs.image_name }}:latest
+          ghcr.io/${OWNER_LC,,}/${{ inputs.image_name }}:latest
 
       # Push image
       - name: Push Docker Image
         run: |
-          OWNER_LC=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
-          docker push ghcr.io/${OWNER_LC}/${{ inputs.image_name }}:latest
+          docker push ghcr.io/${OWNER_LC,,}/${{ inputs.image_name }}:latest
