@@ -14,9 +14,9 @@ RUN dotnet restore "src/Services/IdentityAccess/AsgardeoMicroservice.csproj"
 RUN dotnet publish "src/Services/IdentityAccess/AsgardeoMicroservice.csproj" \
     -c Release -o /app/publish
 
-# ===========================================
+# ==========================================
 # RUNTIME STAGE
-# ===========================================
+# ==========================================
 FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS runtime
 WORKDIR /app
 
