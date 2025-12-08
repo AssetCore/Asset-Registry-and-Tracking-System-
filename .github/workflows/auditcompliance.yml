@@ -12,7 +12,7 @@ jobs:
     uses: ./.github/workflows/reusable-build.yml
     with:
       service_name: "AuditCompliance"
-      service_path: "./src/Services/AuditCompliance"
+      dockerfile_path: "./src/Services/AuditCompliance/Dockerfile"
       image_name: "auditcompliance"
     secrets:
-      DOCKER_TOKEN: ${{ secrets.CJ_GHCR_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

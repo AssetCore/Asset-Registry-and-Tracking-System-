@@ -15,4 +15,4 @@ jobs:
       dockerfile_path: "./src/Services/IdentityAccess/DockerFile"
       image_name: "identityaccess"
     secrets:
-      DOCKER_TOKEN: ${{ secrets.CJ_GHCR_TOKEN }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
