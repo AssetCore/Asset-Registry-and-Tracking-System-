@@ -3,6 +3,7 @@ using System.Text.Json;
 using AuditCompliance.Application.DTOs;
 using AuditCompliance.Application.Interfaces;
 using AuditCompliance.Infrastructure.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
@@ -15,18 +16,18 @@ public class RabbitMqConsumerService : BackgroundService
 {
     private readonly ILogger<RabbitMqConsumerService> _logger;
     private readonly RabbitMqSettings _settings;
-    private readonly IAuditLogService _auditLogService;
+    private readonly IServiceProvider _serviceProvider;
     private IConnection? _connection;
     private IModel? _channel;
 
     public RabbitMqConsumerService(
         ILogger<RabbitMqConsumerService> logger,
         IOptions<RabbitMqSettings> settings,
-        IAuditLogService auditLogService)
+        IServiceProvider serviceProvider)
     {
         _logger = logger;
         _settings = settings.Value;
-        _auditLogService = auditLogService;
+        _serviceProvider = serviceProvider;
     }
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -58,6 +59,9 @@ public class RabbitMqConsumerService : BackgroundService
             var consumer = new AsyncEventingBasicConsumer(_channel);
             consumer.Received += async (model, ea) =>
             {
+                using var scope = _serviceProvider.CreateScope();
+                var auditLogService = scope.ServiceProvider.GetRequiredService<IAuditLogService>();
+
                 try
                 {
                     var body = ea.Body.ToArray();
@@ -69,7 +73,7 @@ public class RabbitMqConsumerService : BackgroundService
 
                     if (auditLogDto != null)
                     {
-                        await _auditLogService.CreateAuditLogAsync(auditLogDto, stoppingToken);
+                        await auditLogService.CreateAuditLogAsync(auditLogDto, stoppingToken);
                         _logger.LogInformation("Audit log saved successfully for action: {Action}", auditLogDto.Action);
                     }
 
