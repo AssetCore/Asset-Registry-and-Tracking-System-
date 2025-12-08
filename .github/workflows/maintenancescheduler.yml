@@ -14,5 +14,3 @@ jobs:
       service_name: "MaintenanceScheduler"
       dockerfile_path: "./src/Services/MaintenanceScheduler/Dockerfile"
       image_name: "maintenancescheduler"
-    secrets:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

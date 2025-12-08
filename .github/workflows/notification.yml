@@ -14,5 +14,3 @@ jobs:
       service_name: "Notification"
       dockerfile_path: "./src/Services/Notification/Dockerfile"
       image_name: "notification"
-    secrets:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

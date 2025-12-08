@@ -14,5 +14,3 @@ jobs:
       service_name: "AuditCompliance"
       dockerfile_path: "./src/Services/AuditCompliance/Dockerfile"
       image_name: "auditcompliance"
-    secrets:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
