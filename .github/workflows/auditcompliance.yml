@@ -15,4 +15,4 @@ jobs:
       service_path: "./src/Services/AuditCompliance"
       image_name: "auditcompliance"
     secrets:
-      DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
+      DOCKER_TOKEN: ${{ secrets.CJ_GHCR_TOKEN }}

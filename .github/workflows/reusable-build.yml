@@ -30,7 +30,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
-          password: ${{ secrets.DOCKER_TOKEN }}
+          password: ${{ secrets.CJ_GHCR_TOKEN }}
 
       # Install Trivy for vulnerability scanning
       - name: Install Trivy
@@ -46,16 +46,16 @@ jobs:
       - name: Build Docker Image
         run: |
           docker build -f ${{ inputs.dockerfile_path }} \
-          -t ghcr.io/wasantha99/${{ inputs.image_name }}:latest \
+          -t ghcr.io/ChandulaJ/${{ inputs.image_name }}:latest \
           .
 
       # Scan image security
       - name: Scan Docker Image with Trivy
         run: |
           trivy image --severity HIGH,CRITICAL --exit-code 0 \
-          ghcr.io/wasantha99/${{ inputs.image_name }}:latest
+          ghcr.io/ChandulaJ/${{ inputs.image_name }}:latest
 
       # Push image
       - name: Push Docker Image
         run: |
-          docker push ghcr.io/wasantha99/${{ inputs.image_name }}:latest
+          docker push ghcr.io/ChandulaJ/${{ inputs.image_name }}:latest

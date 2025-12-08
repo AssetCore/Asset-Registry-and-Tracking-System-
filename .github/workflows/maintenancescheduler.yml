@@ -15,4 +15,4 @@ jobs:
       dockerfile_path: "./src/Services/MaintenanceScheduler/Dockerfile"
       image_name: "maintenancescheduler"
     secrets:
-      DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
+      DOCKER_TOKEN: ${{ secrets.CJ_GHCR_TOKEN }}
