@@ -26,8 +26,8 @@ services:
   # ============================
   asset-registry:
     build:
-      context: ./src
-      dockerfile: Services/AssetRegistry/Dockerfile
+      context: .
+      dockerfile: src/Services/AssetRegistry/Dockerfile
     container_name: asset-registry
     ports:
       - "5001:8080"
@@ -76,8 +76,8 @@ services:
   # ============================
   notification:
     build:
-      context: ./src
-      dockerfile: Services/Notification/Dockerfile
+      context: .
+      dockerfile: src/Services/Notification/Dockerfile
     container_name: notification
     ports:
       - "5005:8080"
