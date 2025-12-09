@@ -3,15 +3,15 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
 # Copy csproj files and restore dependencies
-COPY ["AuditCompliance.Api/AuditCompliance.Api.csproj", "AuditCompliance.Api/"]
-COPY ["AuditCompliance.Application/AuditCompliance.Application.csproj", "AuditCompliance.Application/"]
-COPY ["AuditCompliance.Domain/AuditCompliance.Domain.csproj", "AuditCompliance.Domain/"]
-COPY ["AuditCompliance.Infrastructure/AuditCompliance.Infrastructure.csproj", "AuditCompliance.Infrastructure/"]
+COPY ["src/Services/AuditCompliance/AuditCompliance.Api/AuditCompliance.Api.csproj", "AuditCompliance.Api/"]
+COPY ["src/Services/AuditCompliance/AuditCompliance.Application/AuditCompliance.Application.csproj", "AuditCompliance.Application/"]
+COPY ["src/Services/AuditCompliance/AuditCompliance.Domain/AuditCompliance.Domain.csproj", "AuditCompliance.Domain/"]
+COPY ["src/Services/AuditCompliance/AuditCompliance.Infrastructure/AuditCompliance.Infrastructure.csproj", "AuditCompliance.Infrastructure/"]
 
 RUN dotnet restore "AuditCompliance.Api/AuditCompliance.Api.csproj"
 
 # Copy everything else and build
-COPY . .
+COPY src/Services/AuditCompliance/ .
 WORKDIR "/src/AuditCompliance.Api"
 RUN dotnet build "AuditCompliance.Api.csproj" -c Release -o /app/build
 
