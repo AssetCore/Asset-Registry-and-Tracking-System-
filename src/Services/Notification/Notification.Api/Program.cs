@@ -3,8 +3,30 @@ using Notification.Application.Services;
 using Notification.Infrastructure.Configuration;
 using Notification.Infrastructure.Services;
 using Notification.Infrastructure.Messaging;
+using Serilog;
+using Serilog.Sinks.OpenSearch;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Configure Serilog with OpenSearch
+var openSearchUri = builder.Configuration["OpenSearch:Uri"];
+var openSearchUsername = builder.Configuration["OpenSearch:Username"];
+var openSearchPassword = builder.Configuration["OpenSearch:Password"];
+var indexFormat = builder.Configuration["OpenSearch:IndexFormat"] ?? "notification-logs-{0:yyyy.MM.dd}";
+
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Console()
+    .WriteTo.File("logs/notification-log-.txt", rollingInterval: RollingInterval.Day)
+    .WriteTo.OpenSearch(new OpenSearchSinkOptions(new Uri(openSearchUri ?? "http://3.150.64.215:9200"))
+    {
+        IndexFormat = indexFormat,
+        ModifyConnectionSettings = c => c
+            .BasicAuthentication(openSearchUsername ?? "admin", openSearchPassword ?? "MyStrongPassword123!")
+            .ServerCertificateValidationCallback((o, c, ch, er) => true)
+    })
+    .CreateLogger();
+
+builder.Host.UseSerilog();
 
 // Add configuration
 builder.Services.Configure<RabbitMqSettings>(
@@ -18,7 +40,6 @@ builder.Services.Configure<SlackSettings>(
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddLogging();
 
 // Register application services
 builder.Services.AddSingleton<INotificationService, NotificationService>();
@@ -44,5 +65,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.MapControllers();
 app.MapHealthChecks("/health");
+
+Log.Information("Starting Notification API");
 
 app.Run();
