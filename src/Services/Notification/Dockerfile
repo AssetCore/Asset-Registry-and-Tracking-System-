@@ -4,19 +4,19 @@
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /src
 
-# Copy entire service directory
+# Copy entire repo into the image
 COPY . .
 
 # Restore NuGet packages for Notification API
-RUN dotnet restore "Notification.Api/Notification.Api.csproj"
+RUN dotnet restore "src/Services/Notification/Notification.Api/Notification.Api.csproj"
 
 # Publish the Notification API
-RUN dotnet publish "Notification.Api/Notification.Api.csproj" \
+RUN dotnet publish "src/Services/Notification/Notification.Api/Notification.Api.csproj" \
     -c Release -o /app/publish
 
-# ===========================================
+# ==========================================
 # RUNTIME STAGE
-# ===========================================
+# ==========================================
 FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS runtime
 WORKDIR /app
 

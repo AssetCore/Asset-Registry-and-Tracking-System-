@@ -1,0 +1,17 @@
+### Gateway health
+GET http://localhost:5000/health
+
+### Asset Registry Swagger
+GET http://localhost:5000/assetregistry/swagger/index.html
+
+### Audit Compliance Swagger
+GET http://localhost:5000/audit/swagger/index.html
+
+### Maintenance Scheduler Swagger
+GET http://localhost:5000/maintenance/swagger/index.html
+
+### Notification Swagger
+GET http://localhost:5000/notification/swagger/index.html
+
+### Identity Access sample (adjust path)
+GET http://localhost:5000/identity/health

@@ -6,14 +6,14 @@ WORKDIR /src
 
 COPY . .
 
-RUN dotnet restore "MaintenanceScheduler.Api/MaintenanceScheduler.Api.csproj"
+RUN dotnet restore "src/Services/MaintenanceScheduler/MaintenanceScheduler.Api/MaintenanceScheduler.Api.csproj"
 
-RUN dotnet publish "MaintenanceScheduler.Api/MaintenanceScheduler.Api.csproj" \
+RUN dotnet publish "src/Services/MaintenanceScheduler/MaintenanceScheduler.Api/MaintenanceScheduler.Api.csproj" \
     -c Release -o /app/publish
 
-# ===========================================
+# ==========================================
 # RUNTIME STAGE
-# ===========================================
+# ==========================================
 FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS runtime
 WORKDIR /app
 

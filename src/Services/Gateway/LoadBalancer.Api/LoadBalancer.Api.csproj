@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- YARP reverse proxy for load balancing; run 'dotnet add package Yarp.ReverseProxy' to install -->
+    <PackageReference Include="Yarp.ReverseProxy" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LoadBalancer.Application\LoadBalancer.Application.csproj" />
+    <ProjectReference Include="..\LoadBalancer.Infrastructure\LoadBalancer.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>
