@@ -12,5 +12,5 @@ jobs:
     uses: ./.github/workflows/reusable-build.yml
     with:
       service_name: "IdentityAccess"
-      dockerfile_path: "Services/IdentityAccess/DockerFile"
+      dockerfile_path: "./src/Services/IdentityAccess/DockerFile"
       image_name: "identityaccess"
