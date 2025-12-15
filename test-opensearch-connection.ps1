@@ -56,3 +56,4 @@ Write-Host "If indices don't appear, check:" -ForegroundColor Yellow
 Write-Host "  1. Service console for errors" -ForegroundColor Yellow
 Write-Host "  2. Local log files in logs/ directory" -ForegroundColor Yellow
 Write-Host "  3. Wait 30-60 seconds after service starts" -ForegroundColor Yellow
+
