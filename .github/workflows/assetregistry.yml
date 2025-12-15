@@ -12,5 +12,5 @@ jobs:
     uses: ./.github/workflows/reusable-build.yml
     with:
       service_name: "AssetRegistry"
-      dockerfile_path: "Services/AssetRegistry/Dockerfile"
+      dockerfile_path: "./src/Services/AssetRegistry/Dockerfile"
       image_name: "assetregistry"
