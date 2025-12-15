@@ -12,5 +12,5 @@ jobs:
     uses: ./.github/workflows/reusable-build.yml
     with:
       service_name: "Notification"
-      dockerfile_path: "./src/Services/Notification/Dockerfile"
+      dockerfile_path: "Services/Notification/Dockerfile"
       image_name: "notification"
