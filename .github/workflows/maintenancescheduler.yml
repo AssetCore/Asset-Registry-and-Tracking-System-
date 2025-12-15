@@ -12,5 +12,5 @@ jobs:
     uses: ./.github/workflows/reusable-build.yml
     with:
       service_name: "MaintenanceScheduler"
-      dockerfile_path: "./src/Services/MaintenanceScheduler/Dockerfile"
+      dockerfile_path: "Services/MaintenanceScheduler/Dockerfile"
       image_name: "maintenancescheduler"
