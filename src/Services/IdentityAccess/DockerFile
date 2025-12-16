@@ -24,6 +24,6 @@ COPY --from=build /app/publish .
 
 # Service listens on port 8080 inside container
 ENV ASPNETCORE_URLS=http://+:8080
-EXPOSE 8080
+EXPOSE 5003
 
 ENTRYPOINT ["dotnet", "AsgardeoMicroservice.dll"]

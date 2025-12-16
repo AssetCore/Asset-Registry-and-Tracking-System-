@@ -1,0 +1,16 @@
+name: APIGateway - Build & Push
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "src/Services/APIGateway/**"
+      - ".github/workflows/apigateway.yml"
+
+jobs:
+  call-build:
+    uses: ./.github/workflows/reusable-build.yml
+    with:
+      service_name: "APIGateway"
+      dockerfile_path: "./src/Services/APIGateway/Dockerfile"
+      image_name: "apigateway"
