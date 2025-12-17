@@ -32,7 +32,7 @@ namespace AssetRegistry.Application.Assets
                 .ToList();
         }
 
-        public async Task<Guid> CreateAsync(Asset asset, CancellationToken cancellationToken)
+        public async Task<Guid> CreateAsync(Asset asset, string? userIdentity, CancellationToken cancellationToken)
         {
             if (asset.Id == Guid.Empty) asset.Id = Guid.NewGuid();
 
@@ -45,6 +45,9 @@ namespace AssetRegistry.Application.Assets
             var existing = await _assetRepository.GetByCodeAsync(asset.Code, cancellationToken);
             if (existing is not null)
                 throw new InvalidOperationException("Asset code already exists.");
+
+            asset.CreatedBy = userIdentity;
+            asset.CreatedAt = DateTime.UtcNow;
 
             await _assetRepository.AddAsync(asset, cancellationToken);
             await _assetRepository.SaveChangesAsync(cancellationToken);
@@ -66,7 +69,7 @@ namespace AssetRegistry.Application.Assets
             return asset.Id;
         }
 
-        public async Task<bool> UpdateAsync(Asset asset, CancellationToken cancellationToken)
+        public async Task<bool> UpdateAsync(Asset asset, string? userIdentity, CancellationToken cancellationToken)
         {
             var current = await _assetRepository.GetByIdAsync(asset.Id, cancellationToken);
             if (current is null) return false;
@@ -77,6 +80,9 @@ namespace AssetRegistry.Application.Assets
                 if (duplicate is not null && duplicate.Id != asset.Id)
                     throw new InvalidOperationException("Asset code already exists.");
             }
+
+            asset.UpdatedBy = userIdentity;
+            asset.UpdatedAt = DateTime.UtcNow;
 
             await _assetRepository.UpdateAsync(asset, cancellationToken);
             await _assetRepository.SaveChangesAsync(cancellationToken);

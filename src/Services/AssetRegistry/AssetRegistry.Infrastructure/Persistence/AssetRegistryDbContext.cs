@@ -35,6 +35,9 @@ public class AssetRegistryDbContext : DbContext
             entity.Property(x => x.Category).HasMaxLength(128);
             entity.Property(x => x.Location).HasMaxLength(128);
             entity.Property(x => x.PurchasedAt).IsRequired();
+            entity.Property(x => x.CreatedBy).HasMaxLength(256);
+            entity.Property(x => x.CreatedAt).IsRequired();
+            entity.Property(x => x.UpdatedBy).HasMaxLength(256);
         });
     }
 }

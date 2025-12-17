@@ -14,7 +14,8 @@ namespace AssetRegistry.Api.Controllers
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] Asset assetBody, CancellationToken cancellationToken)
         {
-            var newId = await _assetService.CreateAsync(assetBody, cancellationToken);
+            var userIdentity = Request.Headers["userIdentity"].FirstOrDefault();
+            var newId = await _assetService.CreateAsync(assetBody, userIdentity, cancellationToken);
             return CreatedAtAction(nameof(GetById), new { id = newId }, new { id = newId });
         }
 
@@ -35,8 +36,9 @@ namespace AssetRegistry.Api.Controllers
         [HttpPut("{id:guid}")]
         public async Task<IActionResult> Update(Guid id, [FromBody] Asset assetBody, CancellationToken cancellationToken)
         {
+            var userIdentity = Request.Headers["userIdentity"].FirstOrDefault();
             assetBody.Id = id; 
-            var ok = await _assetService.UpdateAsync(assetBody, cancellationToken);
+            var ok = await _assetService.UpdateAsync(assetBody, userIdentity, cancellationToken);
             return ok ? NoContent() : NotFound();
         }
 

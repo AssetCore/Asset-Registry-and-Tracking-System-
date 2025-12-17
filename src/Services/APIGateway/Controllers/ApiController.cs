@@ -7,7 +7,6 @@ using Microsoft.Extensions.Configuration;
 namespace Gateway.Controllers
 {
     [ApiController]
-    [Authorize]
     public class GatewayController : ControllerBase
     {
         // Allowed paths for different roles
@@ -23,11 +22,20 @@ namespace Gateway.Controllers
         }
 
         [Route("{**catchAll}")]
+        [AllowAnonymous]
         public async Task<IActionResult> HandleAllRequests()
         {
             try
             {
                 var path = Request.Path.Value ?? "/";
+                
+                // Forward non-API paths to frontend
+                if (!path.StartsWith("/api", StringComparison.OrdinalIgnoreCase))
+                {
+                    var frontendResponse = await ForwardToFrontend(path);
+                    return frontendResponse;
+                }
+
                 if (path == "/")
                 {
                     return BadRequest(new
@@ -282,6 +290,47 @@ namespace Gateway.Controllers
                     message = $"External service ({clientName}) is unavailable",
                     details = ex.Message
                 });
+            }
+        }
+
+        private async Task<IActionResult> ForwardToFrontend(string path)
+        {
+            try
+            {
+                var frontendUrl = _configuration["ExternalServices:FrontendServiceClient:Url"] ?? "http://host.docker.internal:3000";
+                var httpClient = _httpClientFactory.CreateClient();
+                httpClient.BaseAddress = new Uri(frontendUrl);
+                
+                var queryString = Request.QueryString.Value ?? string.Empty;
+                var targetUrl = $"{path}{queryString}";
+                var request = new HttpRequestMessage(new HttpMethod(Request.Method), targetUrl);
+
+                // Forward headers
+                foreach (var header in Request.Headers)
+                {
+                    var headerName = header.Key.ToLower();
+                    if (headerName != "host" && headerName != "connection")
+                    {
+                        request.Headers.TryAddWithoutValidation(header.Key, header.Value.ToArray());
+                    }
+                }
+
+                var response = await httpClient.SendAsync(request);
+                var responseBody = await response.Content.ReadAsStringAsync();
+                
+                var result = new ContentResult
+                {
+                    Content = responseBody,
+                    ContentType = response.Content.Headers.ContentType?.ToString() ?? "text/html",
+                    StatusCode = (int)response.StatusCode
+                };
+
+                return result;
+            }
+            catch (Exception)
+            {
+                // If frontend is not available, return a simple message
+                return Content("Frontend service unavailable", "text/plain");
             }
         }
     }
