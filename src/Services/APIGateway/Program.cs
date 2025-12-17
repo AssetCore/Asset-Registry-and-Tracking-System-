@@ -8,6 +8,23 @@ public class Program
         var organizationName = builder.Configuration["AsgardeoSettings:OrganizationName"];
         var clientId = builder.Configuration["AsgardeoSettings:ClientId"];
         var clientSecret = builder.Configuration["AsgardeoSettings:ClientSecret"];
+        
+        // Add CORS
+        builder.Services.AddCors(options =>
+        {
+            options.AddPolicy("AllowFrontend", policy =>
+            {
+                policy.WithOrigins(
+                    "http://localhost:3000",
+                    "http://localhost:5173",
+                    "http://host.docker.internal:3000"
+                )
+                .AllowAnyHeader()
+                .AllowAnyMethod()
+                .AllowCredentials();
+            });
+        });
+        
         builder.Services.AddControllers();
         builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
         {
@@ -84,6 +101,7 @@ public class Program
         });
 
         var app = builder.Build();
+        app.UseCors("AllowFrontend");
         app.UseRouting();
         app.UseAuthentication();
         app.UseAuthorization();
