@@ -34,7 +34,7 @@ services:
       dockerfile: src/Services/AssetRegistry/Dockerfile
     container_name: asset-registry
     ports:
-      - "5001:5001"
+      - "5001:8080"
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       ConnectionStrings__AssetRegistryDb: "Server=sqlserver;Database=AssetRegistry;User Id=sa;Password=YourStrong@Passw0rd;Encrypt=True;TrustServerCertificate=True"
@@ -52,7 +52,7 @@ services:
       dockerfile: ./src/Services/IdentityAccess/DockerFile
     container_name: identity-access
     ports:
-      - "5003:5003"
+      - "5003:8080"
     environment:
       ASPNETCORE_ENVIRONMENT: Development
     restart: unless-stopped
@@ -66,7 +66,7 @@ services:
       dockerfile: ./src/Services/MaintenanceScheduler/Dockerfile
     container_name: maintenance-scheduler
     ports:
-      - "5004:5004"
+      - "5004:8080"
     environment:
       ASPNETCORE_ENVIRONMENT: Development
       ConnectionStrings__DefaultConnection: "Server=sqlserver;Database=MaintenanceSchedulerDB;User Id=sa;Password=YourStrong@Passw0rd;Encrypt=True;TrustServerCertificate=True;MultipleActiveResultSets=true"
@@ -84,7 +84,7 @@ services:
       dockerfile: src/Services/Notification/Dockerfile
     container_name: notification
     ports:
-      - "5005:5005"
+      - "5005:8080"
     environment:
       ASPNETCORE_ENVIRONMENT: Development
     restart: unless-stopped
@@ -98,7 +98,7 @@ services:
       dockerfile: /src/Services/AuditCompliance/Dockerfile
     container_name: audit-compliance
     ports:
-      - "5002:5002"
+      - "5002:8080"
     environment:
       ASPNETCORE_ENVIRONMENT: Development
     restart: unless-stopped
@@ -112,7 +112,7 @@ services:
       dockerfile: src/Services/APIGateway/Dockerfile
     container_name: gateway
     ports:
-      - "5000:5000"
+      - "5000:8080"
     environment:
       ASPNETCORE_ENVIRONMENT: Development
     depends_on:

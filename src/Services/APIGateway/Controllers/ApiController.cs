@@ -7,12 +7,12 @@ using Microsoft.Extensions.Configuration;
 namespace Gateway.Controllers
 {
     [ApiController]
-    [Authorize]
     public class GatewayController : ControllerBase
     {
         // Allowed paths for different roles
         private static readonly string[] allowedUserPaths = { "/api/assets/user", "/api/notifications/user" };
         private static readonly string[] allowedAuditorPaths = { "/api/assets/public", "/api/notifications/public" };
+        private static readonly string[] anonymousPaths = { "/app", "/home", "/dashboard" };
         private readonly IHttpClientFactory _httpClientFactory;
         private readonly IConfiguration _configuration;
 
@@ -23,6 +23,7 @@ namespace Gateway.Controllers
         }
 
         [Route("{**catchAll}")]
+        [AllowAnonymous]
         public async Task<IActionResult> HandleAllRequests()
         {
             try
@@ -36,6 +37,12 @@ namespace Gateway.Controllers
                         message = "Invalid request"
                     });
                 }
+                
+                // Check if path allows anonymous access
+                var lowerPath = path.ToLowerInvariant();
+                bool isAnonymousPath = anonymousPaths.Any(p => lowerPath.StartsWith(p, System.StringComparison.OrdinalIgnoreCase)) 
+                    || lowerPath.StartsWith("/assets") || lowerPath.StartsWith("/static");
+                
                 string? token = null;
                 if (Request.Headers.TryGetValue("Authorization", out var authHeader))
                 {
@@ -45,15 +52,21 @@ namespace Gateway.Controllers
                         token = authValue.Substring("Bearer ".Length).Trim();
                     }
                 }
+                
                 string? userName = null;
-                if (!string.IsNullOrEmpty(token))
+                
+                // Only validate token for non-anonymous paths
+                if (!isAnonymousPath)
                 {
-                    userName = CheckUserRoleAndPath(token, path);
-                }
+                    if (!string.IsNullOrEmpty(token))
+                    {
+                        userName = CheckUserRoleAndPath(token, path);
+                    }
 
-                if (userName == "")
-                {
-                    return Unauthorized(new { error = "Invalid or inactive token" });
+                    if (userName == "")
+                    {
+                        return Unauthorized(new { error = "Invalid or inactive token" });
+                    }
                 }
 
                 var method = Request.Method ?? "GET";
@@ -97,6 +110,7 @@ namespace Gateway.Controllers
             if (lowerPath.StartsWith("/api/user") || lowerPath.StartsWith("/api/roles")) return "IdentityServiceClient";
             if (lowerPath.StartsWith("/api/maintenanceschedule") || lowerPath.StartsWith("/api/warrantyinfo") || lowerPath.StartsWith("/api/maintenancehistory")) return "MaintainanceServiceClient";
             if (lowerPath.StartsWith("/api/notification")) return "NotificationServiceClient";
+            if (lowerPath.StartsWith("/app") || lowerPath.StartsWith("/home") || lowerPath.StartsWith("/dashboard") || lowerPath.StartsWith("/assets") || lowerPath.StartsWith("/static") || lowerPath.Contains("favicon") || lowerPath.EndsWith(".ico") || lowerPath.EndsWith(".png") || lowerPath.EndsWith(".svg")) return "FrontendServiceClient";
             return "DefaultServiceClient";
         }
 
@@ -253,26 +267,34 @@ namespace Gateway.Controllers
                 {
                     request.Content = null;
                 }
-                var response = await httpClient.SendAsync(request);
-                var responseBody = await response.Content.ReadAsStringAsync();
-                var result = new ContentResult
-                {
-                    Content = responseBody,
-                    ContentType = response.Content.Headers.ContentType?.ToString() ?? "application/json",
-                    StatusCode = (int)response.StatusCode
-                };
-
+                var response = await httpClient.SendAsync(request, HttpCompletionOption.ResponseHeadersRead);
+                
+                // Set status code
+                Response.StatusCode = (int)response.StatusCode;
+                
+                // Copy response headers (excluding transfer-encoding and content-length as they will be set automatically)
                 foreach (var header in response.Headers)
                 {
-                    Response.Headers[header.Key] = header.Value.ToArray();
+                    var headerName = header.Key.ToLower();
+                    if (headerName != "transfer-encoding" && headerName != "content-length")
+                    {
+                        Response.Headers[header.Key] = header.Value.ToArray();
+                    }
                 }
 
                 foreach (var header in response.Content.Headers)
                 {
-                    Response.Headers[header.Key] = header.Value.ToArray();
+                    var headerName = header.Key.ToLower();
+                    if (headerName != "transfer-encoding" && headerName != "content-length")
+                    {
+                        Response.Headers[header.Key] = header.Value.ToArray();
+                    }
                 }
 
-                return result;
+                // Stream the response content directly
+                await response.Content.CopyToAsync(Response.Body);
+                
+                return new EmptyResult();
             }
             catch (HttpRequestException ex)
             {

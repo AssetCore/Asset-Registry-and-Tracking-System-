@@ -24,6 +24,6 @@ COPY --from=build /app/publish .
 
 # Listen on port 8080 inside the container
 ENV ASPNETCORE_URLS=http://+:8080
-EXPOSE 5002
+EXPOSE 8080
 
 ENTRYPOINT ["dotnet", "AuditCompliance.Api.dll"]
