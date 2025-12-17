@@ -18,6 +18,9 @@ var openSearchPassword = builder.Configuration["OpenSearch:Password"] ?? "MyStro
 var indexFormat = builder.Configuration["OpenSearch:IndexFormat"] ?? "notification-logs-{0:yyyy.MM.dd}";
 
 var loggerConfig = new LoggerConfiguration()
+     .Enrich.FromLogContext()
+    .Enrich.WithProperty("Service", "NotificationService")
+    .Enrich.WithProperty("Environment", builder.Environment.EnvironmentName)
     .WriteTo.Console() // Keep this for debugging
     .WriteTo.File("logs/notification-log-.txt", rollingInterval: RollingInterval.Day);
 

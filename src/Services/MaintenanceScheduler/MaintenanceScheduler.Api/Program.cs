@@ -15,16 +15,16 @@ var builder = WebApplication.CreateBuilder(args);
 // Enable Serilog self-logging to see internal errors
 Serilog.Debugging.SelfLog.Enable(Console.Error);
 
-
-
 // Configure Serilog with OpenSearch from configuration
 var openSearchUri = builder.Configuration["OpenSearch:Uri"] ?? "http://3.150.64.215:9200";
 var openSearchUsername = builder.Configuration["OpenSearch:Username"] ?? "admin";
 var openSearchPassword = builder.Configuration["OpenSearch:Password"] ?? "MyStrongPassword123!";
 var indexFormat = builder.Configuration["OpenSearch:IndexFormat"] ?? "maintenance-logs-{0:yyyy.MM.dd}";
 
-
 var loggerConfig = new LoggerConfiguration()
+    .Enrich.FromLogContext()
+    .Enrich.WithProperty("Service", "MaintenanceScheduler")
+    .Enrich.WithProperty("Environment", builder.Environment.EnvironmentName)
     .WriteTo.Console() // Keep this for debugging
     .WriteTo.File("logs/maintenance-log-.txt", rollingInterval: RollingInterval.Day);
 
