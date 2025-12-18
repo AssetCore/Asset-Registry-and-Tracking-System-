@@ -12,9 +12,9 @@ on:
       image_name:
         required: true
         type: string
-      image_tag:
-        required: true
-        type: string
+      # image_tag:
+      #   required: true
+      #   type: string
 
 jobs:
   build_push:
@@ -46,18 +46,21 @@ jobs:
 
       # Build Docker image
       - name: Build Docker Image
-        shell: bash
-        run: docker build -f "${{ inputs.dockerfile_path }}" -t "ghcr.io/${OWNER_LC,,}/${{ inputs.image_name }}:${{ inputs.image_tag }}" .
+        run: |
+          docker build -f ${{ inputs.dockerfile_path }} \
+          -t ghcr.io/${OWNER_LC,,}/${{ inputs.image_name }}:${{ github.sha }} \
+          .
         env:
           DOCKER_BUILDKIT: 1
+
 
       # Scan image security
       - name: Scan Docker Image with Trivy
         run: |
           trivy image --severity HIGH,CRITICAL --exit-code 0 \
-          ghcr.io/${OWNER_LC,,}/${{ inputs.image_name }}:${{ inputs.image_tag }}
+          ghcr.io/${OWNER_LC,,}/${{ inputs.image_name }}:${{ github.sha }}
 
       # Push image
       - name: Push Docker Image
         run: |
-          docker push ghcr.io/${OWNER_LC,,}/${{ inputs.image_name }}:${{ inputs.image_tag }}
+          docker push ghcr.io/${OWNER_LC,,}/${{ inputs.image_name }}:${{ github.sha }}
