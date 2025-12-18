@@ -16,7 +16,7 @@ RUN dotnet publish "src/Services/Notification/Notification.Api/Notification.Api.
 
 # =========================================
 # RUNTIME STAGE
-# ==========================================
+# =========================================
 FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS runtime
 WORKDIR /app
 

@@ -13,7 +13,7 @@ RUN dotnet publish "src/Services/MaintenanceScheduler/MaintenanceScheduler.Api/M
 
 # =========================================
 # RUNTIME STAGE
-# ==========================================
+# =========================================
 FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS runtime
 WORKDIR /app
 
