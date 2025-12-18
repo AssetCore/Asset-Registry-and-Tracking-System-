@@ -14,7 +14,7 @@ RUN dotnet restore "src/Services/Notification/Notification.Api/Notification.Api.
 RUN dotnet publish "src/Services/Notification/Notification.Api/Notification.Api.csproj" \
     -c Release -o /app/publish
 
-# =========================================
+# ========================================
 # RUNTIME STAGE
 # =========================================
 FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS runtime
