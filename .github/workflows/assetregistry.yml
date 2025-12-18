@@ -5,7 +5,7 @@ on:
     branches: ["main"]
     paths:
       - "src/Services/AssetRegistry/**"
-      - /assetregistry.yml"
+      - ".github/workflows/assetregistry.yml"
 
 jobs:
   call-build:
