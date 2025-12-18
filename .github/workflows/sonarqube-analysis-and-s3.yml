@@ -57,7 +57,7 @@ jobs:
         SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       run: |
-        PROJECT_KEY="${{ secrets.PROJECT_KEY }}"
+        PROJECT_KEY="${{ secrets.PROJECT_KEY }}" 
         TIMESTAMP=$(date -u +"%Y%m%dT%H%M%SZ")
         OUTFILE="sonarqube-report-${PROJECT_KEY}-${TIMESTAMP}.json"
 
