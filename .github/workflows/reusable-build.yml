@@ -64,16 +64,3 @@ jobs:
       - name: Push Docker Image
         run: |
           docker push ghcr.io/${OWNER_LC,,}/${{ inputs.image_name }}:${{ inputs.image_tag }}
-
-
-       # Deploy to Kubernetes (common step)
-      - name: Deploy to Kubernetes
-        if: ${{ inputs.image_name != '' }} # optional guard
-        env:
-          IMAGE_TAG: ${{ inputs.image_tag }}
-        run: |
-          # Replace image tag in Helm values dynamically
-          SERVICE_NAME=${{ inputs.image_name }}
-          helm upgrade --install $SERVICE_NAME ./charts/$SERVICE_NAME \
-            --set image.tag=${IMAGE_TAG} \
-            --set image.repository=ghcr.io/${OWNER_LC,,}/${SERVICE_NAME}
