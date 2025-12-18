@@ -8,6 +8,7 @@
     <!-- YARP reverse proxy for load balancing; run 'dotnet add package Yarp.ReverseProxy' to install -->
     <PackageReference Include="Yarp.ReverseProxy" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" />
+    <PackageReference Include="prometheus-net.AspNetCore" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LoadBalancer.Application\LoadBalancer.Application.csproj" />

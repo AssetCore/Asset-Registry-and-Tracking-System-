@@ -1,0 +1,10 @@
+# Docker volumes
+prometheus-data/
+grafana-data/
+
+# Backup files
+*.tar.gz
+*.backup
+
+# Logs
+*.log

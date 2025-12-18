@@ -123,10 +123,14 @@ app.UseHttpsRedirection();
 
 app.UseCors("AllowAll");
 
+// Prometheus metrics
+app.UseHttpMetrics();
+
 app.UseAuthorization();
 
 app.MapControllers();
 
+app.MapMetrics();
 //app.MapHealthChecks("/health");
 
 // Ensure database is created

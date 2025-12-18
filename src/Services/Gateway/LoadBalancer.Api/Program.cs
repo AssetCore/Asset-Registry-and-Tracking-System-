@@ -68,11 +68,16 @@ if (!string.IsNullOrWhiteSpace(authority))
     app.UseAuthentication();
     app.UseAuthorization();
 }
+
+// Prometheus metrics
+app.UseHttpMetrics();
+
 app.UseRateLimiter();
 
 // Basic liveness
 app.MapGet("/", () => Results.Ok("LoadBalancer.Api is running"));
 app.MapHealthChecks("/health");
+app.MapMetrics();
 
 // Reverse proxy endpoint
 app.MapReverseProxy();
