@@ -14,4 +14,4 @@ jobs:
       service_name: "AuditCompliance"
       dockerfile_path: "./src/Services/AuditCompliance/Dockerfile"
       image_name: "auditcompliance"
-      image_tag: v1.0.0
+      image_tag: v1.0.${{ github.run_number }}
