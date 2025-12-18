@@ -14,7 +14,7 @@ RUN dotnet restore "src/Services/APIGateway/APIGateway.csproj"
 RUN dotnet publish "src/Services/APIGateway/APIGateway.csproj" \
     -c Release -o /app/publish
 
-# ===========================================
+# ==========================================
 # RUNTIME STAGE
 # ===========================================
 FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS runtime
