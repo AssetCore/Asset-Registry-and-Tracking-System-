@@ -14,3 +14,4 @@ jobs:
       service_name: "MaintenanceScheduler"
       dockerfile_path: "./src/Services/MaintenanceScheduler/Dockerfile"
       image_name: "maintenancescheduler"
+      image_tag: v1.0.${{ github.run_number }}

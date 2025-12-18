@@ -14,3 +14,4 @@ jobs:
       service_name: "APIGateway"
       dockerfile_path: "./src/Services/APIGateway/Dockerfile"
       image_name: "apigateway"
+      image_tag: v1.0.${{ github.run_number }}

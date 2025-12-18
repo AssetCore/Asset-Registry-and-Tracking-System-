@@ -14,3 +14,4 @@ jobs:
       service_name: "Notification"
       dockerfile_path: "./src/Services/Notification/Dockerfile"
       image_name: "notification"
+      image_tag: v1.0.${{ github.run_number }}
