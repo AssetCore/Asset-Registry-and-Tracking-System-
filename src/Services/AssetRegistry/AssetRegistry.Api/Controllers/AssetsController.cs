@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace AssetRegistry.Api.Controllers
 {
     [ApiController]
+    //[Authorize]
     [Route("api/assets")]
     public class AssetsController : ControllerBase
     {

@@ -1,0 +1,83 @@
+name: SonarQube analysis and upload report to S3
+
+on:
+  push:
+    branches:
+      - feature/add-sonarqube-workflow   # change to the branch(es) you want
+
+env:
+  DOTNET_VERSION: "7.0.x"  # change to your target .NET version if needed
+
+jobs:
+  build-and-sonar:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Setup .NET SDK
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: ${{ env.DOTNET_VERSION }}
+
+    - name: Install SonarScanner for .NET
+      run: |
+        dotnet tool install --global dotnet-sonarscanner --version 5.12.0
+        echo "${HOME}/.dotnet/tools" >> $GITHUB_PATH
+
+    - name: Begin SonarQube analysis
+      env:
+        SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      run: |
+        # Replace PROJECT_KEY/NAME if you do not supply PROJECT_KEY secret
+        PROJECT_KEY="${{ secrets.PROJECT_KEY }}"
+        dotnet sonarscanner begin \
+          /k:"$PROJECT_KEY" \
+          /d:sonar.host.url="$SONAR_HOST_URL" \
+          /d:sonar.login="$SONAR_TOKEN"
+
+    - name: Build
+      run: dotnet build --configuration Release
+
+    - name: Run tests (optional, include if you have tests/coverage)
+      run: |
+        # This is optional: capture coverage if you have tests and want coverage
+        dotnet test --configuration Release --no-build
+
+    - name: End SonarQube analysis
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      run: |
+        dotnet sonarscanner end /d:sonar.login=${{ secrets.SONAR_TOKEN }}
+
+    - name: Fetch SonarQube JSON report (project analyses)
+      env:
+        SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      run: |
+        PROJECT_KEY="${{ secrets.PROJECT_KEY }}" 
+        TIMESTAMP=$(date -u +"%Y%m%dT%H%M%SZ")
+        OUTFILE="sonarqube-report-${PROJECT_KEY}-${TIMESTAMP}.json"
+
+        # Example: fetch list of analyses for the project (JSON)
+        curl -s -u "${SONAR_TOKEN}:" "${SONAR_HOST_URL}/api/project_analyses/search?project=${PROJECT_KEY}" > $OUTFILE
+
+        echo "Saved SonarQube API response to $OUTFILE"
+        ls -l $OUTFILE
+
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v2
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ secrets.AWS_REGION }}
+
+    - name: Upload SonarQube report to S3
+      env:
+        BUCKET: ${{ secrets.S3_BUCKET }}
+      run: |
+        OUTFILE=$(ls sonarqube-report-*.json | head -n1)
+        aws s3 cp "$OUTFILE" "s3://$BUCKET/sonarqube-reports/$OUTFILE"
+        echo "Uploaded $OUTFILE to s3://$BUCKET/sonarqube-reports/"

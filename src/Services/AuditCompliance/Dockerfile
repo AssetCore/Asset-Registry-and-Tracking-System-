@@ -14,7 +14,7 @@ RUN dotnet restore "src/Services/AuditCompliance/AuditCompliance.Api/AuditCompli
 RUN dotnet publish "src/Services/AuditCompliance/AuditCompliance.Api/AuditCompliance.Api.csproj" \
     -c Release -o /app/publish
 
-# ==========================================
+# =========================================
 # RUNTIME STAGE
 # ==========================================
 FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS runtime
@@ -25,6 +25,5 @@ COPY --from=build /app/publish .
 # Listen on port 8080 inside the container
 ENV ASPNETCORE_URLS=http://+:8080
 EXPOSE 8080
-EXPOSE 8081
 
 ENTRYPOINT ["dotnet", "AuditCompliance.Api.dll"]

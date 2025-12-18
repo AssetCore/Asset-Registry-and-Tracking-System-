@@ -26,6 +26,20 @@ services:
       start_period: 60s
 
   # ============================
+  # RabbitMQ
+  # ============================
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    restart: unless-stopped
+
+  # ============================
   # Asset Registry Service
   # ============================
   asset-registry:
@@ -37,12 +51,24 @@ services:
       - "5001:8080"
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-      ConnectionStrings__AssetRegistryDb: "Server=sqlserver;Database=AssetRegistry;User Id=sa;Password=YourStrong@Passw0rd;Encrypt=True;TrustServerCertificate=True"
-    depends_on:
-      sqlserver:
-        condition: service_healthy
-    restart: unless-stopped
 
+      ConnectionStrings__AssetRegistryDb: "Server=sqlserver,1433;Database=AssetRegistry;User Id=sa;Password=YourStrong@Passw0rd;Encrypt=True;TrustServerCertificate=True"
+
+      RabbitMq__Host: rabbitmq
+      RabbitMq__Port: "5672"
+      RabbitMq__UserName: guest
+      RabbitMq__Password: guest
+
+      OpenSearch__Enabled: "false"
+      OpenSearch__Uri: "http://opensearch:9200"
+      OpenSearch__Username: "admin"
+      OpenSearch__Password: "admin"
+      OpenSearch__IndexFormat: "asset-registry-logs-{0:yyyy.MM.dd}"
+    depends_on:
+      - rabbitmq
+      - sqlserver
+    restart: unless-stopped
+    
   # ============================
   # Identity Access Service
   # ============================
@@ -101,6 +127,26 @@ services:
       - "5002:8080"
     environment:
       ASPNETCORE_ENVIRONMENT: Development
+    restart: unless-stopped
+
+  # ============================
+  # Gateway / Load Balancer Service
+  # ============================
+  gateway:
+    build:
+      context: .
+      dockerfile: src/Services/APIGateway/Dockerfile
+    container_name: gateway
+    ports:
+      - "5000:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    depends_on:
+      - asset-registry
+      - identity-access
+      - maintenance-scheduler
+      - notification
+      - audit-compliance
     restart: unless-stopped
 
 volumes:

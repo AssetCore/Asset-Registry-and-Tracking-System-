@@ -14,3 +14,4 @@ jobs:
       service_name: "AssetRegistry"
       dockerfile_path: "./src/Services/AssetRegistry/Dockerfile"
       image_name: "assetregistry"
+      image_tag: v1.0.${{ github.run_number }}
