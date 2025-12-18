@@ -1,0 +1,100 @@
+{
+  "family": "public-loadbalancer",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "cpu": "512",
+  "memory": "1024",
+  "executionRoleArn": "arn:aws:iam::YOUR_ACCOUNT_ID:role/ecsTaskExecutionRole",
+  "taskRoleArn": "arn:aws:iam::YOUR_ACCOUNT_ID:role/loadbalancerTaskRole",
+  "containerDefinitions": [
+    {
+      "name": "loadbalancer",
+      "image": "YOUR_ECR_REPO/loadbalancer:latest",
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 8080,
+          "protocol": "tcp",
+          "appProtocol": "http"
+        }
+      ],
+      "environment": [
+        {
+          "name": "ASPNETCORE_ENVIRONMENT",
+          "value": "Production"
+        },
+        {
+          "name": "ReverseProxy__Clusters__asset-registry__Destinations__istio-gateway__Address",
+          "value": "http://internal-istio-nlb-xxxxx.elb.us-east-1.amazonaws.com"
+        },
+        {
+          "name": "ReverseProxy__Clusters__audit-compliance__Destinations__istio-gateway__Address",
+          "value": "http://internal-istio-nlb-xxxxx.elb.us-east-1.amazonaws.com"
+        },
+        {
+          "name": "ReverseProxy__Clusters__identity-access__Destinations__istio-gateway__Address",
+          "value": "http://internal-istio-nlb-xxxxx.elb.us-east-1.amazonaws.com"
+        },
+        {
+          "name": "ReverseProxy__Clusters__maintenance-scheduler__Destinations__istio-gateway__Address",
+          "value": "http://internal-istio-nlb-xxxxx.elb.us-east-1.amazonaws.com"
+        },
+        {
+          "name": "ReverseProxy__Clusters__notification__Destinations__istio-gateway__Address",
+          "value": "http://internal-istio-nlb-xxxxx.elb.us-east-1.amazonaws.com"
+        },
+        {
+          "name": "ReverseProxy__Clusters__apigateway__Destinations__istio-gateway__Address",
+          "value": "http://internal-istio-nlb-xxxxx.elb.us-east-1.amazonaws.com"
+        },
+        {
+          "name": "Logging__LogLevel__Default",
+          "value": "Information"
+        },
+        {
+          "name": "Logging__LogLevel__Yarp",
+          "value": "Information"
+        }
+      ],
+      "secrets": [],
+      "healthCheck": {
+        "command": [
+          "CMD-SHELL",
+          "curl -f http://localhost:8080/health/live || exit 1"
+        ],
+        "interval": 30,
+        "timeout": 10,
+        "retries": 3,
+        "startPeriod": 30
+      },
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/public-loadbalancer",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs",
+          "awslogs-create-group": "true"
+        }
+      },
+      "linuxParameters": {
+        "initProcessEnabled": true
+      }
+    }
+  ],
+  "tags": [
+    {
+      "key": "Environment",
+      "value": "Production"
+    },
+    {
+      "key": "Service",
+      "value": "LoadBalancer"
+    },
+    {
+      "key": "Component",
+      "value": "PublicGateway"
+    }
+  ]
+}
