@@ -5,7 +5,7 @@ on:
     branches: ["main"]
     paths:
       - "src/Services/Notification/**"
-      - ".github/workflows/notification.yml"
+      - "/notification.yml"
 
 jobs:
   call-build:
