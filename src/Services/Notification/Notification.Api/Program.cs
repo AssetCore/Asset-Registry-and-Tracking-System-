@@ -88,8 +88,13 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+// Prometheus metrics
+app.UseHttpMetrics();
+
 app.MapControllers();
 app.MapHealthChecks("/health");
+app.MapMetrics();
 
 Log.Information("Starting Notification API");
 Log.Information("OpenSearch configured: Uri={OpenSearchUri}, IndexFormat={IndexFormat}", openSearchUri, indexFormat);

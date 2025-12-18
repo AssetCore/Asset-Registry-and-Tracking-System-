@@ -123,9 +123,13 @@ if (app.Environment.IsDevelopment())
 // Enable CORS
 app.UseCors("AllowAll");
 
+// Prometheus metrics
+app.UseHttpMetrics();
+
 // app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
+app.MapMetrics();
 
 Log.Information("Starting Asset Registry API");
 Log.Information("OpenSearch configured: Uri={OpenSearchUri}, IndexFormat={IndexFormat}", openSearchUri, indexFormat);
