@@ -5,7 +5,7 @@ on:
     branches: ["main"]
     paths:
       - "src/Services/IdentityAccess/**"
-      - ".github/workflows/identityaccess.yml"
+      - "workflows/identityaccess.yml"
 
 jobs:
   call-build:
