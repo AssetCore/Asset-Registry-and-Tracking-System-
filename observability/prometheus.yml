@@ -1,0 +1,89 @@
+global:
+  scrape_interval: 15s # How often to scrape targets
+  evaluation_interval: 15s # How often to evaluate rules
+
+# Alertmanager configuration (optional)
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets: []
+
+# Rule files (for alerting rules)
+rule_files:
+  # - "alerts.yml"
+
+# Scrape configurations
+scrape_configs:
+  # Prometheus itself
+  - job_name: "prometheus"
+    static_configs:
+      - targets: ["localhost:9090"]
+
+  # Node Exporter (System Metrics)
+  - job_name: "node-exporter"
+    static_configs:
+      - targets: ["node-exporter:9100"]
+        labels:
+          instance: "observability-server"
+
+  # cAdvisor (Docker Container Metrics)
+  - job_name: "cadvisor"
+    static_configs:
+      - targets: ["cadvisor:8080"]
+        labels:
+          instance: "observability-server"
+
+  # Asset Registry Service
+  - job_name: "asset-registry"
+    metrics_path: "/metrics"
+    static_configs:
+      - targets: ["asset-registry-service:8080"]
+        labels:
+          service: "asset-registry"
+          environment: "production"
+
+  # Audit Compliance Service
+  - job_name: "audit-compliance"
+    metrics_path: "/metrics"
+    static_configs:
+      - targets: ["audit-compliance-service:8080"]
+        labels:
+          service: "audit-compliance"
+          environment: "production"
+
+  # Notification Service
+  - job_name: "notification"
+    metrics_path: "/metrics"
+    static_configs:
+      - targets: ["notification-service:8080"]
+        labels:
+          service: "notification"
+          environment: "production"
+
+  # Maintenance Scheduler Service
+  - job_name: "maintenance-scheduler"
+    metrics_path: "/metrics"
+    static_configs:
+      - targets: ["maintenance-scheduler-service:8080"]
+        labels:
+          service: "maintenance-scheduler"
+          environment: "production"
+
+  # Gateway/Load Balancer Service
+  - job_name: "gateway"
+    metrics_path: "/metrics"
+    static_configs:
+      - targets: ["gateway-service:8080"]
+        labels:
+          service: "gateway"
+          environment: "production"
+
+  # RabbitMQ Exporter
+  # - job_name: 'rabbitmq'
+  #   static_configs:
+  #     - targets: ['rabbitmq-exporter:9419']
+
+  # SQL Server Exporter
+  # - job_name: 'sqlserver'
+  #   static_configs:
+  #     - targets: ['sqlserver-exporter:4000']
