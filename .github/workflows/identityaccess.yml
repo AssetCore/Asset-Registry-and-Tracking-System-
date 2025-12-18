@@ -14,3 +14,4 @@ jobs:
       service_name: "IdentityAccess"
       dockerfile_path: "./src/Services/IdentityAccess/DockerFile"
       image_name: "identityaccess"
+      image_tag: v1.0.${{ github.run_number }}
