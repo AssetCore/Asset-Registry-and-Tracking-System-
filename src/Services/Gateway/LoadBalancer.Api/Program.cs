@@ -1,6 +1,7 @@
 using System.Threading.RateLimiting;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.HttpOverrides;
+using Prometheus;
 using Yarp.ReverseProxy;
 
 var builder = WebApplication.CreateBuilder(args);

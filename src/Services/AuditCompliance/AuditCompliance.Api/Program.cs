@@ -7,6 +7,7 @@ using AuditCompliance.Infrastructure.Persistence;
 using AuditCompliance.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using Prometheus;
 using Serilog;
 using Serilog.Sinks.OpenSearch;
 
