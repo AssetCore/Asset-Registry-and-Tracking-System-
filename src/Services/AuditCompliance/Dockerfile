@@ -14,7 +14,7 @@ RUN dotnet restore "src/Services/AuditCompliance/AuditCompliance.Api/AuditCompli
 RUN dotnet publish "src/Services/AuditCompliance/AuditCompliance.Api/AuditCompliance.Api.csproj" \
     -c Release -o /app/publish
 
-# ==========================================
+# =========================================
 # RUNTIME STAGE
 # ==========================================
 FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS runtime
