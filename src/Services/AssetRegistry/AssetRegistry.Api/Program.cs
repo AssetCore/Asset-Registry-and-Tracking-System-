@@ -6,6 +6,7 @@ using AssetRegistry.Infrastructure.Persistence;
 using AssetRegistry.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using Prometheus;
 using Serilog;
 using Serilog.Sinks.OpenSearch;
 

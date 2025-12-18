@@ -3,6 +3,7 @@ using Notification.Application.Services;
 using Notification.Infrastructure.Configuration;
 using Notification.Infrastructure.Services;
 using Notification.Infrastructure.Messaging;
+using Prometheus;
 using Serilog;
 using Serilog.Sinks.OpenSearch;
 

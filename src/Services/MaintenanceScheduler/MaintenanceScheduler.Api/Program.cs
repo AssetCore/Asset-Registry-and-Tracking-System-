@@ -7,6 +7,7 @@ using MaintenanceScheduler.Application.Services;
 using MaintenanceScheduler.Application.Validators;
 using MaintenanceScheduler.Application.DTOs;
 using MaintenanceScheduler.Application.Mappings;
+using Prometheus;
 using Serilog;
 using Serilog.Sinks.OpenSearch;
 
