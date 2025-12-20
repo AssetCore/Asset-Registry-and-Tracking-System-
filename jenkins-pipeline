@@ -1,0 +1,18 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main',
+                    url: 'https://github.com/AssetCore/Asset-Registry-and-Tracking-System-.git'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo 'Build started...'
+            }
+        }
+    }
+}
