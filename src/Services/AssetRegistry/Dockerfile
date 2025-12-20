@@ -11,7 +11,7 @@ COPY . .
 RUN dotnet restore "src/Services/AssetRegistry/AssetRegistry.Api/AssetRegistry.Api.csproj"
 
 # Publish the API project
-RUN dotnet publish "src/Services/AssetRegistry/AssetRegistry.Api/AssetRegistry.Api.csproj" \
+# RUN dotnet publish "src/Services/AssetRegistry/AssetRegistry.Api/AssetRegistry.Api.csproj" \
     -c Release -o /app/publish
 
 # =========================================
